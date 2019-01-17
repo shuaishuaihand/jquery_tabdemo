@@ -1,0 +1,387 @@
+var datatable3='';
+var todayDate = moment().startOf('day');
+var YM = todayDate.format('YYYY-MM');
+// alert(YM);
+// 加载表格
+var DatatableRemoteAjaxDemo_2 = function() {
+	// == Private functions
+	var demo = function loadTableData() {
+		// $('#datatable_ajax').mDatatable('destroy');
+		$('#m_datatable_preprocess').mDatatable('destroy');
+		
+		var datatable = $('#m_datatable_preprocess').mDatatable(
+						{
+							// datasource definition
+							data : {
+								type : 'remote',
+								source : {
+									read : {
+										// sample GET method
+										method : 'POST',
+										url : '/Ruler/getPcInfoPage'
+									/*
+									 * map: function(raw) { // sample data
+									 * mapping var dataSet = raw; if (typeof
+									 * raw.data !== 'undefined') { dataSet =
+									 * raw.data; } return dataSet; },
+									 */
+									}
+								},
+								pageSize : 10,
+								serverPaging : true,
+								serverFiltering : false,
+								serverSorting : false,
+							},
+
+							// layout definition
+							layout : {
+								scroll : false,
+								footer : false
+							},
+
+							// column sorting
+							sortable : false,
+
+							pagination : true,
+
+							// search: {
+							// input: $('#search')
+							// },
+							search : false,
+
+							toolbar : {
+								// toolbar items
+								items : {
+									// pagination
+									pagination : {
+										// page size select
+										pageSizeSelect : [ 10, 20, 30 ],
+									},
+								},
+							},
+							search : false,
+							/*
+							 * search: { input: $('#generalSearch'), },
+							 */
+							// columns definition
+							columns : [
+									{
+										field : 'name',
+										title : '名称',
+										sortable : false,  
+										//width : 80,
+										selector : false,
+										//textAlign : 'center',
+									},
+									{
+										field : 'deviceName',
+										title : '设备类型',
+										//width : 50,
+									},
+ 									{
+										field : 'performAction',
+										title : '预处理动作',
+										//width : 50,
+										template: function (row) {
+											var status = {
+												0: {'title': '关闭', 'class': ''},
+												1: {'title': '打开', 'class': ''}, 
+											};
+											return '<span class="">' + status[row.performAction].title + '</span>';
+										}
+ 									},
+									{
+										field : 'description',
+										title : '描述',
+										//width : 50,
+									},
+									{
+										field : 'memo',
+										title : '备注',
+										//width : 75,
+									},
+									{
+										field : 'Actions',
+										width : 70,
+										title : '操作',
+										textAlign : 'center',
+										sortable : false,
+										overflow : 'visible',
+										template : function(row, index,
+												datatable) {
+											//var str = JSON.stringify(row);
+											//alert(str);
+  											var dropup = (datatable	
+													.getPageSize() - index) <= 4 ? 'dropup'
+													: '';
+											return '\
+        						<a href="#" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="编辑" onclick="UpdatePc(' + JSON.stringify(row).replace(/"/g, '&quot;') + ')">\
+        							<i class="la la-edit"></i>\
+        						</a>\
+        						<a href="#" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill" title="删除" onclick="DeletePc('+row.resId+');">\
+        							<i class="la la-trash"></i>\
+        						</a>\
+        					';
+										},
+									} ]
+						});
+
+		var query = datatable.getDataSourceQuery();
+		/*
+		 * $('#pipeName').on('change', function() {
+		 * datatable.search($(this).val().toLowerCase(), 'pipeName'); });
+		 */
+		datatable3 = datatable;
+		$('#search').click(function() {
+ 							datatable.reload();
+							datatable.search2();
+ 						});
+
+	};
+	// basic demo
+
+	return {
+		// public functions
+		init : function() {
+			demo();
+		}
+	};
+}();
+
+ 
+//修改获取数据
+function UpdatePc(row) {	
+  	console.info(row);
+ 	console.info(row.action);
+	$('#update_modal2').modal('show');// modal插件，手动打开模态框。
+	document.getElementById("pc_resId").value = row.resId;
+	document.getElementById("pc_name").value = row.name;
+	document.getElementById("pc_deviceType").value = row.deviceType;
+	document.getElementById("pc_performAction").value = row.performAction;
+	document.getElementById("pc_memo").value = row.memo;
+}
+
+//修改-提交按钮
+$("#submit_pc").on("click",function(){
+	var pc_resId = $('#pc_resId').val();
+	var pc_name = $('#pc_name').val();
+	var pc_deviceType = $('#pc_deviceType').val();
+	var pc_performAction = $('#pc_performAction').val();
+	var pc_memo = $('#pc_memo').val();
+	var Text1 = $("#pc_deviceType").find("option:selected").text();  //获取Select选择的Text
+	var Text2 = $("#pc_performAction").find("option:selected").text();  //获取Select选择的Text
+    var description = Text1+Text2;
+    
+    console.info(pc_resId);
+    console.info(pc_name);
+    console.info(pc_deviceType);
+    console.info(pc_performAction);
+    console.info(pc_memo);
+ 
+    console.info(description);
+  	if(pc_name==""||pc_name.length==0||pc_deviceType==""||pc_deviceType==""||pc_performAction==""){
+		swal("添加失败", "请填写必填选项！", "warning");
+		return;
+	}
+	$('#mainForm_update_pc').ajaxSubmit( // ajax方式提交表单
+			{
+				url: '/Ruler/UpdatePc',
+				type: 'post',
+				async : false,
+				dataType: 'json',
+				data : {
+ 					'pc_resId' : pc_resId,
+					'pc_name' : pc_name,
+					'pc_deviceType' : pc_deviceType,
+					'pc_performAction' : pc_performAction,
+ 					'pc_memo' : pc_memo,
+ 					'description' : description
+				},
+				success: function (data) {
+					swal("提示", "修改成功", "success");// 弹出成功提示框
+					//$("input[type=reset]").trigger("click"); //清空表单内容
+					$("#update_modal2").modal("toggle");// modal插件，状态反转，关闭则显示，显示则关闭
+					datatable3.reload();// 重新加载表格
+					//window.location.reload(true); 
+				},
+				error : function() {
+					swal("提示", "未知原因添加失败", "error");
+				},
+				clearForm: false,// 禁止清楚表单
+				resetForm: false // 禁止重置表单
+			});
+	//window.location.reload(true); 
+	});
+
+$('#close_modal2').click(function() {
+	$('#pc_resId').val("");
+	$('#pc_name').val("");
+	$('#pc_deviceType').val("");
+	$('#pc_performAction').val("");
+	$('#pc_memo').val("");
+	$("#pc_deviceType").val(""); //获取Select选择的Text
+	$("#pc_performAction").val(""); //获取Select选择的Text
+});
+
+$('#rest_pc').click(function() {
+	$('#pc_resId').val("");
+	$('#pc_name').val("");
+	$('#pc_deviceType').val("");
+	$('#pc_performAction').val("");
+	$('#pc_memo').val("");
+	$("#pc_deviceType").val(""); //获取Select选择的Text
+	$("#pc_performAction").val(""); //获取Select选择的Text
+});
+
+
+//删除
+ function DeletePc(resId){
+	swal({
+        title: '提示',
+        text: "确认删除吗？",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonText: '确认',
+        cancelButtonText: '取消',
+        //reverseButtons: true
+    }).then(function(result){
+        if (result.value) {
+        	$.ajax({
+        		url:"/Ruler/DeletePc",
+        		async:false,
+        		data:{'resId':resId},
+        		type:"POST",
+        		success : function(data) {
+    				console.info(data);
+    				if (data.result) {
+    					swal("提示", "删除成功", "success");//弹出成功提示框
+    					datatable3.reload();//重新加载表格
+    				} else{
+    					swal("提示", "删除失败失败", "error");
+    				}
+    			},
+    			error : function() {
+    				swal("提示", "未知原因删除失败", "error");
+    			}
+        	});
+        } 
+    });
+}
+	
+//新建事件预处理-提交按钮
+$("#submit2").on("click",function(){
+	var Preprocess_name = $('#Preprocess_name').val();
+	var device_type = $('#device_type').val();
+	var perform_action = $('#perform_action').val();
+	var memo = $('#memo').val();
+	var Text1 = $("#device_type").find("option:selected").text();  //获取Select选择的Text
+	var Text2 = $("#perform_action").find("option:selected").text();  //获取Select选择的Text
+    var description = Text1+Text2;
+  	if(Preprocess_name==""||Preprocess_name.length==0||device_type==""||perform_action==""){
+		swal("添加失败", "请填写必填选项！", "warning");
+	  	return;
+	}
+	$('#mainForm_add2').ajaxSubmit( // ajax方式提交表单
+			{
+				url: '/Ruler/AddPreprocess',
+				type: 'post',
+				async : false,
+				dataType: 'json',
+				data : {
+ 					'Preprocess_name' : Preprocess_name,
+					'device_type' : device_type,
+					'perform_action' : perform_action,
+ 					'memo' : memo,
+ 					'description' : description
+				},
+				success : function(data) {
+					if (data.result == "SUCCESS") {
+						swal("提示", "添加成功1", "success");// 弹出成功提示框
+						$("#add_modal2").modal("toggle");// modal插件，状态反转，关闭则显示，显示则关闭
+						$('#Preprocess_name').val("");
+						$('#device_type').val("");
+						$('#perform_action').val("");
+						$('#memo').val("");
+						datatable3.reload();// 重新加载表格
+					}else{
+						swal("提示", "添加成功", "success");// 弹出成功提示框
+					}
+				},
+				error : function() {
+					swal("提示", "未知原因添加失败", "error");
+				},
+				clearForm: false,// 禁止清楚表单
+				resetForm: false // 禁止重置表单
+			});
+	//window.location.reload(true); 
+	});
+
+//重置按钮
+$('#rest4').click(function() {
+	$('#Preprocess_name').val("");
+	$('#device_type').val("");
+	$('#perform_action').val("");
+	$('#memo').val("");
+});
+
+$('#close_modal3').click(function() {
+	$('#Preprocess_name').val("");
+	$('#device_type').val("");
+	$('#perform_action').val("");
+	$('#memo').val("");
+});
+
+//function UpdateC(row) {
+//  	console.info(row);
+//  	var resId = row.resId;
+//  	console.info(resId);
+//  	if(row.operation == 1){
+//  		$.ajax({
+//  			url : "/Ruler/ChangeToZero",
+//  			type : "get",
+//  			dataType : "json",
+//  			async: false,	
+//  		    data:{'resId':row.resId},
+//  			success : function(data) {
+//				 console.info(data);
+//				 if (data.result == "success") {
+//					 swal("提示", "规则失效成功", "success");// 弹出成功提示框
+//					 datatable3.reload();// 重新加载表格
+//				 } else {
+//					 swal("提示", "规则失效失败", "error");
+//				 }
+//			 }
+//  	 	});
+//  	}else if(row.operation == 0){
+//  		$.ajax({
+//  			url : "/Ruler/ChangeToOne",
+//  			type : "get",
+//  			dataType : "json",
+//  			async: false,	
+//  		    data:{'resId':row.resId,
+//  		    	  'fvalTypeId':row.fvaltypeid
+//  		    },
+//  			success : function(data) {
+//				 console.info(data);
+//				 console.info(data.result);
+//				 if (data.result == "success") {
+//					 swal("提示", "规则生效成功", "success");// 弹出成功提示框
+//					 datatable3.reload();// 重新加载表格
+//				 } else if(data.result == "error"){
+//					 swal("提示", "当前类型已经有一条生效规则，请先确定！", "error");
+//				 }
+//			 }
+//  	 	});
+//  	
+//  	}
+//}
+ 
+
+
+// 界面加载时
+jQuery(document).ready(function() {
+	// $('#name').val("");
+	// $('#categories').val("");
+	DatatableRemoteAjaxDemo_2.init();
+
+});

@@ -1,0 +1,5564 @@
+@charset "UTF-8";
+html, body{
+    font-family: "Microsoft YaHei", " SimSun ";
+}
+body{
+    background-color: #f2f3f8;
+}
+.w100-imporant{
+    width: 100% !important;
+}
+.m-aside-left{
+    background-color: #fff;
+    height:100%;
+}
+.custom-tab{
+    /*margin: 0 24px;*/
+    margin-left: 12px !important;
+}
+.custom-nav_tab .m-tabs-line .m-tabs__link{
+    font-size: 0.9rem;
+}
+.custom-nav_tab .tab-content{
+    margin-left: 24px;
+}
+.custom-nav_tab .m-nav .m-nav__item > .m-nav__link .m-nav__link-text{
+    font-size: 0.8rem;
+}
+.custom-nav_tab .nav.nav-tabs .nav-link [class^="flaticon-"]{
+    font-size: 1rem;
+}
+.custom-nav_tab .nav.nav-tabs .nav-link i{
+    vertical-align: 0;
+    margin-right: 0.2rem;
+}
+.m-wrapper{
+    padding: 30px 30px 0;
+}
+.custom-nav_tab .jstree-anchor{
+    font-size: 0.8rem;
+}
+.custom-nav_tab .jstree-default .jstree-clicked{
+    color: #36a3f7;
+}
+.custom-tab.m-tabs-line.m-tabs-line--success.nav.nav-tabs .nav-link.active,
+.custom-tab.m-tabs-line.m-tabs-line--success a.m-tabs__link.active,
+.custom-tab.m-tabs-line.m-tabs-line--success.nav.nav-tabs .nav-link:hover,
+.custom-tab.m-tabs-line.m-tabs-line--success a.m-tabs__link:hover{
+    color: #36a3f7;
+    border-bottom: 1px solid #36a3f7;
+}
+.custom-tab.m-tabs-line.m-tabs-line--success.nav.nav-tabs .nav-link.active > i,
+.custom-tab.m-tabs-line.m-tabs-line--success a.m-tabs__link.active > i,
+.custom-tab.m-tabs-line.m-tabs-line--success.nav.nav-tabs .nav-link:hover > i,
+.custom-tab.m-tabs-line.m-tabs-line--success a.m-tabs__link:hover > i{
+    color: #36a3f7;
+}
+.custom-tab.nav-pills .nav-link{
+    border: 1px solid #ebedf2;
+}
+.custom-tab.nav-pills .nav-link.active, 
+.custom-tab.nav-pills .show > .nav-link{
+    background-color: #36a3f7;
+}
+.nav.nav-pills .nav-item{
+    margin:0 5px 5px 0;
+    max-width: 180px;
+}
+.m-demo-icon .m-demo-icon__preview i{
+    font-size: 1.2rem;
+}
+.m-demo-icon{
+    margin-bottom: 0;
+}
+.m-portlet.m-portlet--rounded{
+    position: relative;
+    padding:0 1.2rem 2.8rem 1.2rem;
+}
+.m-portlet.m-portlet--space .m-portlet__head{
+    padding: 1rem 0;
+    height: auto;
+    line-height: 1;
+}
+.m-portlet .m-portlet__head .m-portlet__head-caption .m-portlet__head-title .m-portlet__head-text{
+    color: #666;
+    font-size: 0.8rem;
+}
+.data_text span{
+    display: block;
+    text-align: center;
+}
+.data_text .m-widget25__price{
+    font-size: 2rem;
+    color: #f39800;
+}
+.data_text .m-widget25__desc{
+    color: #666;
+    font-size: 0.8rem;
+}
+.m-widget14{
+    padding: 0.2rem
+}
+.m-widget24{
+    margin-top: 0.5rem;
+}
+.m-widget24 .m-widget24__item .progress{
+    margin-top: 1.64rem;
+    margin-left: 0;
+    margin-right: 0;
+}
+.m-widget24 .m-widget24__item .m-widget24__number{
+    margin: 0;
+    color: #f39800;
+    font-size: 0.8rem;
+}
+.m-portlet__footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /*background-color: #fbfbfb;*/
+}
+.m-portlet__footer p{
+    margin-bottom: 0;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    font-size: 12px;
+    color: #999;
+    height: 2.3rem; 
+    line-height: 2.3rem;
+}
+.m-widget14 .m-widget14__chart .m-widget14__stat{
+    font-size: 1.0rem;
+}
+.chart-txt{
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1;
+}
+.dev-state{
+    font-size: 0.8rem;
+}
+.state-normal, 
+.custom_chart .state-normal{
+    color: #36a3f7;
+}
+.state-warning,
+.custom_chart .state-warning{
+    color: #f39800;
+}
+.state-danger,
+.custom_chart .state-danger{
+    color: #f4516c;
+}
+.dev-state i{
+    display: inline-block;
+    vertical-align: 1px;
+    margin-right: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+.state-normal i{
+    background-color: #36a3f7;
+}
+.state-warning i{
+    background-color: #f39800;
+}
+.state-danger i{
+    background-color: #f4516c;
+}
+.dev-num{
+    color: #999;
+    font-size: 0.6rem;
+}
+.gn_ico{
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    border-radius: 3px;
+    background: url(ico_phone.png) no-repeat center center;
+}
+.gn_normal{
+    background-color: #36a3f7;
+}
+.gn_warning{
+    background-color: #f39800;
+}
+.gn_danger{
+    background-color: #f4516c;
+}
+.gn_txt{
+    margin-top: 8px;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+/*智能监控 20181129 gq*/
+.bd-padding-set-this{
+    padding-left: 45px;
+    padding-right: 45px;
+}
+.autosystem-portlet-bg{
+    box-shadow: 0px 1px 15px 1px rgba(81, 77, 92, 0.08);
+    background-color: #e4f0f9;
+}
+.gk-data-line .num-line-btns{
+    margin-top: -3px;
+    height: 30px;
+    line-height: 30px;
+}
+.gk-data-line .num-line-btns input{
+    height: 30px;
+}
+.autosystem-devbox{
+    cursor: pointer;
+}
+
+
+
+/* 指挥调度 */
+.btn-state-group{
+/*     margin: 0 24px; */
+    overflow: hidden;
+}
+.btn-state{
+    float: left;
+    width: 22.5%;
+    margin-right:3px;
+}
+.state-box{
+    position: relative;
+    padding: 9px 0 6px;
+    border: 1px solid #e9e9e9;
+    text-align: center;
+}
+.bdr-none{
+    border-right: none;
+}
+.state-box p{
+   margin-bottom: 0;
+   line-height: 1;
+}
+.state-box .state-info{
+    margin: 0 0 13px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.state-msg .state-info{
+    margin-left: -1px;
+    color: #15e18c;
+}
+.state-box .state-info i{
+    margin-right: 4px;
+    display: inline-block;
+    vertical-align: -4px;
+    width: 21px;
+    height: 21px;
+}
+.state-warning .state-info i{
+    background: url(ico_warning.png) no-repeat center center;
+}
+.state-danger .state-info i{
+    background: url(ico_danger.png) no-repeat center center;
+}
+.state-msg .state-info i{
+    background: url(ico_commonly.png) no-repeat center center;
+}
+
+.state-normal .state-info i{
+    background: url(ico_message.png) no-repeat center center;
+}
+
+.state-danger .state-box{
+/*     border-left: none;
+    border-right: none; */
+}
+.state-box .state-txt{
+    font-size: 0.8rem;
+    color: #666;
+}
+.state-box .ico-selected{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 17px;
+    height: 18px;
+}
+.state-box .bdl-line,
+.state-box .bdr-line{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 9;
+    background-color: #2089fe;
+}
+.state-box .bdl-line{
+    left: -1px;
+}
+.state-box .bdr-line{
+    right: -1px;
+}
+.btn-state-active .state-box{
+    border-color: #2089fe;
+}
+.btn-state-active .state-box .ico-selected{
+    background: url(ico_gou.png) no-repeat center center;
+}
+.btn-state-active .bdl-line,
+.btn-state-active .bdr-line{
+    width: 1px;
+}
+.info-list{
+    margin-top: 28px;
+}
+.info-list h4{
+    padding-left: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e9e9e9;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+}
+.info-list .m-widget4__item{
+    padding-top: 0.6rem;
+    padding-left: 14px;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.info-list .m-widget4__item:last-child {
+    border-bottom: none;
+}
+
+.info-list .m-widget4 .m-widget4__item .m-widget4__info{
+    padding-left: 0.4rem;
+    padding-right: 0.2rem;
+}
+.widget4__info .m-widget4__title{
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #333;
+}
+.info-list .m-widget4 .m-widget4__item .m-widget4__img{
+    vertical-align: top;
+    cursor: pointer;
+}
+.info-list .m-widget4__sub{
+    display: block;
+}
+
+.info-list .info-list-ico{
+    margin-top: 2px;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+}
+.detail-bar{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.detail-bar .m-stack--demo.m-stack--ver .m-stack__item{
+    padding: 10px 4px 0;
+    border: none;
+    border-right: 1px solid #ddd;
+    background-color: rgba(67,66,66,0.6);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99434242,endColorstr=#99434242); 
+}
+.m-footer--push.m-aside-left--enabled:not(.m-footer--fixed) .zh-wrapper{
+    position: relative;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+
+/* 指挥调度页面 start */
+.img_abs{
+    position: absolute;
+    top: 120px;
+    right: 26px;
+    background-color: #FFFAFA;
+}
+.image{
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    cursor: pointer;
+}
+
+.index-wrap--sidebar {
+    flex: 0 0 240px;
+    position: relative;
+    width: 240px;
+    -webkit-box-shadow: 0px 1px 15px 1px rgba(81, 77, 92, 0.08) ;
+    -moz-box-shadow: 0px 1px 15px 1px rgba(81, 77, 92, 0.08) ;
+    box-shadow: 0px 1px 15px 1px rgba(81, 77, 92, 0.08) ;
+    background-color: #fff;
+}
+.index-wrap--sidebar-hide {
+    flex: 0 0 14px !important;
+    width: 14px !important;
+}
+.index-wrap--sidebar-hide .index-wrap--sidebar-content {
+    display: none !important;
+}
+
+.index-wrap--sidebar-btn {
+    position: absolute;
+    top: 40%;
+    right: -14px;
+    width: 14px;
+    height: 60px;
+    border-radius: 0 26px 26px 0;
+    background-color: rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+.index-wrap--sidebar-btn i {
+    margin: 20px 0 0 -1px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.index-wrap--fluid {
+    flex: 1 1 auto;
+}
+
+.gis-content{
+    position: relative;
+    height: 100%;
+    /*12-11 地图图片注释部分*/
+    /*background-image: url(/images/index/map_detail3.png);*/
+    /*background-size: 100% 100%;*/
+}
+
+
+
+/*@media screen and (max-width: 1366px) {*/
+    /*.gis-content{*/
+        /*height: 100%;*/
+    /*}*/
+/*}*/
+
+
+.gis-map{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #666;
+}
+.ifl-warn{
+    background: url(ico_warning.png) no-repeat center center;
+}
+.ifl-danger{
+    background: url(ico_danger.png) no-repeat center center;
+}
+.ifl-commonly{
+    background: url(ico_commonly.png) no-repeat center center;
+}
+
+.ifl-msg{
+    background: url(ico_message.png) no-repeat center center;
+}
+.detail-info{
+    margin: 0 16px 10px;
+    text-align: left;
+}
+.detail-info .bj-tit{
+    font-size: 0.8rem;
+}
+.detail-info .bj-tit i{
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: -6px;
+    width: 21px;
+    height: 21px;
+}
+.detail-info .warn-tit{
+    color: #ff6857;
+}
+.detail-info .warn-tit i{
+    background: url(ico_danger.png) no-repeat center center;
+}
+.detail-info .bj-txt{
+    margin:0.4rem 0 0.8rem;
+    font-size: 0.8rem;
+}
+.detail-info .warn-txt{  
+    color: #ff6857;
+}
+.detail-info .sg-tit{
+    color: #6cb1fd;
+}
+.detail-info .sg-tit i{
+    background: url(ico_progess.png) no-repeat center center;
+}
+.detail-info .sg-txt{
+    color: #6cb1fd;
+}
+.btn-box{
+    text-align: left;
+}
+.btn-box button{
+    padding: 0.55rem 0;
+    width: 90px;
+    font-size: 0.85rem;
+}
+.mod-bj{
+    margin-top: 8px;
+    border-top: 1px solid #fff;
+}
+.mod-bj .m-widget4__item{
+    padding: 1rem 0.4rem 0.4rem 0;
+    line-height: 1;
+    border-bottom: none;
+}
+.mod-bj .m-widget4__item .m-widget4__info{
+    padding: 0 1.2rem;
+    text-align: left;
+}
+.mod-bj .m-widget4__item .m-widget4__info .m-widget4__text,
+.mod-bj .m-widget4__item .m-widget4__ext .m-widget4__number{
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #fff !important;
+}
+.mod-pfs{
+    margin: 0 8px;
+}
+.mod-pfs .ico-pfs{
+    display: block;
+    width: 37px;
+    height: 32px;
+    background: url(ico_blower.png) no-repeat center center;
+    background-color:#2089fe;
+    border-radius:5px;
+}
+
+.mod-pfs .ico-blower{
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: url(ico_blower.png) no-repeat center center;
+    background-color:white;
+    border-radius:5px;
+}
+
+.mod-pfs .ico-waterPump{
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: url(ico_water.png) no-repeat center center;
+    background-color:white;
+    border-radius:5px;
+}
+
+.mod-pfs .ico-light{
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: url(ico_lights.png) no-repeat center center;
+    background-color:white;
+    border-radius:5px;
+}
+
+.mod-pfs .ico-test{
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: url(ico_lights.png) no-repeat center center;
+    background-color:white;
+    border-radius:5px;
+}
+
+.mod-pfs .m-widget4__item{
+    padding: 0 0.5rem 1rem 0;
+    border-bottom: none;
+}
+.mod-pfs .m-widget4__item .m-widget4__info .m-widget4__text{
+    font-size: 0.6rem;
+    color: #fff;
+}
+.mod-pfs .m-widget4__ext a{
+    font-size: 1rem;
+    white-space: nowrap;
+    color: #fff;
+}
+.mod-pfs .m-widget4__ext .btn-control-active{
+    color: #2089fe;
+}
+.mod-pfs .btn-success{
+    padding: 0.55rem 0;
+    width: 90px;
+    font-size: 0.85rem;
+}
+.table-section .table{
+    margin-top: 16px;
+    margin-bottom: 0;
+    font-size: 0.85rem;
+    color: #fff;
+}
+.table th,
+.table td{
+    border-top: none;
+}
+.table thead th{
+    border: none;
+    font-weight: bold;
+    background-color: rgba(67,66,66,0.6);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99434242,endColorstr=#99434242);
+}
+.table tbody th,
+.table tbody td{
+    padding: 0.4rem;
+}
+.btn-jd-item{
+    width: 100%;
+    text-align: right;
+}
+.form-box{
+    margin: 0 0 0 0px;
+}
+.form-box .sct-name{
+    margin-right: 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #333;
+}
+.form-box .m-input{
+    padding: 0.2rem 0.75rem;
+    border: none;
+    font-size: 0.875rem;
+    color: #333;
+    height: 28px;
+}
+.form-box .btn{
+    height: 30px;
+}
+
+/* GIS */
+.sub-tree{
+    position: absolute;
+    top: 0;
+    left: 235px;
+    z-index: 5;
+    width: 280px;
+    background-color: #fff;
+}
+.custom-nav_tab{
+    position: absolute;
+    z-index: 999;
+}
+.sub-tree-hd{
+    position: relative;
+    padding:26px 6px 18px 16px;
+    background-color: #3694fe;
+    color: #fff;
+}
+.sub-tree-hd h4{
+    margin-bottom: 0.8rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    line-height: 1;
+}
+.sub-tree-hd p{
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    line-height: 1;
+}
+.sub-tree-hd .la-close{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+.sub-mod{
+    padding: 16px 0 14px;
+    border-bottom: 1px solid #dcdbdc;
+}
+.jk-state .m-widget14{
+    padding: 0;
+}
+.jk-state .m-widget14 .m-widget14__header{
+    margin-bottom: 0.6rem;
+    padding: 0;
+}
+.sub-mod  .m-demo-icon{
+    padding: 0 16px 0 16px;
+}
+.sub-mod .m-demo-icon .m-demo-icon__preview i{
+    vertical-align: -1px;
+}
+.sub-mod .m-demo-icon .m-demo-icon__class{
+    color: #333;
+}
+.state-inner .align-items-center{
+    margin-left: 6px;
+}
+.state-inner .m-widget14__legend-text{
+    font-size: 0.6rem;
+    color: #666;
+}
+.state-inner .col{
+    padding: 0;
+}
+.state-inner .pr-set{
+    margin-right: 40px;
+}
+.state-inner .chart-num{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #2089fe;
+}
+.state-inner .m-widget14 .m-widget14__chart .m-widget14__stat{
+    font-size: 0.8rem;
+    color: #333;
+}
+.hj-img{
+    display: inline-block;
+    margin: 6px 0 0 20px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #dbdadb;
+    border-radius: 3px;
+}
+.lhj01{
+    background: url(img_hj01.png) no-repeat center center;
+}
+.lhj02{
+    background: url(img_hj02.png) no-repeat center center;
+}
+.lhj03{
+    background: url(img_hj03.png) no-repeat center center;
+}
+.lhj04{
+    background: url(img_hj04.png) no-repeat center center;
+}
+.lhj05{
+    background: url(img_hj05.png) no-repeat center center;
+}
+/**告警图标*/
+.lhj06{
+    background: url(img_yanzhong.png) no-repeat center center;
+}
+.lhj07{
+    background: url(img_zhongyao.png) no-repeat center center;
+}	
+.lhj08{
+    background: url(img_yiban.png) no-repeat center center;
+}
+/**设备图标*/
+.lhj09{
+    background: url(img_fengji.png) no-repeat center center;
+}
+.lhj10{
+    background: url(img_shuibeng.png) no-repeat center center;
+}
+.lhj11{
+    background: url(img_zhaoming.png) no-repeat center center;
+}
+/**巡检图标*/
+.lhj12{
+    background: url(img_dingwei.png) no-repeat center center;
+}
+.lhj13{
+    background: url(ing_guangbo.png) no-repeat center center;
+}
+.lhj14{
+    background: url(img_dianhua.png) no-repeat center center;
+}
+.hj-test{
+    position: relative;
+}
+.hj-test .btn-more{
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    font-size: 0.6rem;
+    color: #999;
+    outline: none;
+}
+.hj-test .btn-more:hover{
+    text-decoration: none;
+}
+.hj-test .m-widget5 .m-widget5__item .m-widget5__pic{
+    width: 44px;
+    text-align: center;
+}
+.hj-test .m-widget5 .m-widget5__item .m-widget5__content .m-widget5__title{
+    margin-bottom: 0.3rem;
+    font-size: 0.6rem;
+    color: #333;
+}
+.hj-test .m-widget5 .m-widget5__item .m-widget5__content{
+    vertical-align: middle;
+}
+.hj-test .m-widget5__desc{
+    display: block;
+    margin-bottom: 2px;
+    font-size: 0.6rem;
+    color: #666;
+    line-height: 1;
+}
+.hj-test .m-widget5__desc span{
+    float: right;
+    margin-right: 24px;
+}
+.hj-test .m-widget5{
+    margin-top: 0.8rem;
+}
+.hj-test .m-widget5 .m-widget5__item{
+    margin-bottom: 0.1rem;
+    padding-bottom: 0.1rem;
+    border-bottom: none;
+}
+.r-ico-box{
+    float: right;
+    width: 50px;
+}
+.staff-list{
+    padding: 20px 15px 14px;
+}
+.staff-list-inner .r-icos{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+.staff-list-inner .r-ico01{
+    background: url(ico_email.png)
+}
+.staff-list-inner .r-ico02{
+    background: url(ico_call.png)
+}
+
+/* modal */
+.gl-detail .modal-header{
+    background-color: #2089fe;
+    color: #fff;
+}
+.gl-detail .modal-content .modal-header{
+    padding: 20px 16px;
+}
+.gl-detail .modal-content .modal-header .modal-title{
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.gl-detail .modal-content .modal-header .modal-title span{
+    padding-left: 40px;
+    font-weight: normal;
+    color: #fff;
+    opacity: 0.8;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+}
+.gl-detail .modal-content .modal-header .close{
+    color: #fff;
+}
+.gl-detail .m-portlet.m-portlet--rounded{
+    padding: 0 0.6rem 0 1rem;
+}
+.gl-detail .h-set{
+    height: 112px;
+    line-height: 112px;
+}
+.modal-staff-list .m-widget4__title,
+.modal-staff-list .m-widget4__sub{
+    display: block;
+    line-height: 1;
+}
+.modal-staff-list .m-widget4__sub{
+    margin: 3px 0 6px;
+}
+.m-widget4 .modal-staff-list{
+    padding-top: 0.25rem;
+    padding-bottom: 0;
+}
+.m-widget4 .modal-staff-list .m-widget4__info{
+    padding-right: 0;
+    padding-left: 1rem;
+}
+.model-state-inner .m-widget14__header{
+    padding: 0;
+}
+.model-state-inner .m-demo-icon .m-demo-icon__preview{
+    padding-right: 6px;
+}
+.model-state-inner .m-demo-icon .m-demo-icon__class{
+    color: #333;
+}
+.model-state-inner .m-widget14__stat{
+    font-weight: bold;
+    color: #333;
+}
+.model-state-inner .m-widget14__stat span{
+   font-weight: normal;
+}
+.model-state-inner .m-widget14__legends{
+    padding-left: 8px;
+    border-left: 1px solid #e9e9e9;
+}
+.model-state-inner .m-widget14__legend{
+    margin-bottom: 0.4rem;
+}
+.model-state-inner .chart_exp{
+    font-size: 0.8rem;
+    color: #000;
+    text-align: center;
+}
+.date-text{
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    color: #919191;
+    font-size: 0.6rem;
+}
+.chart-tit{
+    padding-left: 12px;
+    font-size: 0.6rem;
+    color: #666;
+}
+.chart-tit strong{
+    font-size: 0.8rem;
+    color: #2089fe;
+}
+.h200{
+    height: 200px;
+}
+.mg-set{
+    margin: 0 16px;
+}
+.modal-hjjc-modal .m-demo-icon{
+    padding: 0;
+}
+.modal-hjjc-modal .m-stack--demo.m-stack--ver .m-stack__item, .m-stack--demo.m-stack--hor .m-stack__demo-item{
+    border: none;
+    background-color: transparent;
+}
+.mod-cont{
+    height: 80px;
+    border: 1px solid #e0e0e0;
+    border-radius: 1px;
+}
+.mod-cont strong,
+.mod-cont p{
+    font-size: 0.6rem;
+    line-height: 1;
+    text-align: center;
+}
+.mod-cont strong{
+    display: block;
+    margin-bottom: 6px;
+    padding-top: 20px;
+    color: #2089fe; 
+}
+.mod-cont p{
+    margin-bottom: 1px;
+    color: #666;
+}
+.mod-name{
+    text-align: center;
+    font-size: 0.6rem;
+    color: #333;
+}
+.m-demo-icon:hover{
+    background-color: transparent;
+}
+.hide{
+    display: none;
+}
+.btn-opt-wrap .btn-outline-primary{
+    color: #fff;
+    border-color: #fff;
+}
+.btn-opt-wrap .btn-outline-primary:not([disabled]):not(.disabled).active{
+    background-color: #fff;
+    color: #2089fe !important;
+    border-color: #fff;
+}
+.btn-opt-wrap .btn-outline-primary:hover{
+    background-color: #fff; 
+}
+.btn-opt-wrap .btn.btn-outline-primary:hover:not(:disabled){
+    color: #2089fe !important;
+}
+.sw-state .m-widget4__item{
+    padding: 0;
+}
+.sw-state .m-widget4__item .m-widget4__icon > i{
+    margin-left: 20px;
+    color: #333;
+}
+.sw-state .m-widget4__item .m-widget4__info{
+    padding-left: 0.6rem;
+}
+.sw-state .m-widget4__item .m-widget4__info .m-widget4__text{
+    color: #333;
+    font-size: 0.8rem;
+}
+.sw-state .m-widget4__item .m-widget4__ext .m-widget4__number{
+    color: #2089fe;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.sw-state .tag-state{
+    display: inline-block;
+    margin: 0 16px;
+    width: 42px; 
+    height: 24px;
+    line-height: 24px;
+    background-color: #15e18c;
+    color: #fff;
+    font-size: 0.6rem;
+    border-radius: 3px;
+    font-weight: normal;
+    text-align: center;
+}
+.m-stack.sub-stack.m-stack--ver .m-stack__item{
+    padding: 0 10px;
+    background-color: transparent;
+    border: none;
+    vertical-align: middle;
+}
+.sub-stack .mod-cont{
+    height: 40px;
+    text-align: center;
+}
+.sub-stack .mod-cont .la{
+    margin-top: 8px;
+    font-size: 1.8rem;
+    color: #333;
+}
+.sub-stack .mod-name{
+    padding-top: 8px;
+    color: #666;
+}
+.fq-info-list .m-widget5__item .m-widget5__desc{
+    color: #333;
+}
+.fq-info-list .m-widget5__item{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.bg-orange{
+    background-color: #f27a5f;
+}
+.bg-orange .btn-opt-wrap .btn.btn-outline-primary:hover:not(:disabled),
+.bg-orange .btn-opt-wrap .btn-outline-primary:not([disabled]):not(.disabled).active{
+    color: #f27a5f !important;
+}
+
+/* 巡检维护 */
+.sch-wrap{
+    padding-right: 8px;
+}
+.w100{
+    width: 100%;
+}
+.form-sch .col-md-8,
+.form-sch .col-md-4{
+    padding: 0;
+}
+.pl-none{
+    padding-left: 0;
+}
+.xj-table.m-datatable > .m-datatable__table > .m-datatable__head .m-datatable__row > .m-datatable__cell{
+    background-color: #fff
+}
+.xj-table.m-datatable.m-datatable--default.m-datatable--loaded > .m-datatable__table > .m-datatable__body .m-datatable__row > .m-datatable__cell{
+    background-color: #faf9fc;
+}
+.xj-table.m-datatable.m-datatable--default > .m-datatable__table > .m-datatable__body .m-datatable__row.m-datatable__row--even > .m-datatable__cell{
+    background-color: #fff;
+}
+.bg-white{
+    background-color: #fff;
+}
+.m-portlet .m-portlet__head.rask-yc-hd .m-portlet__head-caption .m-portlet__head-title .m-portlet__head-text{
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.m-stack--demo.m-stack--ver.rask-data .m-stack__item, .m-stack--demo.m-stack--hor .m-stack__demo-item{
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+.rask-data-name strong{
+    font-weight: normal;
+}
+.blue-color{
+    color: #2089fe;
+}
+.orange-color{
+    color: #ff7a45;
+}
+.wid95{
+    width: 95px;
+}
+.wid130{
+    width: 130px;
+}
+.rask-mod-hd{
+    display: table;
+    width: 100%;
+    margin-left: -2.2rem;
+}
+.rask-mod-hd h3{
+    display: table-cell;
+    margin-bottom: 0;
+    padding-left: 20px;
+    vertical-align: middle;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 38px;
+}
+.btn-hw{
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+}
+.btn-hw .btn-hw-inner{
+    margin-right: -2.2rem;
+}
+.table thead th{
+    background-color: transparent;
+}
+.m-list-search .qd-list .m-list-search__result-item .m-list-search__result-item-icon{
+    width: 24px;
+}
+.qd-list .fa{
+    font-size: 1.8rem;
+}
+.m-list-search .qd-list .m-list-search__result-item:hover .m-list-search__result-item-text{
+    color: #2089fe;
+}
+
+/* 任务管理 */
+.btn-zdrw .btn{
+    width: 100%;
+}
+.btn-zdrw .btn .btn-inner{
+    margin: 0 auto;
+    width: 100px;
+}
+
+/* 巡检统计 */
+.tj-form .m-portlet__body{
+    padding: 0;
+}
+.chart-mod-hd{
+    float: left;
+    font-size: 1.2rem;
+}
+.chart-mod .nav-pills{
+    justify-content: flex-end;
+}
+.chart-mod .nav-pills .nav-item{
+    flex: 0 1 auto;
+}
+.chart-mod .nav-pills .nav-link{
+    padding: 0;
+}
+.chart-mod .nav-pills .nav-link.active{
+    background-color: transparent;
+    color: #36a3f7;
+}
+.chart-item-pie, .chart-item-bar, .chart-item-line{
+    height: 200px;
+}
+
+/* 配置管理 */
+.pz-wrap .m-portlet__body{
+    padding: 1rem 2.2rem;   
+}
+.jc-info-list .m-widget13__item .m-widget13__text{
+    color: #666;
+}
+.jc-info-list .m-widget13__item .m-widget13__desc{
+    width: 8%;
+    color: #333;
+}
+.jc-info-list .text-color_blue{
+    display: block;
+    margin-bottom: 4px;
+    color: #2089fe;
+    font-weight: normal;
+}
+.jc-info-list .project-list span{
+    display: block;
+}
+.w200{
+    width: 200px;
+}
+.w400{
+    width: 400px;
+}
+
+/* 隐患管理 */
+.m-portlet .m-portlet__head .m-portlet__head-caption .m-portlet__head-title .yhzg-title{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* 预案编制-预案编制 */
+.res-list-item b,
+.res-list-item span{
+    display: block;
+    margin-bottom: 10px;
+}
+.item-selected{
+    background-color: #2089fe !important;
+    color: #fff;
+}
+
+/* 智慧监控 */
+.zhjk-box .btn-secondary:not([disabled]):not(.disabled):active,
+.zhjk-box .btn-secondary:not([disabled]):not(.disabled):focus{
+    color: #fff;
+    background-color: #36a3f7;
+    border-color: #36a3f7;
+}
+.form-box.zhjk-box{
+    position: relative;
+}
+.m-portlet .zhjk-hd{
+    padding: 0 16px;
+    height: 56px;
+    line-height: 56px;
+    background-color: #F8F8FF;
+    border-bottom: none;
+}
+.jk-opt-hd .fa-fire{
+    padding-right: 10px;
+    color: #2089fe;
+}
+.jk-opt-hd b{
+    padding-right: 20px;
+    font-weight: normal;
+}
+.jk-opt-hd .concat-info{
+    color: #666;
+}
+.opt-area i{
+    display: inline-block;
+    margin-left: 12px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.opt-area i.btn-phone{
+    background-image: url("ico_jk_call.png");
+}
+.opt-area i.btn-email{
+    background-image: url("ico_jk_email.png");
+}
+.zhjk-hd .btn-detail{
+    position: absolute;
+    top: 8px;
+    right: 30px;
+}
+.m-dropdown.btn-detail .m-dropdown__wrapper .m-dropdown__body{
+    padding: 6px 0;
+}
+.m-dropdown.dropdown-left-set.m-dropdown--arrow .m-dropdown__wrapper{
+    left: -21px;
+    top: 70%;
+}
+.m-dropdown.dropdown-right-set.m-dropdown--arrow .m-dropdown__wrapper{
+    right: -6px;
+    top: 70%;
+}
+.m-dropdown.dropdown-right-set.m-dropdown--arrow .m-dropdown__arrow.m-dropdown__arrow--left{
+    left: 209px;
+}
+.btn-detail .dropdown-toggle{
+    background-color: transparent;
+    border: none;
+}
+.btn-detail .dropdown-toggle::after{
+    display: none;
+}
+.btn-detail .dropdown-toggle i{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("ico_jk_warn.png");
+}
+/* 内边距 */
+.m-portlet .m-portlet__body.mpot-body-set{
+    padding: 5px 16px;
+}
+.item-jk-tit{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    line-height: 14px;
+    text-align: center;
+}
+.item-jk-tit span{
+    padding-left: 12px;
+    color: #666;
+    font-weight: bold;
+}
+.item-jk-tit a{
+    color: #999;
+    font-size: 12px;
+}
+.item-jk-cont{
+    display: flex;
+    flex-wrap: wrap;
+}
+.jk-cont-list{
+    margin-right: 16px;
+}
+.jk-cont-list .list-item-ico{
+    margin-bottom: 8px;
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+}
+.jk-cont-list .list-item-data{
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 14px;
+    color: #666;
+}
+.jk-cont-list.state-yellow .list-item-data{
+    color: #f39800;
+}
+.jk-cont-list.state-red .list-item-data{
+    color: #f70f0f;
+}
+
+.jk-cont-list .ico-kdgc{
+    background:  url("ico_state_black01.png") no-repeat center center;
+}
+
+.jk-cont-list .ico-type01{
+    background: #f0f4f6 url("ico_state_black01.png") no-repeat center center;
+}
+.jk-cont-list .ico-type02{
+    background: #f0f4f6 url("ico_state_black02.png") no-repeat center center;
+}
+.jk-cont-list .ico-type03{
+    background: #f0f4f6 url("ico_state_black03.png") no-repeat center center;
+}
+.jk-cont-list .ico-type04{
+    background: #f0f4f6 url("ico_state_black04.png") no-repeat center center;
+}
+.jk-cont-list .ico-type05{
+    background: #f0f4f6 url("ico_state_black05.png") no-repeat center center;
+}
+.jk-cont-list .ico-type06{
+    background: #f0f4f6 url("ico_state_black06.png") no-repeat center center;
+}
+.jk-cont-list .ico-type07{
+    background: #f0f4f6 url("ico_state_black07.png") no-repeat center center;
+}
+.jk-cont-list .ico-type08{
+    background: #f0f4f6 url("ico_state_black08.png") no-repeat center center;
+}
+.jk-cont-list.state-yellow .ico-type01{
+    background: #f0f4f6 url("ico_state_yellow01.png") no-repeat center center;
+}
+.jk-cont-list.state-yellow .ico-type02{
+    background: #f0f4f6 url("ico_state_yellow02.png") no-repeat center center;
+}
+.jk-cont-list.state-yellow .ico-type03{
+    background: #f0f4f6 url("ico_state_yellow03.png") no-repeat center center;
+}
+.jk-cont-list.state-yellow .ico-type04{
+    background: #f0f4f6 url("ico_state_yellow04.png") no-repeat center center;
+}
+.jk-cont-list.state-yellow .ico-type05{
+    background: #f0f4f6 url("ico_state_yellow05.png") no-repeat center center;
+}
+.jk-cont-list.state-yellow .ico-type06{
+    background: #f0f4f6 url("ico_state_yellow06.png") no-repeat center center;
+}
+.jk-cont-list.state-yellow .ico-type07{
+    background: #f0f4f6 url("ico_state_yellow07.png") no-repeat center center;
+}
+.jk-cont-list.state-yellow .ico-type08{
+    background: #f0f4f6 url("ico_state_yellow08.png") no-repeat center center;
+}
+.jk-cont-list.state-red .ico-type01{
+    background: #f0f4f6 url("ico_state_red01.png") no-repeat center center;
+}
+.jk-cont-list.state-red .ico-type02{
+    background: #f0f4f6 url("ico_state_red02.png") no-repeat center center;
+}
+.jk-cont-list.state-red .ico-type03{
+    background: #f0f4f6 url("ico_state_red03.png") no-repeat center center;
+}
+.jk-cont-list.state-red .ico-type04{
+    background: #f0f4f6 url("ico_state_red04.png") no-repeat center center;
+}
+.jk-cont-list.state-red .ico-type05{
+    background: #f0f4f6 url("ico_state_red05.png") no-repeat center center;
+}
+.jk-cont-list.state-red .ico-type06{
+    background: #f0f4f6 url("ico_state_red06.png") no-repeat center center;
+}
+.jk-cont-list.state-red .ico-type07{
+    background: #f0f4f6 url("ico_state_red07.png") no-repeat center center;
+}
+.jk-cont-list.state-red .ico-type08{
+    background: #f0f4f6 url("ico_state_red08.png") no-repeat center center;
+}
+.jk-subnav li{
+    line-height: 32px;
+}
+.menu-list-set{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* 预案编制-预案编制 */
+.res-list-item b,
+.res-list-item span{
+    display: block;
+    margin-bottom: 10px;
+}
+.item-selected{
+    background-color: #2089fe !important;
+    color: #fff;
+}
+
+/* 智慧监控 */
+.zhjk-box .btn-secondary:not([disabled]):not(.disabled):active,
+.zhjk-box .btn-secondary:not([disabled]):not(.disabled):focus{
+    color: #fff;
+    background-color: #36a3f7;
+    border-color: #36a3f7;
+}
+.form-box.zhjk-box{
+    position: relative;
+}
+.m-portlet .zhjk-hd{
+    padding: 0 16px;
+    height: 56px;
+    line-height: 56px;
+    background-color: #fbfbfb;
+    border-bottom: none;
+}
+.jk-opt-hd .fa-fire{
+    padding-right: 10px;
+    color: #2089fe;
+}
+.jk-opt-hd b{
+    padding-right: 20px;
+    font-weight: normal;
+}
+.jk-opt-hd .concat-info{
+    color: #666;
+}
+.opt-area i{
+    display: inline-block;
+    margin-left: 12px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.opt-area i.btn-phone{
+    background-image: url("ico_jk_call.png");
+}
+.opt-area i.btn-email{
+    background-image: url("ico_jk_email.png");
+}
+.zhjk-hd .btn-detail{
+    position: absolute;
+    top: 8px;
+    right: 30px;
+}
+.m-dropdown.btn-detail .m-dropdown__wrapper .m-dropdown__body{
+    padding: 6px 0;
+}
+.m-dropdown.dropdown-left-set.m-dropdown--arrow .m-dropdown__wrapper{
+    left: -21px;
+    top: 70%;
+}
+.m-dropdown.dropdown-right-set.m-dropdown--arrow .m-dropdown__wrapper{
+    right: -6px;
+    top: 70%;
+}
+.m-dropdown.dropdown-right-set.m-dropdown--arrow .m-dropdown__arrow.m-dropdown__arrow--left{
+    left: 209px;
+}
+.btn-detail .dropdown-toggle{
+    background-color: transparent;
+    border: none;
+}
+.btn-detail .dropdown-toggle::after{
+    display: none;
+}
+.btn-detail .dropdown-toggle i{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("ico_jk_warn.png");
+}
+.m-portlet .m-portlet__body.mpot-body-set{
+    padding: 5px 16px;
+}
+.item-jk-tit{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    line-height: 14px;
+    text-align: center;
+}
+.item-jk-tit span{
+    padding-left: 12px;
+    color: #666;
+    font-weight: bold;
+}
+.item-jk-tit a{
+    color: #999;
+    font-size: 12px;
+}
+.item-jk-cont{
+    display: flex;
+    flex-wrap: wrap;
+}
+.jk-cont-list{
+    margin-right: 16px;
+}
+.jk-cont-list .list-item-ico{
+    margin-bottom: 8px;
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+}
+.jk-cont-list .list-item-data{
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 14px;
+    color: #666;
+}
+.jk-cont-list.state-yellow .list-item-data{
+    color: #f39800;
+}
+.jk-cont-list.state-red .list-item-data{
+    color: #f70f0f;
+}
+.jk-cont-list .ico-type01{
+    background: #f0f4f6 url("ico_state_black01.png") no-repeat center center;
+}
+.jk-cont-list .ico-type02{
+    background: #f0f4f6 url("ico_state_black02.png") no-repeat center center;
+}
+.jk-cont-list .ico-type03{
+    background: #f0f4f6 url("ico_state_black03.png") no-repeat center center;
+}
+.jk-cont-list .ico-type04{
+    background: #f0f4f6 url("ico_state_black04.png") no-repeat center center;
+}
+.jk-cont-list .ico-type05{
+    background: #f0f4f6 url("ico_state_black05.png") no-repeat center center;
+}
+.jk-cont-list .ico-type06{
+    background: #f0f4f6 url("ico_state_black06.png") no-repeat center center;
+}
+.jk-cont-list .ico-type07{
+    background: #f0f4f6 url("ico_state_black07.png") no-repeat center center;
+}
+.jk-cont-list .ico-type08{
+    background: #f0f4f6 url("ico_state_black08.png") no-repeat center center;
+}
+.jk-cont-list.state-yellow .ico-type01{
+    background: #f0f4f6 url("ico_state_yellow01.png") no-repeat center center;
+}
+.jk-cont-list.state-yellow .ico-type02{
+    background: #f0f4f6 url("ico_state_yellow02.png") no-repeat center center;
+}
+.jk-cont-list.state-yellow .ico-type03{
+    background: #f0f4f6 url("ico_state_yellow03.png") no-repeat center center;
+}
+.jk-cont-list.state-yellow .ico-type04{
+    background: #f0f4f6 url("ico_state_yellow04.png") no-repeat center center;
+}
+.jk-cont-list.state-yellow .ico-type05{
+    background: #f0f4f6 url("ico_state_yellow05.png") no-repeat center center;
+}
+.jk-cont-list.state-yellow .ico-type06{
+    background: #f0f4f6 url("ico_state_yellow06.png") no-repeat center center;
+}
+.jk-cont-list.state-yellow .ico-type07{
+    background: #f0f4f6 url("ico_state_yellow07.png") no-repeat center center;
+}
+.jk-cont-list.state-yellow .ico-type08{
+    background: #f0f4f6 url("ico_state_yellow08.png") no-repeat center center;
+}
+.jk-cont-list.state-red .ico-type01{
+    background: #f0f4f6 url("ico_state_red01.png") no-repeat center center;
+}
+.jk-cont-list.state-red .ico-type02{
+    background: #f0f4f6 url("ico_state_red02.png") no-repeat center center;
+}
+.jk-cont-list.state-red .ico-type03{
+    background: #f0f4f6 url("ico_state_red03.png") no-repeat center center;
+}
+.jk-cont-list.state-red .ico-type04{
+    background: #f0f4f6 url("ico_state_red04.png") no-repeat center center;
+}
+.jk-cont-list.state-red .ico-type05{
+    background: #f0f4f6 url("ico_state_red05.png") no-repeat center center;
+}
+.jk-cont-list.state-red .ico-type06{
+    background: #f0f4f6 url("ico_state_red06.png") no-repeat center center;
+}
+.jk-cont-list.state-red .ico-type07{
+    background: #f0f4f6 url("ico_state_red07.png") no-repeat center center;
+}
+.jk-cont-list.state-red .ico-type08{
+    background: #f0f4f6 url("ico_state_red08.png") no-repeat center center;
+}
+.jk-subnav li{
+    line-height: 32px;
+}
+.menu-list-set{
+    display: flex;
+    justify-content: space-around;
+}
+.m-portlet.mb-set{
+    margin-bottom: 5px;
+}
+.row.pd-set .col-lg-6{
+    padding-left: 5px;
+    padding-right: 0px;
+}
+
+/* 结构调整 */
+
+/* 左侧侧边栏宽度设置 */
+.m-aside-left.wrap-left-set,
+.m-brand.wrap-brand-set{
+   /*  width:50%; */
+}
+
+/* 左侧侧边栏高度设置 */
+.m-aside-left.wrap-left-set{
+    margin-top: -20px;
+    height: auto;
+}
+
+/* 顶部栏高度设置 */
+.m-header--fixed.body-hd-set .m-body{
+    padding-top: 55px !important;
+}
+.m-header.wrap-header-set{
+    height: 50px;
+}
+.m-brand.wrap-brand-set .m-stack .m-brand__logo,
+.m-brand.wrap-brand-set .m-stack .m-brand__tools{
+    height: 50px !important;
+}
+
+
+body.m-aside-left--skin-dark .m-header.wrap-header-set .m-header-head{
+    box-shadow: none;
+    background-color:#2a3542;
+}
+
+/* 右侧内容块四周间距设置 */
+.m-body .m-content.wrap-content-set{
+    padding: 0px 5px;
+}
+
+/*indexHome 菜单tab切换 start*/
+/*返回首页按钮 -by gq at 2018.9.25
+		.m-menu__index{
+			display: table;
+			table-layout: fixed;
+			width: 100%;
+			text-decoration: none;
+			position: relative;
+			outline: none;
+			height: 44px;
+			padding: 9px 30px;
+			margin-top: 30px;
+		}
+		.m-menu__index:hover{
+			text-decoration: none;
+			cursor: pointer;
+			transition: background-color 0.3s;
+			background-color: #292b3a;
+			color: #2739c1;
+		}
+		.m-menu__index-icon{
+			display: table-cell;
+			height: 100%;
+			vertical-align: middle;
+			line-height: 0;
+			text-align: left;
+			width: 35px;
+			font-size: 1.4rem;
+			color: #525672;
+		}
+		.m-menu__index:hover .m-menu__index-icon{
+			color: #8c8ea4;
+		}
+		.m-menu__index-text{
+			display: table-cell;
+			height: 100%;
+			width: 100%;
+			padding: 0;
+			vertical-align: middle;
+			font-weight: 400;
+			font-size: 1.02rem;
+			text-transform: initial;
+			color: #fff;
+		}
+		.m-menu__index:hover .m-menu__index-text{
+			color: #525672;
+		}*/
+
+/*菜单页*/
+.scroll-tabs{
+    overflow-y: auto;
+}
+.indexHome-pagetabs .nav {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+.indexHome-pagetabs .nav > li {
+    position: relative;
+    display: block;
+}
+.indexHome-pagetabs .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: #666;
+}
+.indexHome-pagetabs .nav > li > a:hover,
+.indexHome-pagetabs .nav > li > a:focus {
+    text-decoration: none;
+    color: #000;
+    background: #DBDCE3;
+}
+.indexHome-pagetabs .nav > li.disabled > a {
+    color: #777777;
+}
+.indexHome-pagetabs .nav > li.disabled > a:hover,
+.indexHome-pagetabs .nav > li.disabled > a:focus {
+    color: #777777;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: not-allowed;
+}
+.indexHome-pagetabs .nav .open > a,
+.indexHome-pagetabs .nav .open > a:hover,
+.indexHome-pagetabs .nav .open > a:focus {
+    background-color: #eeeeee;
+    border-color: #337ab7;
+}
+.indexHome-pagetabs .nav .nav-divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}
+.indexHome-pagetabs .nav > li > a > img {
+    max-width: none;
+}
+.indexHome-pagetabs .nav-tabs {
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 0 !important;
+}
+.indexHome-pagetabs .nav-tabs > li {
+    /*float: left;*/
+    margin-bottom: -1px;
+}
+.indexHome-pagetabs .nav-tabs > li > a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+}
+.indexHome-pagetabs .nav-tabs > li > a:hover {
+    border-color: #eeeeee #eeeeee #dddddd;
+}
+.indexHome-pagetabs .nav-tabs > li.active > a,
+.indexHome-pagetabs .nav-tabs > li.active > a:hover,
+.indexHome-pagetabs .nav-tabs > li.active > a:focus {
+    color: #000;
+    background-color: #DBDCEA;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    cursor: pointer;
+}
+
+/*首页菜单 关闭按钮样式*/
+.indexHome-pagetabs .h_close {
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    color: #c2c2c2;
+    text-align: center;
+}
+
+.indexHome-pagetabs .h_close:hover {
+    border-radius: 50%;
+    background-color: #FF5722;
+    color: #fff;
+}
+
+
+
+
+.indexHome-pagetabs .nav-tabs.nav-justified {
+    width: 100%;
+    border-bottom: 0;
+}
+.indexHome-pagetabs .nav-tabs.nav-justified > li {
+    float: none;
+}
+.indexHome-pagetabs .nav-tabs.nav-justified > li > a {
+    text-align: center;
+    margin-bottom: 5px;
+}
+.indexHome-pagetabs .nav-tabs.nav-justified > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+}
+@media (min-width: 768px) {
+    .indexHome-pagetabs .nav-tabs.nav-justified > li {
+        display: table-cell;
+        width: 1%;
+    }
+    .indexHome-pagetabs .nav-tabs.nav-justified > li > a {
+        margin-bottom: 0;
+    }
+}
+.indexHome-pagetabs .nav-tabs.nav-justified > li > a {
+    margin-right: 0;
+    border-radius: 4px;
+}
+.indexHome-pagetabs .nav-tabs.nav-justified > .active > a,
+.indexHome-pagetabs .nav-tabs.nav-justified > .active > a:hover,
+.indexHome-pagetabs .nav-tabs.nav-justified > .active > a:focus {
+    border: 1px solid #dddddd;
+}
+@media (min-width: 768px) {
+    .indexHome-pagetabs .nav-tabs.nav-justified > li > a {
+        border-bottom: 1px solid #dddddd;
+        border-radius: 4px 4px 0 0;
+    }
+    .indexHome-pagetabs .nav-tabs.nav-justified > .active > a,
+    .indexHome-pagetabs .nav-tabs.nav-justified > .active > a:hover,
+    .indexHome-pagetabs .nav-tabs.nav-justified > .active > a:focus {
+        border-bottom-color: #ffffff;
+    }
+}
+.indexHome-pagetabs .nav-pills > li {
+    float: left;
+}
+.indexHome-pagetabs .nav-pills > li > a {
+    border-radius: 4px;
+}
+.indexHome-pagetabs .nav-pills > li + li {
+    margin-left: 2px;
+}
+.indexHome-pagetabs .nav-pills > li.active > a,
+.indexHome-pagetabs .nav-pills > li.active > a:hover,
+.indexHome-pagetabs .nav-pills > li.active > a:focus {
+    color: #ffffff;
+    background-color: #337ab7;
+}
+
+.indexHome-pagetabs .tab-content > .tab-pane {
+    display: none;
+}
+.indexHome-pagetabs .tab-content > .active {
+    display: block;
+}
+.indexHome-pagetabs .nav-tabs .dropdown-menu {
+    margin-top: -1px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+/*tab 项*/
+.nav-my-tab{
+    position: relative;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 80px 0 40px;
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+}
+.indexHome-tabs-control{
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    box-sizing: border-box;
+    color: #333;
+}
+.tabs-icon-prev{
+    left: 0;
+    border-left: none;
+    border-right: 1px solid #f6f6f6;
+}
+.tabs-icon-next{
+    right: 40px;
+}
+.tabs-icon-down{
+    right: 0;
+}
+.indexHome-tabs-control:hover{
+    color: #000;
+    background: #DBDCE3;
+}
+.tabs-icon-nav-more{
+    display: block;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+}
+.indexHome-tabs-control .m-dropdown__wrapper{
+    width: 125px;
+}
+.indexHome-tabs-control .m-dropdown__body{
+    padding: 10px !important;
+}
+
+.indexHome-tabs-control .m-nav__link{
+    padding: 0 !important;
+}
+.m-nav__link-text{
+    font-size: 12px;
+    line-height: 20px;
+}
+
+
+.indexHome-pagetabs{
+    margin: 0;
+    overflow: hidden;
+    text-align: left !important;
+    height: 42px;
+    position: relative;
+}
+
+.indexHome-pagetabs .nav-tabs {
+    position: relative;
+    height: 42px;
+    white-space: nowrap;
+    left: 0;
+}
+
+
+/*indexHome 菜单tab切换 end*/
+
+
+
+
+/* 其它 */
+.custom-nav_tab .tab-content.tab-content-gj{
+    margin-left: 12px;
+}
+.info-list.info-list-gj .m-widget4__item{
+    padding-left: 0;
+}
+.info-list.info-list-gj .info-list-ico{
+    margin-right: 10px;
+}
+
+.m-datatable.m-datatable--default > .m-datatable__table > .m-datatable__body .m-datatable__row > .m-datatable__cell{
+    /*padding: 1px 5px;*/
+}
+
+/*通讯系统*/
+.tx-cont-list .list-item-ico{
+    margin-bottom: 8px;
+    width: 100px;
+    height: 130px;
+    border-radius: 8px;
+}
+.tx-cont-list .ico-ap{
+/*     background: #f0f4f6 url("ap.png") no-repeat center center; */
+    background: url("ap.png") no-repeat center center;
+}
+.tx-cont-list .ico-duijiangji{
+    background: url("duijiangji.png") no-repeat center center;
+}
+/*火灾系统*/
+.tx-cont-list .list-item-ico{
+    margin-bottom: 8px;
+    width: 100px;
+    height: 130px;
+    border-radius: 8px;
+}
+.tx-cont-list .ico-krqttc{
+    background: url("krqttc.png") no-repeat center center;
+}
+.tx-cont-list .ico-gl{
+    background: url("gl.png") no-repeat center center;
+}
+.tx-cont-list .ico-krqtsgbkq{
+    background: url("可燃气体声光报警器.png") no-repeat center center;
+}
+.tx-cont-list .ico-gytcq{
+    background: url("烟感探测器.png") no-repeat center center;
+}
+/*安全防范系统*/
+.tx-cont-list .list-item-ico{
+    margin-bottom: 8px;
+    width: 100px;
+    height: 130px;
+    border-radius: 8px;
+}
+.tx-cont-list .ico-tantou{
+    background: url("探头.png") no-repeat center center;
+}
+.tx-cont-list .ico-jingbao{
+    background: url("警报.png") no-repeat center center;
+}
+.tx-cont-list .ico-qiang{
+    background: url("车道摄像机.png") no-repeat center center;
+}
+.tx-cont-list .ico-banqiu{
+    background: url("半球摄像机.png") no-repeat center center;
+}
+
+/*设备监控页面*/
+.equipment-mo-cont3{
+    position: relative;
+    height: 100%;
+    box-shadow: 0px 1px 15px 1px rgba(81, 77, 92, 0.08);
+    background-color: #fff;
+}
+
+.equipment-mo-cont h5{
+    padding: 6px 0 2px 10px;
+}
+
+
+/*告警状态的显示效果-右侧悬浮可折叠的告警信息提示框 start*/
+.equipment-alarm-sidebar {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 230px;
+    height: 340px;
+    color: #f0f0f0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1000;
+}
+.equipment-alarm-sidebar-hide {
+    right: -230px !important;
+}
+.equipment-alarm-sidebar-content {
+    position: relative;
+    padding: 0 3px;
+    height: 100%;
+    overflow: auto;
+}
+.equipment-alarm-sidebar-btn {
+    position: absolute;
+    top: 32px;
+    left: -25px;
+    width: 25px;
+    height: 50px;
+    border-radius: 25px 0 0 25px;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1005;
+    cursor: pointer;
+}
+.equipment-alarm-sidebar-btn i {
+     margin: 15px 6px;
+ }
+
+.info-list-ea-sidebar .info-list-title {
+    margin: 10px 0 0 10px;
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #fff;
+}
+
+.m-widget-eas {
+    padding: 0 10px;
+}
+.m-widget-eas .m-widget-eas__item {
+    padding-top: 0.6rem;
+    border-bottom: 1px dashed #bfb8b8;
+}
+.m-widget-eas .m-widget-eas__item:last-child {
+    border-bottom: none;
+}
+
+.m-widget-eas__icon {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.m-widget-eas__icon .info-list-icon{
+    display: inline-block;
+    margin-top: 2px;
+    width: 21px;
+    height: 21px;
+}
+
+.m-widget-eas__icon .iflic-warn{
+    background: url(ico_warning.png) no-repeat center center;
+}
+.m-widget-eas__icon .iflic-danger{
+    background: url(ico_danger.png) no-repeat center center;
+}
+.m-widget-eas__icon .iflic-msg{
+    background: url(ico_message.png) no-repeat center center;
+}
+
+.widget-eas__info {
+    display: inline-block;
+    /*width: 178px;*/
+    width: 161px;
+    font-size: 12px;
+}
+
+.m-widget-eas__title {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #fff;
+}
+.m-widget-eas__sub {
+    display: block;
+    color: #f0f0f0;
+}
+.m-widget-eas__sub_danger {
+    color: #fb644f;
+}
+.m-widget-eas__sub em {
+    color: #ffc3c3 !important;
+}
+
+/*告警状态的显示效果-右侧悬浮可折叠的告警信息提示框 end*/
+
+
+/*环境监测情况*/
+.eq-m-portlet .eq-m-portlet__body{
+    padding: 2rem 2rem 1rem 2rem;
+}
+.equipment-mo-table,.equipment-mo-table tr th, .equipment-mo-table tr td {
+    border: 1px solid #342F2C;
+    padding-left: 1rem;
+    vertical-align: middle;
+}
+
+.eq-m-portlet{
+    box-shadow: 0px 1px 15px 1px rgba(81, 77, 92, 0.08);
+    background-color: #fff;
+}
+
+.excel-td-box{
+    width: 42%;
+    display: inline-block;
+}
+
+
+/*环境数据*/
+.eq-item-cont{
+    padding: 0 24px;
+}
+
+.eq-item-cont .eq-item-cont-stack {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.eq-item-cont .border-bottom-set {
+    border-bottom: 1px solid #ebedf2;
+}
+.eq-item-cont-stack__item {
+    position: relative;
+    background-color: #fff;
+    border: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 2px;
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+}
+
+.eq-item-cont-stack__item-left{
+    width: 40% !important;
+}
+.eq-item-cont-stack__item-right{
+    width: 60% !important;
+    text-align: left !important;
+}
+
+.eq-item-cont-stack__item .jc-icon-01 {
+    background: url('/images/equipmentImgs/icons/top_icon01.png');
+}
+.eq-item-cont-stack__item .jc-icon-02 {
+    background: url('/images/equipmentImgs/icons/top_icon02.png');
+}
+.eq-item-cont-stack__item .jc-icon-03 {
+    background: url('/images/equipmentImgs/icons/top_icon03.png');
+}
+.eq-item-cont-stack__item .jc-icon-04 {
+    background: url('/images/equipmentImgs/icons/top_icon04.png');
+}
+.eq-item-cont-stack__item .jc-icon-05 {
+    background: url('/images/equipmentImgs/icons/top_icon05.png');
+}
+.eq-item-cont-stack__item .jc-icon-06 {
+    background: url('/images/equipmentImgs/icons/top_icon06.png');
+}
+.eq-item-cont-stack__item .jc-icon-07 {
+    background: url('/images/equipmentImgs/icons/top_icon07.png');
+}
+.eq-item-cont-stack__item .jc-icon-08 {
+    background: url('/images/equipmentImgs/icons/top_icon08.png');
+}
+
+.eq-item-cont-stack__item .top-icons {
+    display: block;
+    margin: 1px auto;
+    width: 26px;
+    height: 28px;
+}
+
+
+.eq-item-cont-stack__item .under-text-btn {
+    padding: 0 15px;
+    border-radius: 40%;
+    border: 1px solid #ebedf2;
+
+}
+
+.text-inner-em{
+    display: inline-block;
+    font-size: 2.1rem;
+    vertical-align: top;
+    width: 70px;
+}
+.text-right-small{
+    display: inline-block;
+}
+.text-right-small span {
+    display: block;
+}
+.eq-item-cont .text-green{
+    color: #54ce7b;
+}
+
+.eq-item-cont .text-red{
+    color: #f23454;
+}
+
+
+
+
+/*视频*/
+.video-cont {
+    margin: 0;
+    padding: 10px;
+}
+.video-cont li{
+    max-width: 250px;
+    list-style: none;
+    margin: 10px auto;
+}
+.video-cont-selected {
+    border: 2px solid red;
+}
+
+/*tab切换*/
+.eq-nav-tabs{
+    margin: 0 !important;
+}
+.eq-nav-tabs .m-tabs__item{
+    margin-left: 15px !important;
+    margin-right: 0 !important;
+}
+.eq-nav-tabs .m-tabs__link{
+    padding: 8px 2px;
+}
+
+.equipment-mo-title{
+    height: 30px;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    /*box-shadow: 0px 1px 15px 1px rgba(81, 77, 92, 0.08);*/
+    background-color: #fff;
+}
+.equipment-mo-title .left-arrow,.equipment-mo-title .right-arrow{
+    margin-top: -13px;
+}
+.equipment-mo-arrow-left, .equipment-mo-arrow-right {
+    position: absolute;
+    top: 4px;
+    z-index: 9;
+    height: 22px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    padding: 2px 6px;
+    color: #fff;
+}
+.equipment-mo-arrow-left:hover, .equipment-mo-arrow-right:hover {
+    text-decoration: none;
+}
+.equipment-mo-arrow-left {
+    left: 20px;
+    background-color: #000;
+}
+.equipment-mo-arrow-right {
+    right: 20px;
+    background-color: #000;
+}
+
+
+.eq-tab-pane {
+    margin: 0 auto;
+    width: 1580px;
+    height: 288px;
+    position: relative;
+}
+.eq-tab-pane-gas {
+    background: url('/images/equipmentImgs/Gas-tank.png') no-repeat;
+}
+.eq-tab-pane-electric-first {
+    background: url('/images/equipmentImgs/Electric-power-cabin-1st.png') no-repeat;
+}
+.eq-tab-pane-electric-second {
+    background: url('/images/equipmentImgs/Electric-power-cabin-2nd.png') no-repeat;
+}
+.eq-tab-pane-comprehensive-first {
+     background: url('/images/equipmentImgs/Comprehensive-cabin-1st.png') no-repeat;
+ }
+.eq-tab-pane-comprehensive-second {
+    background: url('/images/equipmentImgs/Comprehensive-cabin-2nd.png') no-repeat;
+}
+.eq-tab-pane-thermal-first {
+    background: url('/images/equipmentImgs/Thermal-tank-1st.png') no-repeat;
+}
+.eq-tab-pane-thermal-second {
+    background: url('/images/equipmentImgs/Thermal-tank-2nd.png') no-repeat;
+}
+
+/* 舱室中图标 */
+.eq-inner-icons {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+}
+.eq-inner-icons::before {
+    font-size: 10px;
+    color: #000;
+    display: inline-block;
+    width: 125px;
+    padding: 6px 0 0 25px;
+}
+
+.eq-inner-icons:hover {
+    cursor: pointer;
+}
+/*摄像头： 左、右*/
+.eq_icon_camera_left{
+    background: url('/images/equipmentImgs/icons/eq_icons.png') no-repeat 0 0;
+}
+.eq_icon_camera_right{
+    background: url('/images/equipmentImgs/icons/eq_icons.png') no-repeat -30px 0;
+}
+/*甲烷*/
+.eq_icon_ch4{
+    background: url('/images/equipmentImgs/icons/eq_icons.png') no-repeat -38px -91px;
+}
+/*硫化氢*/
+.eq_icon_h2s{
+    background: url('/images/equipmentImgs/icons/eq_icons.png') no-repeat -110px -91px;
+}
+/*氧气*/
+.eq_icon_o2{
+    background: url('/images/equipmentImgs/icons/eq_icons.png') no-repeat -76px -91px;
+}
+
+/*温湿度液位计*/
+.eq_icon_temperature{
+    background: url('/images/equipmentImgs/icons/eq_icons.png') no-repeat 0 -122px;
+}
+/*排风扇 静态*/
+.eq_icon_fan{
+    background: url('/images/equipmentImgs/icons/eq_icons.png') no-repeat 0 -29px;
+}
+/*排风扇 动态*/
+.eq_icon_fan_animation{
+    background: url('/images/equipmentImgs/icons/eq-icons_fan.gif') no-repeat;
+}
+/*70℃防火阀*/
+.eq_icon_fire_damper{
+    background: url('/images/equipmentImgs/icons/eq_icons.png') no-repeat -39px -123px;
+}
+/*排水泵 静态*/
+.eq_icon_pump{
+    height: 34px !important;
+    /*background: url('/images/equipmentImgs/icons/eq_icons.png') no-repeat -67px 0;*/
+    background: url('/images/equipmentImgs/icons/eq_icons.png') no-repeat -75px -122px;
+}
+/*排水泵 动态*/
+.eq_icon_pump_animation{
+    height: 34px !important;
+    background: url('/images/equipmentImgs/icons/eq-icons_pump.gif') no-repeat;
+}
+/*排水泵-液位计 投入式*/
+.eq_icon_pump_level_in{
+    /*background: url('/images/equipmentImgs/icons/eq_icons.png') no-repeat -81px -57px;*/
+    background: url('/images/equipmentImgs/icons/eq_icons.png') no-repeat -150px -128px;
+}
+/*排水泵-液位计 浮球*/
+.eq_icon_pump_level_ball{
+    /*background: url('/images/equipmentImgs/icons/eq_icons.png') no-repeat -81px -57px;*/
+    background: url('/images/equipmentImgs/icons/eq_icons.png') no-repeat -115px -127px;
+}
+
+
+/*入侵报警*/
+.eq_icon_intrusion_alarm{
+    background: url('/images/equipmentImgs/icons/eq_icons.png') no-repeat -35px -57px;
+}
+
+/*声光报警器*/
+.eq_icon_audible_visual_alarm{
+    background: url('/images/equipmentImgs/icons/eq_icons.png') no-repeat 0 -60px;
+}
+
+/*无线AP*/
+.eq_icon_wifi_ap{
+    background: url('/images/equipmentImgs/icons/eq_icons.png') no-repeat -173px -29px;
+}
+
+/*无线对讲机*/
+.eq_icon_wireless_intercom{
+    background: url('/images/equipmentImgs/icons/eq_icons.png') no-repeat -135px -29px;
+}
+
+/*超声波液位计*/
+.eq_icon_ultrasonic{
+    background: url('/images/equipmentImgs/icons/eq_icons.png') no-repeat 0 -92px;
+}
+
+/*通讯电话*/
+.eq_icon_telephone{
+  background: url('/images/equipmentImgs/icons/eq_icons.png') no-repeat -156px -92px;
+}
+
+/*双鉴探测器*/
+.eq_icon_double_testing{
+    background: url('/images/equipmentImgs/icons/eq_icons.png') no-repeat -153px -57px;
+}
+
+
+/*1129 无实际图标  防火门*/
+.eq_icon_fire_door{
+    width: 10px;
+    height: 90px;
+    position: absolute;
+    /*border: 1px solid #ead90e;*/
+}
+.eq_icon_fire_door::before {
+    font-size: 10px;
+    color: #000;
+    display: inline-block;
+    width: 125px;
+    margin: 60px 0 0 12px;
+    /*content: "防火门";*/
+}
+
+.eq_icon_fire_door:hover {
+    cursor: pointer;
+}
+/*1129 无实际图标 黄色液压井盖*/
+.eq_icon_manhole_cover{
+    width: 42px;
+    height: 8px;
+    position: absolute;
+    /*border: 1px solid #ead90e;*/
+}
+.eq_icon_manhole_cover::before {
+    font-size: 10px;
+    color: #000;
+    display: inline-block;
+    width: 125px;
+    padding: 6px 0 0 15px;
+    /*content: "液压井盖";*/
+}
+
+.eq_icon_manhole_cover:hover {
+    cursor: pointer;
+}
+
+/*各图标位置---燃气舱*/
+/*舱内部设备*/
+/*1129 新增防火门*/
+.gas-inner-icons-fire-door_left{
+    top: 135px;
+    left: 238px;
+}
+/*.gas-inner-icons-fire-door_left::before {*/
+    /*content: "防火门";*/
+/*}*/
+.gas-inner-icons-fire-door_right{
+    top: 135px;
+    left: 1148px;
+}
+/*.gas-inner-icons-fire-door_right::before {*/
+    /*content: "防火门";*/
+/*}*/
+
+.gas-inner-icons-camera_left {
+    top: 150px;
+    left: 260px;
+}
+/*.gas-inner-icons-camera_left::before {*/
+    /*content: "摄像头";*/
+/*}*/
+.gas-inner-icons-camera_right {
+    top: 150px;
+    left: 1110px;
+}
+
+.gas-inner-icons-ch4 {
+    top: 135px;
+    left: 730px;
+}
+/*.gas-inner-icons-ch4::before {*/
+    /*content: "CH4";*/
+/*}*/
+
+.gas-inner-icons-h2s {
+    top: 175px;
+    left: 735px;
+}
+/*.gas-inner-icons-h2s::before {*/
+    /*content: "H2S";*/
+/*}*/
+
+.gas-inner-icons-o2 {
+    top: 155px;
+    left: 690px;
+}
+/*.gas-inner-icons-o2::before {*/
+    /*content: "O2";*/
+/*}*/
+
+.gas-inner-icons-temperature {
+    top: 155px;
+    left: 770px;
+}
+/*.gas-inner-icons-temperature::before {*/
+    /*content: "温湿度液位计";*/
+/*}*/
+
+.gas-inner-icons-fan00 {
+    top: 96px;
+    left: 284px;
+}
+/*.gas-inner-icons-fan00::before {*/
+    /*content: "主风机";*/
+/*}*/
+.gas-inner-icons-fan01 {
+    top: 96px;
+    left: 249px;
+}
+/*.gas-inner-icons-fan01::before {*/
+    /*content: "备";*/
+/*}*/
+.gas-inner-icons-fan10 {
+    top: 96px;
+    left: 1123px;
+}
+/*.gas-inner-icons-fan10::before {*/
+    /*content: "主风机";*/
+/*}*/
+.gas-inner-icons-fan11 {
+    top: 96px;
+    left: 1087px;
+}
+/*.gas-inner-icons-fan11::before {*/
+    /*content: "备";*/
+/*}*/
+
+.gas-inner-icons-fire_damper00 {
+    top: 125px;
+    left: 284px;
+}
+/*.gas-inner-icons-fire_damper00::before {*/
+    /*content: "主防火阀";*/
+/*}*/
+.gas-inner-icons-fire_damper01 {
+    top: 125px;
+    left: 249px;
+}
+/*.gas-inner-icons-fire_damper01::before {*/
+    /*content: "备";*/
+/*}*/
+.gas-inner-icons-fire_damper10 {
+    top: 125px;
+    left: 1124px;
+}
+.gas-inner-icons-fire_damper11 {
+    top: 125px;
+    left: 1090px;
+}
+
+.gas-inner-icons-pump_level {
+    top: 215px;
+    left: 727px;
+}
+/*.gas-inner-icons-pump_level::before {*/
+    /*content: "液位计";*/
+/*}*/
+/*1129 新增液位计*/
+.gas-inner-icons-pump_level_in{
+    top: 220px;
+    left: 347px;
+}
+.gas-inner-icons-pump_level_ball-10{
+    top: 212px;
+    left: 327px;
+}
+.gas-inner-icons-pump_level_ball-11{
+    top: 212px;
+    left: 365px;
+}
+
+.gas-inner-icons-pump00 {
+    top: 240px;
+    left: 360px;
+}
+/*.gas-inner-icons-pump00::before {
+    content: "主潜水泵";
+}*/
+
+.gas-inner-icons-pump11 {
+    top: 240px;
+    left: 331px;
+}
+/*
+.gas-inner-icons-pump11::before {
+    content: "备";
+}
+*/
+
+.gas-inner-icons-ultrasonic {
+    top: 140px;
+    left: 590px;
+}
+/*.gas-inner-icons-ultrasonic::before {*/
+    /*content: "超声波液位计";*/
+/*}*/
+
+.gas-inner-icons-telephone {
+    top: 190px;
+    left: 1100px;
+}
+/*.gas-inner-icons-telephone::before {*/
+    /*content: "通讯电话";*/
+/*}*/
+.gas-inner-icons-wifi_ap {
+    top: 145px;
+    left: 390px;
+}
+/*.gas-inner-icons-wifi_ap::before {*/
+    /*content: "无线AP";*/
+/*}*/
+.gas-inner-icons-wireless_intercom {
+    top: 145px;
+    left: 450px;
+}
+/*.gas-inner-icons-wireless_intercom::before {*/
+    /*content: "无线对讲机";*/
+/*}*/
+
+
+/*公共设备夹层*/
+/*左*/
+/*1129新增 液压井盖*/
+.eq-tab-pane-gas .left-interlayer-icons_manhole_cover{
+    top: 33px;
+    left: 64px;
+}
+
+.eq-tab-pane-gas .left-interlayer-icons-camera_right {
+    top: 72px;
+    left: 565px;
+}
+
+.eq-tab-pane-gas .left-interlayer-icons-temperature {
+    top: 72px;
+    left: 455px;
+}
+
+.eq-tab-pane-gas .left-interlayer-icons-ch4 {
+    top: 60px;
+    left: 415px;
+}
+
+.eq-tab-pane-gas .left-interlayer-icons-h2s {
+    top: 85px;
+    left: 417px;
+}
+
+.eq-tab-pane-gas .left-interlayer-icons-o2 {
+    top: 72px;
+    left: 370px;
+}
+
+.eq-tab-pane-gas .left-interlayer-icons-audible_visual_alarm {
+    top: 35px;
+    left: 145px;
+}
+/*.eq-tab-pane-gas .left-interlayer-icons-audible_visual_alarm::before {*/
+    /*content: "声光报警器";*/
+/*}*/
+
+.eq-tab-pane-gas .left-interlayer-icons-double_testing {
+    top: 65px;
+    left: 145px;
+}
+/*.eq-tab-pane-gas .left-interlayer-icons-double_testing::before {*/
+    /*content: "双鉴探测器";*/
+/*}*/
+
+/*右*/
+/*1129新增 液压井盖*/
+.eq-tab-pane-gas .right-interlayer-icons_manhole_cover{
+    top: 38px;
+    left: 977px;
+}
+
+.eq-tab-pane-gas .right-interlayer-icons-camera_left {
+    top: 72px;
+    left: 1010px;
+}
+
+.eq-tab-pane-gas .right-interlayer-icons-temperature {
+    top: 72px;
+    left: 1095px;
+}
+
+.eq-tab-pane-gas .right-interlayer-icons-ch4 {
+    top: 50px;
+    left: 1060px;
+}
+
+.eq-tab-pane-gas .right-interlayer-icons-h2s {
+    top: 85px;
+    left: 1060px;
+}
+
+.eq-tab-pane-gas .right-interlayer-icons-o2 {
+    top: 66px;
+    left: 1050px;
+}
+
+.eq-tab-pane-gas .right-interlayer-icons-audible_visual_alarm {
+    top: 68px;
+    left: 1170px;
+}
+
+.eq-tab-pane-gas .right-interlayer-icons-double_testing {
+    top: 93px;
+    left: 1180px;
+}
+
+/*各图标位置---燃气舱*/
+
+
+/*各图标位置---电力舱-标准段1*/
+/*舱内部设备*/
+/*1129 新增防火门*/
+.epc-1st-inner-icons-fire-door_left{
+    top: 136px;
+    left: 232px;
+}
+/*.epc-1st-inner-icons-fire-door_left::before {*/
+    /*content: "防火门";*/
+/*}*/
+.epc-1st-inner-icons-fire-door_right{
+    top: 136px;
+    left: 912px;
+}
+/*.epc-1st-inner-icons-fire-door_right::before {*/
+    /*content: "防火门";*/
+/*}*/
+
+.epc-1st-inner-icons-camera_left {
+    top: 150px;
+    left: 250px;
+}
+/*.epc-1st-inner-icons-camera_left::before {*/
+    /*content: "摄像头";*/
+/*}*/
+.epc-1st-inner-icons-camera_right {
+    top: 150px;
+    left: 880px;
+}
+
+.epc-1st-inner-icons-ch4 {
+    top: 135px;
+    left: 495px;
+}
+/*.epc-1st-inner-icons-ch4::before {*/
+    /*content: "CH4";*/
+/*}*/
+
+.epc-1st-inner-icons-h2s {
+    top: 175px;
+    left: 497px;
+}
+/*.epc-1st-inner-icons-h2s::before {*/
+    /*content: "H2S";*/
+/*}*/
+
+.epc-1st-inner-icons-o2 {
+    top: 155px;
+    left: 465px;
+}
+/*.epc-1st-inner-icons-o2::before {*/
+    /*content: "O2";*/
+/*}*/
+
+.epc-1st-inner-icons-temperature {
+    top: 155px;
+    left: 520px;
+}
+/*.epc-1st-inner-icons-temperature::before {*/
+    /*content: "温湿度液位计";*/
+/*}*/
+
+.epc-1st-inner-icons-fan00 {
+    top: 96px;
+    left: 279px;
+}
+/*.epc-1st-inner-icons-fan00::before {*/
+    /*content: "主风机";*/
+/*}*/
+.epc-1st-inner-icons-fan01 {
+    top: 96px;
+    left: 243px;
+}
+/*.epc-1st-inner-icons-fan01::before {*/
+    /*content: "备";*/
+/*}*/
+.epc-1st-inner-icons-fan10 {
+    top: 96px;
+    left: 884px;
+}
+/*.epc-1st-inner-icons-fan10::before {*/
+    /*content: "主风机";*/
+/*}*/
+.epc-1st-inner-icons-fan11 {
+    top: 96px;
+    left: 848px;
+}
+/*.epc-1st-inner-icons-fan11::before {*/
+    /*content: "备";*/
+/*}*/
+
+.epc-1st-inner-icons-fire_damper00 {
+    top: 125px;
+    left: 279px;
+}
+/*.epc-1st-inner-icons-fire_damper00::before {*/
+    /*content: "主防火阀";*/
+/*}*/
+.epc-1st-inner-icons-fire_damper01 {
+    top: 125px;
+    left: 242px;
+}
+/*.epc-1st-inner-icons-fire_damper01::before {*/
+    /*content: "备";*/
+/*}*/
+.epc-1st-inner-icons-fire_damper10 {
+    top: 125px;
+    left: 886px;
+}
+.epc-1st-inner-icons-fire_damper11 {
+    top: 125px;
+    left: 849px;
+}
+
+.epc-1st-inner-icons-pump_level {
+    top: 215px;
+    left: 490px;
+}
+/*.epc-1st-inner-icons-pump_level::before {*/
+    /*content: "液位计";*/
+/*}*/
+/*1129 新增液位计*/
+.epc-1st-inner-icons-pump_level_in{
+    top: 220px;
+    left: 347px;
+}
+.epc-1st-inner-icons-pump_level_ball-10{
+    top: 212px;
+    left: 327px;
+}
+.epc-1st-inner-icons-pump_level_ball-11{
+    top: 212px;
+    left: 365px;
+}
+
+.epc-1st-inner-icons-pump00 {
+    top: 241px;
+    left: 359px;
+}
+/*.epc-1st-inner-icons-pump00::before {*/
+    /*content: "主潜水泵";*/
+/*}*/
+
+.epc-1st-inner-icons-pump11 {
+    top: 241px;
+    left: 330px;
+}
+/*.epc-1st-inner-icons-pump11::before {*/
+    /*content: "备";*/
+/*}*/
+
+.epc-1st-inner-icons-ultrasonic {
+    top: 140px;
+    left: 658px;
+}
+/*.epc-1st-inner-icons-ultrasonic::before {*/
+    /*content: "超声波液位计";*/
+/*}*/
+
+.epc-1st-inner-icons-telephone {
+    top: 190px;
+    left: 840px;
+}
+/*.epc-1st-inner-icons-telephone::before {*/
+    /*content: "通讯电话";*/
+/*}*/
+.epc-1st-inner-icons-wifi_ap {
+    top: 160px;
+    left: 316px;
+}
+/*.epc-1st-inner-icons-wifi_ap::before {*/
+    /*content: "无线AP";*/
+/*}*/
+.epc-1st-inner-icons-wireless_intercom {
+    top: 145px;
+    left: 372px;
+}
+/*.epc-1st-inner-icons-wireless_intercom::before {*/
+    /*content: "无线对讲机";*/
+/*}*/
+
+
+/*公共设备夹层*/
+/*左*/
+/*1129新增 液压井盖*/
+.eq-tab-pane-electric-first .left-interlayer-icons_manhole_cover{
+    top: 33px;
+    left: 58px;
+}
+.eq-tab-pane-electric-first .left-interlayer-icons-camera_right {
+    top: 72px;
+    left: 338px;
+}
+
+.eq-tab-pane-electric-first .left-interlayer-icons-temperature {
+    top: 72px;
+    left: 180px;
+}
+
+.eq-tab-pane-electric-first .left-interlayer-icons-ch4 {
+    top: 58px;
+    left: 150px;
+}
+
+.eq-tab-pane-electric-first .left-interlayer-icons-h2s {
+    top: 85px;
+    left: 145px;
+}
+
+.eq-tab-pane-electric-first .left-interlayer-icons-o2 {
+    top: 72px;
+    left: 122px;
+}
+
+.eq-tab-pane-electric-first .left-interlayer-icons-audible_visual_alarm {
+    top: 41px;
+    left: 68px;
+}
+
+.eq-tab-pane-electric-first .left-interlayer-icons-double_testing {
+    top: 70px;
+    left: 70px;
+}
+
+
+/*右*/
+/*1129新增 液压井盖*/
+.eq-tab-pane-electric-first .right-interlayer-icons_manhole_cover{
+    top: 33px;
+    left: 738px;
+}
+.eq-tab-pane-electric-first .right-interlayer-icons-camera_left {
+    top: 72px;
+    left: 775px;
+}
+
+.eq-tab-pane-electric-first .right-interlayer-icons-temperature {
+    top: 72px;
+    left: 1095px;
+}
+
+.eq-tab-pane-electric-first .right-interlayer-icons-ch4 {
+    top: 60px;
+    left: 1060px;
+}
+
+.eq-tab-pane-electric-first .right-interlayer-icons-h2s {
+    top: 85px;
+    left: 1060px;
+}
+
+.eq-tab-pane-electric-first .right-interlayer-icons-o2 {
+    top: 72px;
+    left: 1032px;
+}
+
+.eq-tab-pane-electric-first .right-interlayer-icons-audible_visual_alarm {
+    top: 58px;
+    left: 1150px;
+}
+
+.eq-tab-pane-electric-first .right-interlayer-icons-double_testing {
+    top: 75px;
+    left: 1182px;
+}
+/*各图标位置---电力舱-标准段1*/
+
+/*各图标位置---电力舱-标准段2*/
+/*舱内部设备*/
+/*1129 新增防火门*/
+.epc-2nd-inner-icons-fire-door_left{
+    top: 136px;
+    left: 182px;
+}
+/*.epc-2nd-inner-icons-fire-door_left::before {*/
+    /*content: "防火门";*/
+/*}*/
+.epc-2nd-inner-icons-fire-door_right{
+    top: 136px;
+    left: 1280px;
+}
+/*.epc-2nd-inner-icons-fire-door_right::before {*/
+    /*content: "防火门";*/
+/*}*/
+
+.epc-2nd-inner-icons-camera_left {
+    top: 150px;
+    left: 200px;
+}
+/*.epc-2nd-inner-icons-camera_left::before {*/
+    /*content: "摄像头";*/
+/*}*/
+.epc-2nd-inner-icons-camera_right {
+    top: 150px;
+    left: 1250px;
+}
+
+.epc-2nd-inner-icons-ch4 {
+    top: 135px;
+    left: 700px;
+}
+/*.epc-2nd-inner-icons-ch4::before {*/
+    /*content: "CH4";*/
+/*}*/
+
+.epc-2nd-inner-icons-h2s {
+    top: 175px;
+    left: 705px;
+}
+/*.epc-2nd-inner-icons-h2s::before {*/
+    /*content: "H2S";*/
+/*}*/
+
+.epc-2nd-inner-icons-o2 {
+    top: 155px;
+    left: 675px;
+}
+/*.epc-2nd-inner-icons-o2::before {*/
+    /*content: "O2";*/
+/*}*/
+
+.epc-2nd-inner-icons-temperature {
+    top: 155px;
+    left: 760px;
+}
+/*.epc-2nd-inner-icons-temperature::before {*/
+    /*content: "温湿度液位计";*/
+/*}*/
+
+.epc-2nd-inner-icons-fan00 {
+    top: 98px;
+    left: 229px;
+}
+/*.epc-2nd-inner-icons-fan00::before {*/
+    /*content: "主风机";*/
+/*}*/
+.epc-2nd-inner-icons-fan01 {
+    top: 98px;
+    left: 192px;
+}
+/*.epc-2nd-inner-icons-fan01::before {*/
+    /*content: "备";*/
+/*}*/
+.epc-2nd-inner-icons-fan10 {
+    top: 98px;
+    left: 1254px;
+}
+/*.epc-2nd-inner-icons-fan10::before {*/
+    /*content: "主风机";*/
+/*}*/
+.epc-2nd-inner-icons-fan11 {
+    top: 98px;
+    left: 1218px;
+}
+/*.epc-2nd-inner-icons-fan11::before {*/
+    /*content: "备";*/
+/*}*/
+
+.epc-2nd-inner-icons-fire_damper00 {
+    top: 125px;
+    left: 230px;
+}
+/*.epc-2nd-inner-icons-fire_damper00::before {*/
+    /*content: "主防火阀";*/
+/*}*/
+.epc-2nd-inner-icons-fire_damper01 {
+    top: 125px;
+    left: 193px;
+}
+/*.epc-2nd-inner-icons-fire_damper01::before {*/
+    /*content: "备";*/
+/*}*/
+.epc-2nd-inner-icons-fire_damper10 {
+    top: 125px;
+    left: 1256px;
+}
+.epc-2nd-inner-icons-fire_damper11 {
+    top: 125px;
+    left: 1220px;
+}
+
+.epc-2nd-inner-icons-pump_level {
+    top: 215px;
+    left: 700px;
+}
+/*.epc-2nd-inner-icons-pump_level::before {*/
+    /*content: "液位计";*/
+/*}*/
+/*1129 新增液位计*/
+.epc-2nd-inner-icons-pump_level_in{
+    top: 220px;
+    left: 295px;
+}
+.epc-2nd-inner-icons-pump_level_ball-10{
+    top: 212px;
+    left: 275px;
+}
+.epc-2nd-inner-icons-pump_level_ball-11{
+    top: 212px;
+    left: 313px;
+}
+
+.epc-2nd-inner-icons-pump00 {
+    top: 242px;
+    left: 308px;
+}
+/*.epc-2nd-inner-icons-pump00::before {*/
+    /*content: "主潜水泵";*/
+/*}*/
+
+.epc-2nd-inner-icons-pump11 {
+    top: 242px;
+    left: 279px;
+}
+/*.epc-2nd-inner-icons-pump11::before {*/
+    /*content: "备";*/
+/*}*/
+
+.epc-2nd-inner-icons-ultrasonic {
+    top: 140px;
+    left: 565px;
+}
+/*.epc-2nd-inner-icons-ultrasonic::before {*/
+    /*content: "超声波液位计";*/
+/*}*/
+
+.epc-2nd-inner-icons-telephone {
+    top: 190px;
+    left: 1205px;
+}
+/*.epc-2nd-inner-icons-telephone::before {*/
+    /*content: "通讯电话";*/
+/*}*/
+.epc-2nd-inner-icons-wifi_ap {
+    top: 145px;
+    left: 345px;
+}
+/*.epc-2nd-inner-icons-wifi_ap::before {*/
+    /*content: "无线AP";*/
+/*}*/
+.epc-2nd-inner-icons-wireless_intercom {
+    top: 145px;
+    left: 422px;
+}
+/*.epc-2nd-inner-icons-wireless_intercom::before {*/
+    /*content: "无线对讲机";*/
+/*}*/
+
+
+/*公共设备夹层*/
+/*左*/
+/*1129新增 液压井盖*/
+.eq-tab-pane-electric-second .left-interlayer-icons_manhole_cover{
+    top: 41px;
+    left: 1108px;
+}
+.eq-tab-pane-electric-second .left-interlayer-icons-camera_right {
+    top: 72px;
+    left: 508px;
+}
+
+.eq-tab-pane-electric-second .left-interlayer-icons-temperature {
+    top: 72px;
+    left: 455px;
+}
+
+.eq-tab-pane-electric-second .left-interlayer-icons-ch4 {
+    top: 60px;
+    left: 410px;
+}
+
+.eq-tab-pane-electric-second .left-interlayer-icons-h2s {
+    top: 85px;
+    left: 417px;
+}
+
+.eq-tab-pane-electric-second .left-interlayer-icons-o2 {
+    top: 72px;
+    left: 370px;
+}
+
+.eq-tab-pane-electric-second .left-interlayer-icons-audible_visual_alarm {
+    top: 35px;
+    left: 92px;
+}
+/*.eq-tab-pane-electric-second .left-interlayer-icons-audible_visual_alarm::before {*/
+    /*content: "声光报警器";*/
+/*}*/
+
+.eq-tab-pane-electric-second .left-interlayer-icons-double_testing {
+    top: 65px;
+    left: 94px;
+}
+/*.eq-tab-pane-electric-second .left-interlayer-icons-double_testing::before {*/
+    /*content: "双鉴探测器";*/
+/*}*/
+
+/*右*/
+/*1129新增 液压井盖*/
+.eq-tab-pane-electric-second .right-interlayer-icons_manhole_cover{
+    top: 33px;
+    left: 8px;
+}
+.eq-tab-pane-electric-second .right-interlayer-icons-camera_left {
+    top: 72px;
+    left: 1000px;
+}
+
+.eq-tab-pane-electric-second .right-interlayer-icons-temperature {
+    top: 66px;
+    left: 1217px;
+}
+
+.eq-tab-pane-electric-second .right-interlayer-icons-ch4 {
+    top: 50px;
+    left: 1188px;
+}
+
+.eq-tab-pane-electric-second .right-interlayer-icons-h2s {
+    top: 85px;
+    left: 1189px;
+}
+
+.eq-tab-pane-electric-second .right-interlayer-icons-o2 {
+    top: 69px;
+    left: 1166px;
+}
+
+.eq-tab-pane-electric-second .right-interlayer-icons-audible_visual_alarm {
+    top: 68px;
+    left: 1314px;
+}
+
+.eq-tab-pane-electric-second .right-interlayer-icons-double_testing {
+    top: 82px;
+    left: 1350px;
+}
+
+/*各图标位置---电力舱-标准段2*/
+
+
+/*各图标位置---综合舱-标准段1*/
+/*舱内部设备*/
+/*1129 新增防火门*/
+.comprehensive-1st-inner-icons-fire-door_left{
+    top: 136px;
+    left: 231px;
+}
+/*.comprehensive-1st-inner-icons-fire-door_left::before {*/
+    /*content: "防火门";*/
+/*}*/
+.comprehensive-1st-inner-icons-fire-door_right{
+    top: 136px;
+    left: 910px;
+}
+/*.comprehensive-1st-inner-icons-fire-door_right::before {*/
+    /*content: "防火门";*/
+/*}*/
+
+.comprehensive-1st-inner-icons-camera_left {
+    top: 150px;
+    left: 250px;
+}
+/*.comprehensive-1st-inner-icons-camera_left::before {*/
+    /*content: "摄像头";*/
+/*}*/
+.comprehensive-1st-inner-icons-camera_right {
+    top: 150px;
+    left: 880px;
+}
+
+.comprehensive-1st-inner-icons-ch4 {
+    top: 135px;
+    left: 495px;
+}
+/*.comprehensive-1st-inner-icons-ch4::before {*/
+    /*content: "CH4";*/
+/*}*/
+
+.comprehensive-1st-inner-icons-h2s {
+    top: 175px;
+    left: 497px;
+}
+/*.comprehensive-1st-inner-icons-h2s::before {*/
+    /*content: "H2S";*/
+/*}*/
+
+.comprehensive-1st-inner-icons-o2 {
+    top: 155px;
+    left: 465px;
+}
+/*.comprehensive-1st-inner-icons-o2::before {*/
+    /*content: "O2";*/
+/*}*/
+
+.comprehensive-1st-inner-icons-temperature {
+    top: 155px;
+    left: 520px;
+}
+/*.comprehensive-1st-inner-icons-temperature::before {*/
+    /*content: "温湿度液位计";*/
+/*}*/
+
+.comprehensive-1st-inner-icons-fan00 {
+    top: 96px;
+    left: 279px;
+}
+/*.comprehensive-1st-inner-icons-fan00::before {*/
+    /*content: "主风机";*/
+/*}*/
+.comprehensive-1st-inner-icons-fan01 {
+    top: 96px;
+    left: 243px;
+}
+/*.comprehensive-1st-inner-icons-fan01::before {*/
+    /*content: "备";*/
+/*}*/
+.comprehensive-1st-inner-icons-fan10 {
+    top: 96px;
+    left: 884px;
+}
+/*.comprehensive-1st-inner-icons-fan10::before {*/
+    /*content: "主风机";*/
+/*}*/
+.comprehensive-1st-inner-icons-fan11 {
+    top: 96px;
+    left: 848px;
+}
+/*.comprehensive-1st-inner-icons-fan11::before {*/
+    /*content: "备";*/
+/*}*/
+
+.comprehensive-1st-inner-icons-fire_damper00 {
+    top: 125px;
+    left: 279px;
+}
+/*.comprehensive-1st-inner-icons-fire_damper00::before {*/
+    /*content: "主防火阀";*/
+/*}*/
+.comprehensive-1st-inner-icons-fire_damper01 {
+    top: 125px;
+    left: 242px;
+}
+/*.comprehensive-1st-inner-icons-fire_damper01::before {*/
+    /*content: "备";*/
+/*}*/
+.comprehensive-1st-inner-icons-fire_damper10 {
+    top: 125px;
+    left: 886px;
+}
+.comprehensive-1st-inner-icons-fire_damper11 {
+    top: 125px;
+    left: 849px;
+}
+
+.comprehensive-1st-inner-icons-pump_level {
+    top: 215px;
+    left: 520px;
+}
+/*.comprehensive-1st-inner-icons-pump_level::before {*/
+    /*content: "液位计";*/
+/*}*/
+/*1129 新增液位计*/
+.comprehensive-1st-inner-icons-pump_level_in{
+    top: 220px;
+    left: 338px;
+}
+.comprehensive-1st-inner-icons-pump_level_ball-10{
+    top: 212px;
+    left: 318px;
+}
+.comprehensive-1st-inner-icons-pump_level_ball-11{
+    top: 212px;
+    left: 355px;
+}
+.comprehensive-1st-inner-icons-pump00 {
+    top: 241px;
+    left: 352px;
+}
+/*.comprehensive-1st-inner-icons-pump00::before {*/
+    /*content: "主潜水泵";*/
+/*}*/
+
+.comprehensive-1st-inner-icons-pump11 {
+    top: 241px;
+    left: 322px;
+}
+/*.comprehensive-1st-inner-icons-pump11::before {*/
+    /*content: "备";*/
+/*}*/
+
+.comprehensive-1st-inner-icons-ultrasonic {
+    top: 140px;
+    left: 658px;
+}
+/*.comprehensive-1st-inner-icons-ultrasonic::before {*/
+    /*content: "超声波液位计";*/
+/*}*/
+
+.comprehensive-1st-inner-icons-telephone {
+    top: 190px;
+    left: 840px;
+}
+/*.comprehensive-1st-inner-icons-telephone::before {*/
+    /*content: "通讯电话";*/
+/*}*/
+.comprehensive-1st-inner-icons-wifi_ap {
+    top: 160px;
+    left: 316px;
+}
+/*.comprehensive-1st-inner-icons-wifi_ap::before {*/
+    /*content: "无线AP";*/
+/*}*/
+.comprehensive-1st-inner-icons-wireless_intercom {
+    top: 145px;
+    left: 372px;
+}
+/*.comprehensive-1st-inner-icons-wireless_intercom::before {*/
+    /*content: "无线对讲机";*/
+/*}*/
+
+
+/*公共设备夹层*/
+/*左*/
+/*1129新增 液压井盖*/
+.eq-tab-pane-comprehensive-first .left-interlayer-icons_manhole_cover{
+    top: 33px;
+    left: 57px;
+}
+.eq-tab-pane-comprehensive-first .left-interlayer-icons-camera_right {
+    top: 72px;
+    left: 338px;
+}
+
+.eq-tab-pane-comprehensive-first .left-interlayer-icons-temperature {
+    top: 72px;
+    left: 180px;
+}
+
+.eq-tab-pane-comprehensive-first .left-interlayer-icons-ch4 {
+    top: 58px;
+    left: 150px;
+}
+
+.eq-tab-pane-comprehensive-first .left-interlayer-icons-h2s {
+    top: 85px;
+    left: 145px;
+}
+
+.eq-tab-pane-comprehensive-first .left-interlayer-icons-o2 {
+    top: 72px;
+    left: 122px;
+}
+
+.eq-tab-pane-comprehensive-first .left-interlayer-icons-audible_visual_alarm {
+    top: 41px;
+    left: 68px;
+}
+
+.eq-tab-pane-comprehensive-first .left-interlayer-icons-double_testing {
+    top: 70px;
+    left: 70px;
+}
+
+
+/*右*/
+/*1129新增 液压井盖*/
+.eq-tab-pane-comprehensive-first .right-interlayer-icons_manhole_cover{
+    top: 33px;
+    left: 737px;
+}
+
+.eq-tab-pane-comprehensive-first .right-interlayer-icons-camera_left {
+    top: 72px;
+    left: 775px;
+}
+
+.eq-tab-pane-comprehensive-first .right-interlayer-icons-temperature {
+    top: 72px;
+    left: 1095px;
+}
+
+.eq-tab-pane-comprehensive-first .right-interlayer-icons-ch4 {
+    top: 60px;
+    left: 1060px;
+}
+
+.eq-tab-pane-comprehensive-first .right-interlayer-icons-h2s {
+    top: 85px;
+    left: 1060px;
+}
+
+.eq-tab-pane-comprehensive-first .right-interlayer-icons-o2 {
+    top: 72px;
+    left: 1032px;
+}
+
+.eq-tab-pane-comprehensive-first .right-interlayer-icons-audible_visual_alarm {
+    top: 58px;
+    left: 1150px;
+}
+
+.eq-tab-pane-comprehensive-first .right-interlayer-icons-double_testing {
+    top: 75px;
+    left: 1182px;
+}
+/*各图标位置---综合舱-标准段1*/
+
+
+/*各图标位置---综合舱-标准段2*/
+/*舱内部设备*/
+/*1129 新增防火门*/
+.comprehensive-2nd-inner-icons-fire-door_left{
+    top: 137px;
+    left: 180px;
+}
+/*.comprehensive-2nd-inner-icons-fire-door_left::before {*/
+    /*content: "防火门";*/
+/*}*/
+.comprehensive-2nd-inner-icons-fire-door_right{
+    top: 137px;
+    left: 1279px;
+}
+/*.comprehensive-2nd-inner-icons-fire-door_right::before {*/
+    /*content: "防火门";*/
+/*}*/
+
+.comprehensive-2nd-inner-icons-camera_left {
+    top: 150px;
+    left: 200px;
+}
+/*.comprehensive-2nd-inner-icons-camera_left::before {*/
+    /*content: "摄像头";*/
+/*}*/
+.comprehensive-2nd-inner-icons-camera_right {
+    top: 150px;
+    left: 1250px;
+}
+
+.comprehensive-2nd-inner-icons-ch4 {
+    top: 135px;
+    left: 700px;
+}
+/*.comprehensive-2nd-inner-icons-ch4::before {*/
+    /*content: "CH4";*/
+/*}*/
+
+.comprehensive-2nd-inner-icons-h2s {
+    top: 175px;
+    left: 705px;
+}
+/*.comprehensive-2nd-inner-icons-h2s::before {*/
+    /*content: "H2S";*/
+/*}*/
+
+.comprehensive-2nd-inner-icons-o2 {
+    top: 155px;
+    left: 675px;
+}
+/*.comprehensive-2nd-inner-icons-o2::before {*/
+    /*content: "O2";*/
+/*}*/
+
+.comprehensive-2nd-inner-icons-temperature {
+    top: 155px;
+    left: 760px;
+}
+/*.comprehensive-2nd-inner-icons-temperature::before {*/
+    /*content: "温湿度液位计";*/
+/*}*/
+
+.comprehensive-2nd-inner-icons-fan00 {
+    top: 98px;
+    left: 229px;
+}
+/*.comprehensive-2nd-inner-icons-fan00::before {*/
+    /*content: "主风机";*/
+/*}*/
+.comprehensive-2nd-inner-icons-fan01 {
+    top: 98px;
+    left: 192px;
+}
+/*.comprehensive-2nd-inner-icons-fan01::before {*/
+    /*content: "备";*/
+/*}*/
+.comprehensive-2nd-inner-icons-fan10 {
+    top: 98px;
+    left: 1254px;
+}
+/*.comprehensive-2nd-inner-icons-fan10::before {*/
+    /*content: "主风机";*/
+/*}*/
+.comprehensive-2nd-inner-icons-fan11 {
+    top: 98px;
+    left: 1218px;
+}
+/*.comprehensive-2nd-inner-icons-fan11::before {*/
+    /*content: "备";*/
+/*}*/
+
+.comprehensive-2nd-inner-icons-fire_damper00 {
+    top: 125px;
+    left: 230px;
+}
+/*.comprehensive-2nd-inner-icons-fire_damper00::before {*/
+    /*content: "主防火阀";*/
+/*}*/
+.comprehensive-2nd-inner-icons-fire_damper01 {
+    top: 125px;
+    left: 193px;
+}
+/*.comprehensive-2nd-inner-icons-fire_damper01::before {*/
+    /*content: "备";*/
+/*}*/
+.comprehensive-2nd-inner-icons-fire_damper10 {
+    top: 125px;
+    left: 1256px;
+}
+.comprehensive-2nd-inner-icons-fire_damper11 {
+    top: 125px;
+    left: 1220px;
+}
+
+.comprehensive-2nd-inner-icons-pump_level {
+    top: 215px;
+    left: 700px;
+}
+/*.comprehensive-2nd-inner-icons-pump_level::before {*/
+    /*content: "液位计";*/
+/*}*/
+/*1129 新增液位计*/
+.comprehensive-2nd-inner-icons-pump_level_in{
+    top: 220px;
+    left: 295px;
+}
+.comprehensive-2nd-inner-icons-pump_level_ball-10{
+    top: 212px;
+    left: 275px;
+}
+.comprehensive-2nd-inner-icons-pump_level_ball-11{
+    top: 212px;
+    left: 312px;
+}
+
+.comprehensive-2nd-inner-icons-pump00 {
+    top: 243px;
+    left: 310px;
+}
+/*.comprehensive-2nd-inner-icons-pump00::before {*/
+    /*content: "主潜水泵";*/
+/*}*/
+
+.comprehensive-2nd-inner-icons-pump11 {
+    top: 243px;
+    left: 280px;
+}
+/*.comprehensive-2nd-inner-icons-pump11::before {*/
+    /*content: "备";*/
+/*}*/
+
+.comprehensive-2nd-inner-icons-ultrasonic {
+    top: 140px;
+    left: 565px;
+}
+/*.comprehensive-2nd-inner-icons-ultrasonic::before {*/
+    /*content: "超声波液位计";*/
+/*}*/
+
+.comprehensive-2nd-inner-icons-telephone {
+    top: 190px;
+    left: 1205px;
+}
+/*.comprehensive-2nd-inner-icons-telephone::before {*/
+    /*content: "通讯电话";*/
+/*}*/
+.comprehensive-2nd-inner-icons-wifi_ap {
+    top: 145px;
+    left: 345px;
+}
+/*.comprehensive-2nd-inner-icons-wifi_ap::before {*/
+    /*content: "无线AP";*/
+/*}*/
+.comprehensive-2nd-inner-icons-wireless_intercom {
+    top: 145px;
+    left: 422px;
+}
+/*.comprehensive-2nd-inner-icons-wireless_intercom::before {*/
+    /*content: "无线对讲机";*/
+/*}*/
+
+
+/*公共设备夹层*/
+/*左*/
+/*1129新增 液压井盖*/
+.eq-tab-pane-comprehensive-second .left-interlayer-icons_manhole_cover{
+    top: 42px;
+    left: 1108px;
+}
+.eq-tab-pane-comprehensive-second .left-interlayer-icons-camera_right {
+    top: 72px;
+    left: 508px;
+}
+
+.eq-tab-pane-comprehensive-second .left-interlayer-icons-temperature {
+    top: 72px;
+    left: 455px;
+}
+
+.eq-tab-pane-comprehensive-second .left-interlayer-icons-ch4 {
+    top: 60px;
+    left: 410px;
+}
+
+.eq-tab-pane-comprehensive-second .left-interlayer-icons-h2s {
+    top: 85px;
+    left: 417px;
+}
+
+.eq-tab-pane-comprehensive-second .left-interlayer-icons-o2 {
+    top: 72px;
+    left: 370px;
+}
+
+.eq-tab-pane-comprehensive-second .left-interlayer-icons-audible_visual_alarm {
+    top: 35px;
+    left: 92px;
+}
+/*.eq-tab-pane-comprehensive-second .left-interlayer-icons-audible_visual_alarm::before {*/
+    /*content: "声光报警器";*/
+/*}*/
+
+.eq-tab-pane-comprehensive-second .left-interlayer-icons-double_testing {
+    top: 65px;
+    left: 94px;
+}
+/*.eq-tab-pane-comprehensive-second .left-interlayer-icons-double_testing::before {*/
+    /*content: "双鉴探测器";*/
+/*}*/
+
+/*右*/
+/*1129新增 液压井盖*/
+.eq-tab-pane-comprehensive-second .right-interlayer-icons_manhole_cover{
+    top: 33px;
+    left: 7px;
+}
+
+.eq-tab-pane-comprehensive-second .right-interlayer-icons-camera_left {
+    top: 72px;
+    left: 1000px;
+}
+
+.eq-tab-pane-comprehensive-second .right-interlayer-icons-temperature {
+    top: 66px;
+    left: 1217px;
+}
+
+.eq-tab-pane-comprehensive-second .right-interlayer-icons-ch4 {
+    top: 50px;
+    left: 1188px;
+}
+
+.eq-tab-pane-comprehensive-second .right-interlayer-icons-h2s {
+    top: 85px;
+    left: 1189px;
+}
+
+.eq-tab-pane-comprehensive-second .right-interlayer-icons-o2 {
+    top: 69px;
+    left: 1166px;
+}
+
+.eq-tab-pane-comprehensive-second .right-interlayer-icons-audible_visual_alarm {
+    top: 68px;
+    left: 1314px;
+}
+
+.eq-tab-pane-comprehensive-second .right-interlayer-icons-double_testing {
+    top: 82px;
+    left: 1350px;
+}
+/*各图标位置---综合舱-标准段2*/
+
+
+/*各图标位置---热力舱-标准段1*/
+/*舱内部设备*/
+/*1129 新增防火门*/
+.thermal-1st-inner-icons-fire-door_left{
+    top: 136px;
+    left: 230px;
+}
+/*.thermal-1st-inner-icons-fire-door_left::before {*/
+    /*content: "防火门";*/
+/*}*/
+.thermal-1st-inner-icons-fire-door_right{
+    top: 136px;
+    left: 912px;
+}
+/*.thermal-1st-inner-icons-fire-door_right::before {*/
+    /*content: "防火门";*/
+/*}*/
+
+.thermal-1st-inner-icons-camera_left {
+    top: 150px;
+    left: 250px;
+}
+/*.thermal-1st-inner-icons-camera_left::before {*/
+    /*content: "摄像头";*/
+/*}*/
+.thermal-1st-inner-icons-camera_right {
+    top: 150px;
+    left: 880px;
+}
+
+.thermal-1st-inner-icons-ch4 {
+    top: 135px;
+    left: 495px;
+}
+/*.thermal-1st-inner-icons-ch4::before {*/
+    /*content: "CH4";*/
+/*}*/
+
+.thermal-1st-inner-icons-h2s {
+    top: 175px;
+    left: 497px;
+}
+/*.thermal-1st-inner-icons-h2s::before {*/
+    /*content: "H2S";*/
+/*}*/
+
+.thermal-1st-inner-icons-o2 {
+    top: 155px;
+    left: 465px;
+}
+/*.thermal-1st-inner-icons-o2::before {*/
+    /*content: "O2";*/
+/*}*/
+
+.thermal-1st-inner-icons-temperature {
+    top: 155px;
+    left: 520px;
+}
+/*.thermal-1st-inner-icons-temperature::before {*/
+    /*content: "温湿度液位计";*/
+/*}*/
+
+.thermal-1st-inner-icons-fan00 {
+    top: 96px;
+    left: 279px;
+}
+/*.thermal-1st-inner-icons-fan00::before {*/
+    /*content: "主风机";*/
+/*}*/
+.thermal-1st-inner-icons-fan01 {
+    top: 96px;
+    left: 243px;
+}
+/*.thermal-1st-inner-icons-fan01::before {*/
+    /*content: "备";*/
+/*}*/
+.thermal-1st-inner-icons-fan10 {
+    top: 96px;
+    left: 884px;
+}
+/*.thermal-1st-inner-icons-fan10::before {*/
+    /*content: "主风机";*/
+/*}*/
+.thermal-1st-inner-icons-fan11 {
+    top: 96px;
+    left: 848px;
+}
+/*.thermal-1st-inner-icons-fan11::before {*/
+    /*content: "备";*/
+/*}*/
+
+.thermal-1st-inner-icons-fire_damper00 {
+    top: 125px;
+    left: 279px;
+}
+/*.thermal-1st-inner-icons-fire_damper00::before {*/
+    /*content: "主防火阀";*/
+/*}*/
+.thermal-1st-inner-icons-fire_damper01 {
+    top: 125px;
+    left: 242px;
+}
+/*.thermal-1st-inner-icons-fire_damper01::before {*/
+    /*content: "备";*/
+/*}*/
+.thermal-1st-inner-icons-fire_damper10 {
+    top: 125px;
+    left: 886px;
+}
+.thermal-1st-inner-icons-fire_damper11 {
+    top: 125px;
+    left: 849px;
+}
+
+.thermal-1st-inner-icons-pump_level {
+    top: 215px;
+    left: 600px;
+}
+/*.thermal-1st-inner-icons-pump_level::before {*/
+    /*content: "液位计";*/
+/*}*/
+/*1129 新增液位计*/
+.thermal-1st-inner-icons-pump_level_in{
+    top: 220px;
+    left: 366px;
+}
+.thermal-1st-inner-icons-pump_level_ball-10{
+    top: 212px;
+    left: 347px;
+}
+.thermal-1st-inner-icons-pump_level_ball-11{
+    top: 212px;
+    left: 385px;
+}
+
+.thermal-1st-inner-icons-pump00 {
+    top: 240px;
+    left: 382px;
+}
+/*.thermal-1st-inner-icons-pump00::before {*/
+    /*content: "主潜水泵";*/
+/*}*/
+
+.thermal-1st-inner-icons-pump11 {
+    top: 240px;
+    left: 354px;
+}
+/*.thermal-1st-inner-icons-pump11::before {*/
+    /*content: "备";*/
+/*}*/
+
+.thermal-1st-inner-icons-ultrasonic {
+    top: 140px;
+    left: 658px;
+}
+/*.thermal-1st-inner-icons-ultrasonic::before {*/
+    /*content: "超声波液位计";*/
+/*}*/
+
+.thermal-1st-inner-icons-telephone {
+    top: 190px;
+    left: 840px;
+}
+/*.thermal-1st-inner-icons-telephone::before {*/
+    /*content: "通讯电话";*/
+/*}*/
+.thermal-1st-inner-icons-wifi_ap {
+    top: 160px;
+    left: 316px;
+}
+/*.thermal-1st-inner-icons-wifi_ap::before {*/
+    /*content: "无线AP";*/
+/*}*/
+.thermal-1st-inner-icons-wireless_intercom {
+    top: 145px;
+    left: 372px;
+}
+/*.thermal-1st-inner-icons-wireless_intercom::before {*/
+    /*content: "无线对讲机";*/
+/*}*/
+
+
+/*公共设备夹层*/
+/*左*/
+/*1129新增 液压井盖*/
+.eq-tab-pane-thermal-first .left-interlayer-icons_manhole_cover{
+    top: 33px;
+    left: 58px;
+}
+.eq-tab-pane-thermal-first .left-interlayer-icons-camera_right {
+    top: 72px;
+    left: 338px;
+}
+
+.eq-tab-pane-thermal-first .left-interlayer-icons-temperature {
+    top: 72px;
+    left: 180px;
+}
+
+.eq-tab-pane-thermal-first .left-interlayer-icons-ch4 {
+    top: 58px;
+    left: 150px;
+}
+
+.eq-tab-pane-thermal-first .left-interlayer-icons-h2s {
+    top: 85px;
+    left: 145px;
+}
+
+.eq-tab-pane-thermal-first .left-interlayer-icons-o2 {
+    top: 72px;
+    left: 122px;
+}
+
+.eq-tab-pane-thermal-first .left-interlayer-icons-audible_visual_alarm {
+    top: 41px;
+    left: 68px;
+}
+
+.eq-tab-pane-thermal-first .left-interlayer-icons-double_testing {
+    top: 70px;
+    left: 70px;
+}
+
+/*中间*/
+/*1129新增 液压井盖*/
+.eq-tab-pane-thermal-first .middle-interlayer-icons_manhole_cover{
+    top: 33px;
+    left: 458px;
+}
+
+/*右*/
+/*1129新增 液压井盖*/
+.eq-tab-pane-thermal-first .right-interlayer-icons_manhole_cover{
+    top: 33px;
+    left: 738px;
+}
+
+.eq-tab-pane-thermal-first .right-interlayer-icons-camera_left {
+    top: 72px;
+    left: 775px;
+}
+
+.eq-tab-pane-thermal-first .right-interlayer-icons-temperature {
+    top: 72px;
+    left: 1095px;
+}
+
+.eq-tab-pane-thermal-first .right-interlayer-icons-ch4 {
+    top: 60px;
+    left: 1060px;
+}
+
+.eq-tab-pane-thermal-first .right-interlayer-icons-h2s {
+    top: 85px;
+    left: 1060px;
+}
+
+.eq-tab-pane-thermal-first .right-interlayer-icons-o2 {
+    top: 72px;
+    left: 1032px;
+}
+
+.eq-tab-pane-thermal-first .right-interlayer-icons-audible_visual_alarm {
+    top: 58px;
+    left: 1150px;
+}
+
+.eq-tab-pane-thermal-first .right-interlayer-icons-double_testing {
+    top: 75px;
+    left: 1182px;
+}
+/*各图标位置---热力舱-标准段1*/
+
+/*各图标位置---热力舱-标准段2*/
+/*舱内部设备*/
+/*1129 新增防火门*/
+.thermal-2nd-inner-icons-fire-door_left{
+    top: 136px;
+    left: 180px;
+}
+/*.thermal-2nd-inner-icons-fire-door_left::before {*/
+    /*content: "防火门";*/
+/*}*/
+.thermal-2nd-inner-icons-fire-door_right{
+    top: 136px;
+    left: 1283px;
+}
+/*.thermal-2nd-inner-icons-fire-door_right::before {*/
+    /*content: "防火门";*/
+/*}*/
+
+.thermal-2nd-inner-icons-camera_left {
+    top: 150px;
+    left: 200px;
+}
+/*.thermal-2nd-inner-icons-camera_left::before {*/
+    /*content: "摄像头";*/
+/*}*/
+.thermal-2nd-inner-icons-camera_right {
+    top: 150px;
+    left: 1250px;
+}
+
+.thermal-2nd-inner-icons-ch4 {
+    top: 135px;
+    left: 700px;
+}
+/*.thermal-2nd-inner-icons-ch4::before {*/
+    /*content: "CH4";*/
+/*}*/
+
+.thermal-2nd-inner-icons-h2s {
+    top: 175px;
+    left: 705px;
+}
+/*.thermal-2nd-inner-icons-h2s::before {*/
+    /*content: "H2S";*/
+/*}*/
+
+.thermal-2nd-inner-icons-o2 {
+    top: 155px;
+    left: 675px;
+}
+/*.thermal-2nd-inner-icons-o2::before {*/
+    /*content: "O2";*/
+/*}*/
+
+.thermal-2nd-inner-icons-temperature {
+    top: 155px;
+    left: 760px;
+}
+/*.thermal-2nd-inner-icons-temperature::before {*/
+    /*content: "温湿度液位计";*/
+/*}*/
+
+.thermal-2nd-inner-icons-fan00 {
+    top: 98px;
+    left: 229px;
+}
+/*.thermal-2nd-inner-icons-fan00::before {*/
+    /*content: "主风机";*/
+/*}*/
+.thermal-2nd-inner-icons-fan01 {
+    top: 98px;
+    left: 192px;
+}
+/*.thermal-2nd-inner-icons-fan01::before {*/
+    /*content: "备";*/
+/*}*/
+.thermal-2nd-inner-icons-fan10 {
+    top: 98px;
+    left: 1254px;
+}
+/*.thermal-2nd-inner-icons-fan10::before {*/
+    /*content: "主风机";*/
+/*}*/
+.thermal-2nd-inner-icons-fan11 {
+    top: 98px;
+    left: 1218px;
+}
+/*.thermal-2nd-inner-icons-fan11::before {*/
+    /*content: "备";*/
+/*}*/
+
+.thermal-2nd-inner-icons-fire_damper00 {
+    top: 125px;
+    left: 230px;
+}
+/*.thermal-2nd-inner-icons-fire_damper00::before {*/
+    /*content: "主防火阀";*/
+/*}*/
+.thermal-2nd-inner-icons-fire_damper01 {
+    top: 125px;
+    left: 193px;
+}
+/*.thermal-2nd-inner-icons-fire_damper01::before {*/
+    /*content: "备";*/
+/*}*/
+.thermal-2nd-inner-icons-fire_damper10 {
+    top: 125px;
+    left: 1256px;
+}
+.thermal-2nd-inner-icons-fire_damper11 {
+    top: 125px;
+    left: 1220px;
+}
+
+.thermal-2nd-inner-icons-pump_level {
+    top: 215px;
+    left: 650px;
+}
+/*.thermal-2nd-inner-icons-pump_level::before {*/
+    /*content: "液位计";*/
+/*}*/
+/*1129 新增液位计*/
+.thermal-2nd-inner-icons-pump_level_in{
+    top: 220px;
+    left: 313px;
+}
+.thermal-2nd-inner-icons-pump_level_ball-10{
+    top: 212px;
+    left: 292px;
+}
+.thermal-2nd-inner-icons-pump_level_ball-11{
+    top: 212px;
+    left: 330px;
+}
+
+.thermal-2nd-inner-icons-pump00 {
+    top: 242px;
+    left: 325px;
+}
+/*.thermal-2nd-inner-icons-pump00::before {*/
+    /*content: "主潜水泵";*/
+/*}*/
+
+.thermal-2nd-inner-icons-pump11 {
+    top: 242px;
+    left: 296px;
+}
+/*.thermal-2nd-inner-icons-pump11::before {*/
+    /*content: "备";*/
+/*}*/
+
+.thermal-2nd-inner-icons-ultrasonic {
+    top: 140px;
+    left: 565px;
+}
+/*.thermal-2nd-inner-icons-ultrasonic::before {*/
+    /*content: "超声波液位计";*/
+/*}*/
+
+.thermal-2nd-inner-icons-telephone {
+    top: 190px;
+    left: 1205px;
+}
+/*.thermal-2nd-inner-icons-telephone::before {*/
+    /*content: "通讯电话";*/
+/*}*/
+.thermal-2nd-inner-icons-wifi_ap {
+    top: 145px;
+    left: 345px;
+}
+/*.thermal-2nd-inner-icons-wifi_ap::before {*/
+    /*content: "无线AP";*/
+/*}*/
+.thermal-2nd-inner-icons-wireless_intercom {
+    top: 145px;
+    left: 422px;
+}
+/*.thermal-2nd-inner-icons-wireless_intercom::before {*/
+    /*content: "无线对讲机";*/
+/*}*/
+
+
+/*公共设备夹层*/
+/*左*/
+/*1129新增 液压井盖*/
+.eq-tab-pane-thermal-second .left-interlayer-icons_manhole_cover{
+    top: 40px;
+    left: 1111px;
+}
+.eq-tab-pane-thermal-second .left-interlayer-icons-camera_right {
+    top: 72px;
+    left: 508px;
+}
+
+.eq-tab-pane-thermal-second .left-interlayer-icons-temperature {
+    top: 72px;
+    left: 455px;
+}
+
+.eq-tab-pane-thermal-second .left-interlayer-icons-ch4 {
+    top: 60px;
+    left: 410px;
+}
+
+.eq-tab-pane-thermal-second .left-interlayer-icons-h2s {
+    top: 85px;
+    left: 417px;
+}
+
+.eq-tab-pane-thermal-second .left-interlayer-icons-o2 {
+    top: 72px;
+    left: 370px;
+}
+
+.eq-tab-pane-thermal-second .left-interlayer-icons-audible_visual_alarm {
+    top: 35px;
+    left: 92px;
+}
+/*.eq-tab-pane-thermal-second .left-interlayer-icons-audible_visual_alarm::before {*/
+    /*content: "声光报警器";*/
+/*}*/
+
+.eq-tab-pane-thermal-second .left-interlayer-icons-double_testing {
+    top: 65px;
+    left: 94px;
+}
+/*.eq-tab-pane-thermal-second .left-interlayer-icons-double_testing::before {*/
+    /*content: "双鉴探测器";*/
+/*}*/
+
+/*中间*/
+/*1129新增 液压井盖*/
+.eq-tab-pane-thermal-second .middle-interlayer-icons_manhole_cover{
+    top: 33px;
+    left: 806px;
+}
+
+/*右*/
+/*1129新增 液压井盖*/
+.eq-tab-pane-thermal-second .right-interlayer-icons_manhole_cover{
+    top: 33px;
+    left: 6px;
+}
+
+.eq-tab-pane-thermal-second .right-interlayer-icons-camera_left {
+    top: 72px;
+    left: 1000px;
+}
+
+.eq-tab-pane-thermal-second .right-interlayer-icons-temperature {
+    top: 66px;
+    left: 1217px;
+}
+
+.eq-tab-pane-thermal-second .right-interlayer-icons-ch4 {
+    top: 50px;
+    left: 1188px;
+}
+
+.eq-tab-pane-thermal-second .right-interlayer-icons-h2s {
+    top: 85px;
+    left: 1189px;
+}
+
+.eq-tab-pane-thermal-second .right-interlayer-icons-o2 {
+    top: 69px;
+    left: 1166px;
+}
+
+.eq-tab-pane-thermal-second .right-interlayer-icons-audible_visual_alarm {
+    top: 68px;
+    left: 1314px;
+}
+
+.eq-tab-pane-thermal-second .right-interlayer-icons-double_testing {
+    top: 82px;
+    left: 1350px;
+}
+/*各图标位置---热力舱-标准段2*/
+
+
+/*巡检日志页面 start*/
+.g-wrap--body {
+    display: flex;
+}
+.g-wrap--fluid {
+    flex: 1 1 auto;
+}
+.g-wrap--sidebar {
+    flex: 0 0 240px;
+    position: relative;
+    margin-left: 20px;
+    width: 240px;
+    -webkit-box-shadow: 0px 1px 15px 1px rgba(81, 77, 92, 0.08) ;
+    -moz-box-shadow: 0px 1px 15px 1px rgba(81, 77, 92, 0.08) ;
+    box-shadow: 0px 1px 15px 1px rgba(81, 77, 92, 0.08) ;
+    background-color: #fff;
+}
+
+.g-wrap--sidebar-hide {
+    flex: 0 0 auto !important;
+    width: 0 !important;
+}
+.g-wrap--sidebar-hide .g-wrap--sidebar-content {
+    display: none !important;
+}
+.g-wrap--sidebar-hide .g-wrap--sidebar-btn {
+    left: 0 !important;
+}
+
+.g-wrap--sidebar-btn {
+    position: absolute;
+    margin-top: -30px;
+    top: 50%;
+    left: -14px;
+    width: 14px;
+    height: 60px;
+    border-radius: 26px 0 0 26px;
+    background-color: rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+.g-wrap--sidebar-btn i {
+    margin: 20px auto;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.g-wrap--sidebar-content {
+    display: block;
+    padding: 10px;
+    height: 100%;
+    background-color: #f1f1f1;
+    max-width: 450px;
+}
+
+.g-wrap--sidebar-title {
+    padding-left: 8px;
+}
+.g-wrap--sidebar-wrapper {
+    padding: 8px;
+    background-color: #fbfbfb;
+}
+.g-wrap--sidebar-wrapper .info-list-p{
+    margin-top: 8px;
+}
+
+/*巡检日志页面 end*/
+
+
+
+
+/* error页面 start*/
+.error-pages-body {
+    background-color: #fff;
+}
+.error-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #fff;
+}
+
+.error-img-inner {
+    width: 440px;
+    height:256px;
+    margin: 50px auto;
+}
+
+.img-error404 {
+    background: url("/images/errors/404.png") no-repeat;
+}
+
+.img-error500 {
+    background: url("/images/errors/500.png") no-repeat;
+}
+
+.error-img-inner2 {
+    width: 440px;
+    height:295px;
+    margin: 70px auto 0;
+}
+
+.img-error {
+    background: url("/images/errors/error.png") no-repeat;
+}
+
+.error-text {
+    font-size: 20px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    color: #000;
+}
+.error-text-sm{
+    font-size: 16px;
+    text-align: center;
+    height: 16px;
+    line-height: 16px;
+    color: #666;
+}
+
+.error-btn {
+    margin: 0 auto;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    width: 90px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    background: rgb(238,197,91);
+    border-radius: 20%;
+    text-decoration: none;
+}
+
+/* error页面 end*/
+
+
+/* 巡检监控页面 start */
+.inspect-monitor-widget4  .m-widget4__item {
+    width: 95%;
+}
+.inspect-monitor-widget4 .widget4__info{
+    font-size:12px;
+}
+.inspect-monitor-widget4 .widget4__info-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    cursor: pointer;
+}
+.inspect-monitor-widget4 .widget4__info-title:hover {
+    color: #1996f6;
+}
+
+.inspect-monitor-widget4 .widget4__info p {
+    line-height: 1.5;
+}
+.inspect-monitor-widget4 .widget4__info-text-em{
+    color: #0000ff;
+    font-weight: bold;
+}
+.inspect-monitor-widget4 .widget4__info-text{
+    color: #000;
+}
+
+.inspect-monitor-container{
+    margin: 0 10px;
+}
+
+.inspect-monitor-container .zhdd-box{
+    background-color:#FFF;
+    height:60px;
+    width:100%;
+    line-height:60px;
+}
+.inspect-monitor-content{
+    margin-top: 10px;
+    background: #fff;
+    height: 680px;
+}
+
+.inspect-monitor-content  table {
+    width: 100%;
+    margin-left:10px;
+}
+
+.inspect-monitor-content  table td{
+    color: #fff;
+    width: 33%;
+    font-size: 13px;
+}
+
+/* 巡检监控页面 end */
+
+/* animation */
+.a-bounce,.a-flip,.a-flash,.a-shake,.a-swing,.a-wobble,.a-ring{-webkit-animation:1.3s ease infinite;-moz-animation:1.3s ease infinite;-ms-animation:1.3s ease;animation:1.3s ease infinite;}
+.a-fadein,.a-fadeinT,.a-fadeinR,.a-fadeinB,.a-fadeinL,.a-bouncein,.a-bounceinT,
+.a-bounceinR,.a-bounceinB,.a-bounceinL,.a-rotatein,.a-rotateinLT,.a-rotateinLB,.a-rotateinRT,
+.a-rotateinRB,.a-flipin,.a-flipinX,
+.a-flipinY{-webkit-animation:1.3s ease-out backwards;-moz-animation:1.3s ease-out backwards;-ms-animation:1.3s ease-out backwards;animation:1.3s ease-out backwards;}
+.a-fadeout,.a-fadeoutT,.a-fadeoutR,.a-fadeoutB,.a-fadeoutL,.a-bounceout,
+.a-bounceoutT,.a-bounceoutR,.a-bounceoutB,.a-bounceoutL,.a-rotateout,.a-rotateoutLT,
+.a-rotateoutLB,.a-rotateoutRT,.a-rotateoutRB,.a-flipout,.a-flipoutX,
+.a-flipoutY{-webkit-animation:1.3s ease-in forwards;-moz-animation:1.3s ease-in forwards;-ms-animation:1.3s ease-in forwards;animation:1.3s ease-in forwards;}
+/* 淡入 */
+.a-fadein{-webkit-animation-name:fadein;-moz-animation-name:fadein;-ms-animation-name:fadein;animation-name:fadein;}
+/* 淡入-从上 */
+.a-fadeinT{-webkit-animation-name:fadeinT;-moz-animation-name:fadeinT;-ms-animation-name:fadeinT;animation-name:fadeinT;}
+/* 淡入-从右 */
+.a-fadeinR{-webkit-animation-name:fadeinR;-moz-animation-name:fadeinR;-ms-animation-name:fadeinR;animation-name:fadeinR;}
+/* 淡入-从下 */
+.a-fadeinB{-webkit-animation-name:fadeinB;-moz-animation-name:fadeinB;-ms-animation-name:fadeinB;animation-name:fadeinB;}
+/* 淡入-从左 */
+.a-fadeinL{-webkit-animation-name:fadeinL;-moz-animation-name:fadeinL;-ms-animation-name:fadeinL;animation-name:fadeinL;}
+/* 淡出 */
+.a-fadeout{-webkit-animation-name:fadeout;-moz-animation-name:fadeout;-ms-animation-name:fadeout;animation-name:fadeout;}
+/* 淡出-向上 */
+.a-fadeoutT{-webkit-animation-name:fadeoutT;-moz-animation-name:fadeoutT;-ms-animation-name:fadeoutT;animation-name:fadeoutT;}
+/* 淡出-向右 */
+.a-fadeoutR{-webkit-animation-name:fadeoutR;-moz-animation-name:fadeoutR;-ms-animation-name:fadeoutR;animation-name:fadeoutR;}
+/* 淡出-向下 */
+.a-fadeoutB{-webkit-animation-name:fadeoutB;-moz-animation-name:fadeoutB;-ms-animation-name:fadeoutB;animation-name:fadeoutB;}
+/* 淡出-向左 */
+.a-fadeoutL{-webkit-animation-name:fadeoutL;-moz-animation-name:fadeoutL;-ms-animation-name:fadeoutL;animation-name:fadeoutL;}
+/* 弹跳 */
+.a-bounce{-webkit-animation-name:bounce;-moz-animation-name:bounce;-ms-animation-name:bounce;animation-name:bounce;}
+/* 弹入 */
+.a-bouncein{-webkit-animation-name:bouncein;-moz-animation-name:bouncein;-ms-animation-name:bouncein;animation-name:bouncein;}
+/* 弹入-从上 */
+.a-bounceinT{-webkit-animation-name:bounceinT;-moz-animation-name:bounceinT;-ms-animation-name:bounceinT;animation-name:bounceinT;}
+/* 弹入-从右 */
+.a-bounceinR{-webkit-animation-name:bounceinR;-moz-animation-name:bounceinR;-ms-animation-name:bounceinR;animation-name:bounceinR;}
+/* 弹入-从下 */
+.a-bounceinB{-webkit-animation-name:bounceinB;-moz-animation-name:bounceinB;-ms-animation-name:bounceinB;animation-name:bounceinB;}
+/* 弹入-从左 */
+.a-bounceinL{-webkit-animation-name:bounceinL;-moz-animation-name:bounceinL;-ms-animation-name:bounceinL;animation-name:bounceinL;}
+/* 弹出 */
+.a-bounceout{-webkit-animation-name:bounceout;-moz-animation-name:bounceout;-ms-animation-name:bounceout;animation-name:bounceout;}
+/* 弹出-向上 */
+.a-bounceoutT{-webkit-animation-name:bounceoutT;-moz-animation-name:bounceoutT;-ms-animation-name:bounceoutT;animation-name:bounceoutT;}
+/* 弹出-向右 */
+.a-bounceoutR{-webkit-animation-name:bounceoutR;-moz-animation-name:bounceoutR;-ms-animation-name:bounceoutR;animation-name:bounceoutR;}
+/* 弹出-向下 */
+.a-bounceoutB{-webkit-animation-name:bounceoutB;-moz-animation-name:bounceoutB;-ms-animation-name:bounceoutB;animation-name:bounceoutB;}
+/* 弹出-向左 */
+.a-bounceoutL{-webkit-animation-name:bounceoutL;-moz-animation-name:bounceoutL;-ms-animation-name:bounceoutL;animation-name:bounceoutL;}
+/* 转入 */
+.a-rotatein{-webkit-animation-name:rotatein;-moz-animation-name:rotatein;-ms-animation-name:rotatein;animation-name:rotatein;}
+/* 转入-从左上 */
+.a-rotateinLT{-webkit-animation-name:rotateinLT;-moz-animation-name:rotateinLT;-ms-animation-name:rotateinLT;animation-name:rotateinLT;}
+/* 转入-从左下 */
+.a-rotateinLB{-webkit-animation-name:rotateinLB;-moz-animation-name:rotateinLB;-ms-animation-name:rotateinLB;animation-name:rotateinLB;}
+/* 转入-从右上 */
+.a-rotateinRT{-webkit-animation-name:rotateinRT;-moz-animation-name:rotateinRT;-ms-animation-name:rotateinRT;animation-name:rotateinRT;}
+/* 转入-从右下*/
+.a-rotateinRB{-webkit-animation-name:rotateinRB;-moz-animation-name:rotateinRB;-ms-animation-name:rotateinRB;animation-name:rotateinRB;}
+/* 转出 */
+.a-rotateout{-webkit-animation-name:rotateout;-moz-animation-name:rotateout;-ms-animation-name:rotateout;animation-name:rotateout;}
+/* 转出-向左上 */
+.a-rotateoutLT{-webkit-animation-name:rotateoutLT;-moz-animation-name:rotateoutLT;-ms-animation-name:rotateoutLT;animation-name:rotateoutLT;}
+/* 转出-向左下 */
+.a-rotateoutLB{-webkit-animation-name:rotateoutLB;-moz-animation-name:rotateoutLB;-ms-animation-name:rotateoutLB;animation-name:rotateoutLB;}
+/* 转出-向右上 */
+.a-rotateoutRT{-webkit-animation-name:rotateoutRT;-moz-animation-name:rotateoutRT;-ms-animation-name:rotateoutRT;animation-name:rotateoutRT;}
+/* 转出-向右下 */
+.a-rotateoutRB{-webkit-animation-name:rotateoutRB;-moz-animation-name:rotateoutRB;-ms-animation-name:rotateoutRB;animation-name:rotateoutRB;}
+/* 翻转 */
+.a-flip{-webkit-animation-name:flip;-moz-animation-name:flip;-ms-animation-name:flip;animation-name:flip;}
+/* 翻入-X轴 */
+.a-flipinX{-webkit-animation-name:flipinX;-moz-animation-name:flipinX;-ms-animation-name:flipinX;animation-name:flipinX;}
+/* 翻入-Y轴 */
+.a-flipin,.a-flipinY{-webkit-animation-name:flipinY;-moz-animation-name:flipinY;-ms-animation-name:flipinY;animation-name:flipinY;}
+/* 翻出-X轴 */
+.a-flipoutX{-webkit-animation-name:flipoutX;-moz-animation-name:flipoutX;-ms-animation-name:flipoutX;animation-name:flipoutX;}
+/* 翻出-Y轴 */
+.a-flipout,.a-flipoutY{-webkit-animation-name:flipoutY;-moz-animation-name:flipoutY;-ms-animation-name:flipoutY;animation-name:flipoutY;}
+/* 闪烁 */
+.a-flash{-webkit-animation-name:flash;-moz-animation-name:flash;-ms-animation-name:flash;animation-name:flash;}
+/* 震颤 */
+.a-shake{-webkit-animation-name:shake;-moz-animation-name:shake;-ms-animation-name:shake;animation-name:shake;}
+/* 摇摆 */
+.a-swing{-webkit-animation-name:swing;-moz-animation-name:swing;-ms-animation-name:swing;animation-name:swing;}
+/* 摇晃 */
+.a-wobble{-webkit-animation-name:wobble;-moz-animation-name:wobble;-ms-animation-name:wobble;animation-name:wobble;}
+/* 震铃 */
+.a-ring{-webkit-animation-name:ring;-moz-animation-name:ring;-ms-animation-name:ring;animation-name:ring;}
+/* define */
+/* 淡入 */
+@-webkit-keyframes fadein{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+@-moz-keyframes fadein{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+@-ms-keyframes fadein{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+@keyframes fadein{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+/* 淡入-从上 */
+@-webkit-keyframes fadeinT{
+    0%{opacity:0;-webkit-transform:translateY(-100px);}
+    100%{opacity:1;-webkit-transform:translateY(0);}
+}
+@-moz-keyframes fadeinT{
+    0%{opacity:0;-moz-transform:translateY(-100px);}
+    100%{opacity:1;-moz-transform:translateY(0);}
+}
+@-ms-keyframes fadeinT{
+    0%{opacity:0;-ms-transform:translateY(-100px);}
+    100%{opacity:1;-ms-transform:translateY(0);}
+}
+@keyframes fadeinT{
+    0%{opacity:0;transform:translateY(-100px);}
+    100%{opacity:1;transform:translateY(0);}
+}
+/* 淡入-从右 */
+@-webkit-keyframes fadeinR{
+    0%{opacity:0;-webkit-transform:translateX(100px);}
+    100%{opacity:1;-webkit-transform:translateX(0);}
+}
+@-moz-keyframes fadeinR{
+    0%{opacity:0;-moz-transform:translateX(100px);}
+    100%{opacity:1;-moz-transform:translateX(0);}
+}
+@-ms-keyframes fadeinR{
+    0%{opacity:0;-ms-transform:translateX(100px);}
+    100%{opacity:1;-ms-transform:translateX(0);}
+}
+@keyframes fadeinR{
+    0%{opacity:0;transform:translateX(100px);}
+    100%{opacity:1;transform:translateX(0);}
+}
+/* 淡入-从下 */
+@-webkit-keyframes fadeinB{
+    0%{opacity:0;-webkit-transform:translateY(100px);}
+    100%{opacity:1;-webkit-transform:translateY(0);}
+}
+@-moz-keyframes fadeinB{
+    0%{opacity:0;-moz-transform:translateY(100px);}
+    100%{opacity:1;-moz-transform:translateY(0);}
+}
+@-ms-keyframes fadeinB{
+    0%{opacity:0;-ms-transform:translateY(100px);}
+    100%{opacity:1;-ms-transform:translateY(0);}
+}
+@keyframes fadeinB{
+    0%{opacity:0;transform:translateY(100px);}
+    100%{opacity:1;transform:translateY(0);}
+}
+/* 淡入-从左 */
+@-webkit-keyframes fadeinL{
+    0%{opacity:0;-webkit-transform:translateX(-100px);}
+    100%{opacity:1;-webkit-transform:translateX(0);}
+}
+@-moz-keyframes fadeinL{
+    0%{opacity:0;-moz-transform:translateX(-100px);}
+    100%{opacity:1;-moz-transform:translateX(0);}
+}
+@-ms-keyframes fadeinL{
+    0%{opacity:0;-ms-transform:translateX(-100px);}
+    100%{opacity:1;-ms-transform:translateX(0);}
+}
+@keyframes fadeinL{
+    0%{opacity:0;transform:translateX(-100px);}
+    100%{opacity:1;transform:translateX(0);}
+}
+/* 淡出 */
+@-webkit-keyframes fadeout{
+    0%{opacity:1;}
+    100%{opacity:0;}
+}
+@-moz-keyframes fadeout{
+    0%{opacity:1;}
+    100%{opacity:0;}
+}
+@-ms-keyframes fadeout{
+    0%{opacity:1;}
+    100%{opacity:0;}
+}
+@keyframes fadeout{
+    0%{opacity:1;}
+    100%{opacity:0;}
+}
+/* 淡出-向上 */
+@-webkit-keyframes fadeoutT{
+    0%{opacity:1;-webkit-transform:translateY(0);}
+    100%{opacity:0;-webkit-transform:translateY(-100px);}
+}
+@-moz-keyframes fadeoutT{
+    0%{opacity:1;-moz-transform:translateY(0);}
+    100%{opacity:0;-moz-transform:translateY(-100px);}
+}
+@-ms-keyframes fadeoutT{
+    0%{opacity:1;-ms-transform:translateY(0);}
+    100%{opacity:0;-ms-transform:translateY(-100px);}
+}
+@keyframes fadeoutT{
+    0%{opacity:1;transform:translateY(0);}
+    100%{opacity:0;transform:translateY(-100px);}
+}
+/* 淡出-向右 */
+@-webkit-keyframes fadeoutR{
+    0%{opacity:1;-webkit-transform:translateX(0);}
+    100%{opacity:0;-webkit-transform:translateX(100px);}
+}
+@-moz-keyframes fadeoutR{
+    0%{opacity:1;-moz-transform:translateX(0);}
+    100%{opacity:0;-moz-transform:translateX(100px);}
+}
+@-ms-keyframes fadeoutR{
+    0%{opacity:1;-ms-transform:translateX(0);}
+    100%{opacity:0;-ms-transform:translateX(100px);}
+}
+@keyframes fadeoutR{
+    0%{opacity:1;transform:translateX(0);}
+    100%{opacity:0;transform:translateX(100px);}
+}
+/* 淡出-向下 */
+@-webkit-keyframes fadeoutB{
+    0%{opacity:1;-webkit-transform:translateY(0);}
+    100%{opacity:0;-webkit-transform:translateY(100px);}
+}
+@-moz-keyframes fadeoutB{
+    0%{opacity:1;-moz-transform:translateY(0);}
+    100%{opacity:0;-moz-transform:translateY(100px);}
+}
+@-ms-keyframes fadeoutB{
+    0%{opacity:1;-ms-transform:translateY(0);}
+    100%{opacity:0;-ms-transform:translateY(100px);}
+}
+@keyframes fadeoutB{
+    0%{opacity:1;transform:translateY(0);}
+    100%{opacity:0;transform:translateY(100px);}
+}
+/* 淡出-向左 */
+@-webkit-keyframes fadeoutL{
+    0%{opacity:1;-webkit-transform:translateX(0);}
+    100%{opacity:0;-webkit-transform:translateX(-100px);}
+}
+@-moz-keyframes fadeoutL{
+    0%{opacity:1;-moz-transform:translateX(0);}
+    100%{opacity:0;-moz-transform:translateX(-100px);}
+}
+@-ms-keyframes fadeoutL{
+    0%{opacity:1;-ms-transform:translateX(0);}
+    100%{opacity:0;-ms-transform:translateX(-100px);}
+}
+@keyframes fadeoutL{
+    0%{opacity:1;transform:translateX(0);}
+    100%{opacity:0;transform:translateX(-100px);}
+}
+/* 弹跳 */
+@-webkit-keyframes bounce{
+    0%,20%,50%,80%,100%{-webkit-transform:translateY(0);}
+    40%{-webkit-transform:translateY(-30px);}
+    60%{-webkit-transform:translateY(-15px);}
+}
+@-moz-keyframes bounce{
+    0%,20%,50%,80%,100%{-moz-transform:translateY(0);}
+    40%{-moz-transform:translateY(-30px);}
+    60%{-moz-transform:translateY(-15px);}
+}
+@-ms-keyframes bounce{
+    0%,20%,50%,80%,100%{-ms-transform:translateY(0);}
+    40%{-ms-transform:translateY(-30px);}
+    60%{-ms-transform:translateY(-15px);}
+}
+@keyframes bounce{
+    0%,20%,50%,80%,100%{transform:translateY(0);}
+    40%{transform:translateY(-30px);}
+    60%{transform:translateY(-15px);}
+}
+/* 弹入 */
+@-webkit-keyframes bouncein{
+    0%{opacity:0;-webkit-transform:scale(0.3);}
+    50%{opacity:1;-webkit-transform:scale(1.05);}
+    70%{-webkit-transform:scale(0.9);}
+    100%{-webkit-transform:scale(1);}
+}
+@-moz-keyframes bouncein{
+    0%{opacity:0;-moz-transform:scale(0.3);}
+    50%{opacity:1;-moz-transform:scale(1.05);}
+    70%{-moz-transform:scale(0.9);}
+    100%{-moz-transform:scale(1);}
+}
+@-ms-keyframes bouncein{
+    0%{opacity:0;-ms-transform:scale(0.3);}
+    50%{opacity:1;-ms-transform:scale(1.05);}
+    70%{-ms-transform:scale(0.9);}
+    100%{-ms-transform:scale(1);}
+}
+@keyframes bouncein{
+    0%{opacity:0;transform:scale(0.3);}
+    50%{opacity:1;transform:scale(1.05);}
+    70%{transform:scale(0.9);}
+    100%{transform:scale(1);}
+}
+/* 弹入-从上 */
+@-webkit-keyframes bounceinT{
+    0%{opacity:0;-webkit-transform:translateY(-100px);}
+    60%{opacity:1;-webkit-transform:translateY(30px);}
+    80%{-webkit-transform:translateY(-10px);}
+    100%{-webkit-transform:translateY(0);}
+}
+@-moz-keyframes bounceinT{
+    0%{opacity:0;-moz-transform:translateY(-100px);}
+    60%{opacity:1;-moz-transform:translateY(30px);}
+    80%{-moz-transform:translateY(-10px);}
+    100%{-moz-transform:translateY(0);}
+}
+@-ms-keyframes bounceinT{
+    0%{opacity:0;-ms-transform:translateY(-100px);}
+    60%{opacity:1;-ms-transform:translateY(30px);}
+    80%{-ms-transform:translateY(-10px);}
+    100%{-ms-transform:translateY(0);}
+}
+@keyframes bounceinT{
+    0%{opacity:0;transform:translateY(-100px);}
+    60%{opacity:1;transform:translateY(30px);}
+    80%{transform:translateY(-10px);}
+    100%{transform:translateY(0);}
+}
+/* 弹入-从右 */
+@-webkit-keyframes bounceinR{
+    0%{opacity:0;-webkit-transform:translateX(100px);}
+    60%{opacity:1;-webkit-transform:translateX(-30px);}
+    80%{-webkit-transform:translateX(10px);}
+    100%{-webkit-transform:translateX(0);}
+}
+@-moz-keyframes bounceinR{
+    0%{opacity:0;-moz-transform:translateX(100px);}
+    60%{opacity:1;-moz-transform:translateX(-30px);}
+    80%{-moz-transform:translateX(10px);}
+    100%{-moz-transform:translateX(0);}
+}
+@-ms-keyframes bounceinR{
+    0%{opacity:0;-ms-transform:translateX(100px);}
+    60%{opacity:1;-ms-transform:translateX(-30px);}
+    80%{-ms-transform:translateX(10px);}
+    100%{-ms-transform:translateX(0);}
+}
+@keyframes bounceinR{
+    0%{opacity:0;transform:translateX(100px);}
+    60%{opacity:1;transform:translateX(-30px);}
+    80%{transform:translateX(10px);}
+    100%{transform:translateX(0);}
+}
+/* 弹入-从下 */
+@-webkit-keyframes bounceinB{
+    0%{opacity:0;-webkit-transform:translateY(100px);}
+    60%{opacity:1;-webkit-transform:translateY(-30px);}
+    80%{-webkit-transform:translateY(10px);}
+    100%{-webkit-transform:translateY(0);}
+}
+@-moz-keyframes bounceinB{
+    0%{opacity:0;-moz-transform:translateY(100px);}
+    60%{opacity:1;-moz-transform:translateY(-30px);}
+    80%{-moz-transform:translateY(10px);}
+    100%{-moz-transform:translateY(0);}
+}
+@-ms-keyframes bounceinB{
+    0%{opacity:0;-ms-transform:translateY(100px);}
+    60%{opacity:1;-ms-transform:translateY(-30px);}
+    80%{-ms-transform:translateY(10px);}
+    100%{-ms-transform:translateY(0);}
+}
+@keyframes bounceinB{
+    0%{opacity:0;transform:translateY(100px);}
+    60%{opacity:1;transform:translateY(-30px);}
+    80%{transform:translateY(10px);}
+    100%{transform:translateY(0);}
+}
+/* 弹入-从左 */
+@-webkit-keyframes bounceinL{
+    0%{opacity:0;-webkit-transform:translateX(-100px);}
+    60%{opacity:1;-webkit-transform:translateX(30px);}
+    80%{-webkit-transform:translateX(-10px);}
+    100%{-webkit-transform:translateX(0);}
+}
+@-moz-keyframes bounceinL{
+    0%{opacity:0;-moz-transform:translateX(-100px);}
+    60%{opacity:1;-moz-transform:translateX(30px);}
+    80%{-moz-transform:translateX(-10px);}
+    100%{-moz-transform:translateX(0);}
+}
+@-ms-keyframes bounceinL{
+    0%{opacity:0;-ms-transform:translateX(-100px);}
+    60%{opacity:1;-ms-transform:translateX(30px);}
+    80%{-ms-transform:translateX(-10px);}
+    100%{-ms-transform:translateX(0);}
+}
+@keyframes bounceinL{
+    0%{opacity:0;transform:translateX(-100px);}
+    60%{opacity:1;transform:translateX(30px);}
+    80%{transform:translateX(-10px);}
+    100%{transform:translateX(0);}
+}
+/* 弹出 */
+@-webkit-keyframes bounceout{
+    0%{-webkit-transform:scale(1);}
+    25%{-webkit-transform:scale(0.95);}
+    50%{opacity:1;-webkit-transform:scale(1.1);}
+    100%{opacity:0;-webkit-transform:scale(0.3);}
+}
+@-moz-keyframes bounceout{
+    0%{-moz-transform:scale(1);}
+    25%{-moz-transform:scale(0.95);}
+    50%{opacity:1;-moz-transform:scale(1.1);}
+    100%{opacity:0;-moz-transform:scale(0.3);}
+}
+@-ms-keyframes bounceout{
+    0%{-ms-transform:scale(1);}
+    25%{-ms-transform:scale(0.95);}
+    50%{opacity:1;-ms-transform:scale(1.1);}
+    100%{opacity:0;-ms-transform:scale(0.3);}
+}
+@keyframes bounceout{
+    0%{transform:scale(1);}
+    25%{transform:scale(0.95);}
+    50%{opacity:1;transform:scale(1.1);}
+    100%{opacity:0;transform:scale(0.3);}
+}
+/* 弹出-向上*/
+@-webkit-keyframes bounceoutT{
+    0%{-webkit-transform:translateY(0);}
+    20%{opacity:1;-webkit-transform:translateY(20px);}
+    100%{opacity:0;-webkit-transform:translateY(-100px);}
+}
+@-moz-keyframes bounceoutT{
+    0%{-moz-transform:translateY(0);}
+    20%{opacity:1;-moz-transform:translateY(20px);}
+    100%{opacity:0;-moz-transform:translateY(-100px);}
+}
+@-ms-keyframes bounceoutT{
+    0%{-ms-transform:translateY(0);}
+    20%{opacity:1;-ms-transform:translateY(20px);}
+    100%{opacity:0;-ms-transform:translateY(-100px);}
+}
+@keyframes bounceoutT{
+    0%{transform:translateY(0);}
+    20%{opacity:1;transform:translateY(20px);}
+    100%{opacity:0;transform:translateY(-100px);}
+}
+/* 弹出-向右*/
+@-webkit-keyframes bounceoutR{
+    0%{-webkit-transform:translateX(0);}
+    20%{opacity:1;-webkit-transform:translateX(-20px);}
+    100%{opacity:0;-webkit-transform:translateX(100px);}
+}
+@-moz-keyframes bounceoutR{
+    0%{-moz-transform:translateX(0);}
+    20%{opacity:1;-moz-transform:translateX(-20px);}
+    100%{opacity:0;-moz-transform:translateX(100px);}
+}
+@-ms-keyframes bounceoutR{
+    0%{-ms-transform:translateX(0);}
+    20%{opacity:1;-ms-transform:translateX(-20px);}
+    100%{opacity:0;-ms-transform:translateX(100px);}
+}
+@keyframes bounceoutR{
+    0%{transform:translateX(0);}
+    20%{opacity:1;transform:translateX(-20px);}
+    100%{opacity:0;transform:translateX(100px);}
+}
+/* 弹出-向下 */
+@-webkit-keyframes bounceoutB{
+    0%{-webkit-transform:translateY(0);}
+    20%{opacity:1;-webkit-transform:translateY(-20px);}
+    100%{opacity:0;-webkit-transform:translateY(100px);}
+}
+@-moz-keyframes bounceoutB{
+    0%{-moz-transform:translateY(0);}
+    20%{opacity:1;-moz-transform:translateY(-20px);}
+    100%{opacity:0;-moz-transform:translateY(100px);}
+}
+@-ms-keyframes bounceoutB{
+    0%{-ms-transform:translateY(0);}
+    20%{opacity:1;-ms-transform:translateY(-20px);}
+    100%{opacity:0;-ms-transform:translateY(100px);}
+}
+@keyframes bounceoutB{
+    0%{transform:translateY(0);}
+    20%{opacity:1;transform:translateY(-20px);}
+    100%{opacity:0;transform:translateY(100px);}
+}
+/* 弹出-向左 */
+@-webkit-keyframes bounceoutL{
+    0%{-webkit-transform:translateX(0);}
+    20%{opacity:1;-webkit-transform:translateX(20px);}
+    100%{opacity:0;-webkit-transform:translateX(-100px);}
+}
+@-moz-keyframes bounceoutL{
+    0%{-moz-transform:translateX(0);}
+    20%{opacity:1;-moz-transform:translateX(20px);}
+    100%{opacity:0;-moz-transform:translateX(-100px);}
+}
+@-ms-keyframes bounceoutL{
+    0%{-ms-transform:translateX(0);}
+    20%{opacity:1;-ms-transform:translateX(20px);}
+    100%{opacity:0;-ms-transform:translateX(-100px);}
+}
+@keyframes bounceoutL{
+    0%{transform:translateX(0);}
+    20%{opacity:1;transform:translateX(20px);}
+    100%{opacity:0;transform:translateX(-200px);}
+}
+/* 转入 */
+@-webkit-keyframes rotatein{
+    0%{opacity:0;-webkit-transform:rotate(-200deg);}
+    100%{opacity:1;-webkit-transform:rotate(0);}
+}
+@-moz-keyframes rotatein{
+    0%{opacity:0;-moz-transform:rotate(-200deg);}
+    100%{opacity:1;-moz-transform:rotate(0);}
+}
+@-ms-keyframes rotatein{
+    0%{opacity:0;-ms-transform:rotate(-200deg);}
+    100%{opacity:1;-ms-transform:rotate(0);}
+}
+@keyframes rotatein{
+    0%{opacity:0;transform:rotate(-200deg);}
+    100%{opacity:1;transform:rotate(0);}
+}
+/* 转入-从左上 */
+@-webkit-keyframes rotateinLT{
+    0%{-webkit-transform-origin:left bottom;-webkit-transform:rotate(-90deg);opacity:0;}
+    100%{-webkit-transform-origin:left bottom;-webkit-transform:rotate(0);opacity:1;}
+}
+@-moz-keyframes rotateinLT{
+    0%{-moz-transform-origin:left bottom;-moz-transform:rotate(-90deg);opacity:0;}
+    100%{-moz-transform-origin:left bottom;-moz-transform:rotate(0);opacity:1;}
+}
+@-ms-keyframes rotateinLT{
+    0%{-ms-transform-origin:left bottom;-ms-transform:rotate(-90deg);opacity:0;}
+    100%{-ms-transform-origin:left bottom;-ms-transform:rotate(0);opacity:1;}
+}
+@keyframes rotateinLT{
+    0%{transform-origin:left bottom;transform:rotate(-90deg);opacity:0;}
+    100%{transform-origin:left bottom;transform:rotate(0);opacity:1;}
+}
+/* 转入-从左下 */
+@-webkit-keyframes rotateineftB{
+    0%{-webkit-transform-origin:left bottom;-webkit-transform:rotate(90deg);opacity:0;}
+    100%{-webkit-transform-origin:left bottom;-webkit-transform:rotate(0);opacity:1;}
+}
+@-moz-keyframes rotateineftB{
+    0%{-moz-transform-origin:left bottom;-moz-transform:rotate(90deg);opacity:0;}
+    100%{-moz-transform-origin:left bottom;-moz-transform:rotate(0);opacity:1;}
+}
+@-ms-keyframes rotateineftB{
+    0%{-ms-transform-origin:left bottom;-ms-transform:rotate(90deg);opacity:0;}
+    100%{-ms-transform-origin:left bottom;-ms-transform:rotate(0);opacity:1;}
+}
+@keyframes rotateineftB{
+    0%{transform-origin:left bottom;transform:rotate(90deg);opacity:0;}
+    100%{transform-origin:left bottom;transform:rotate(0);opacity:1;}
+}
+/* 转入-从右上 */
+@-webkit-keyframes rotateinRT{
+    0%{-webkit-transform-origin:right bottom;-webkit-transform:rotate(90deg);opacity:0;}
+    100%{-webkit-transform-origin:right bottom;-webkit-transform:rotate(0);opacity:1;}
+}
+@-moz-keyframes rotateinRT{
+    0%{-moz-transform-origin:right bottom;-moz-transform:rotate(90deg);opacity:0;}
+    100%{-moz-transform-origin:right bottom;-moz-transform:rotate(0);opacity:1;}
+}
+@-ms-keyframes rotateinRT{
+    0%{-ms-transform-origin:right bottom;-ms-transform:rotate(90deg);opacity:0;}
+    100%{-ms-transform-origin:right bottom;-ms-transform:rotate(0);opacity:1;}
+}
+@keyframes rotateinRT{
+    0%{transform-origin:right bottom;transform:rotate(90deg);opacity:0;}
+    100%{transform-origin:right bottom;transform:rotate(0);opacity:1;}
+}
+/* 转入-从右下*/
+@-webkit-keyframes rotateinRB{
+    0%{-webkit-transform-origin:right bottom;-webkit-transform:rotate(-90deg);opacity:0;}
+    100%{-webkit-transform-origin:right bottom;-webkit-transform:rotate(0);opacity:1;}
+}
+@-moz-keyframes rotateinRB{
+    0%{-moz-transform-origin:right bottom;-moz-transform:rotate(-90deg);opacity:0;}
+    100%{-moz-transform-origin:right bottom;-moz-transform:rotate(0);opacity:1;}
+}
+@-ms-keyframes rotateinRB{
+    0%{-ms-transform-origin:right bottom;-ms-transform:rotate(-90deg);opacity:0;}
+    100%{-ms-transform-origin:right bottom;-ms-transform:rotate(0);opacity:1;}
+}
+@keyframes rotateinRB{
+    0%{transform-origin:right bottom;transform:rotate(-90deg);opacity:0;}
+    100%{transform-origin:right bottom;transform:rotate(0);opacity:1;}
+}
+/* 转出 */
+@-webkit-keyframes rotateout{
+    0%{-webkit-transform-origin:center center;-webkit-transform:rotate(0);opacity:1;}
+    100%{-webkit-transform-origin:center center;-webkit-transform:rotate(200deg);opacity:0;}
+}
+@-moz-keyframes rotateout{
+    0%{-moz-transform-origin:center center;-moz-transform:rotate(0);opacity:1;}
+    100%{-moz-transform-origin:center center;-moz-transform:rotate(200deg);opacity:0;}
+}
+@-ms-keyframes rotateout{
+    0%{-ms-transform-origin:center center;-ms-transform:rotate(0);opacity:1;}
+    100%{-ms-transform-origin:center center;-ms-transform:rotate(200deg);opacity:0;}
+}
+@keyframes rotateout{
+    0%{transform-origin:center center;transform:rotate(0);opacity:1;}
+    100%{transform-origin:center center;transform:rotate(200deg);opacity:0;}
+}
+/* 转出-向左上 */
+@-webkit-keyframes rotateoutLT{
+    0%{-webkit-transform-origin:left bottom;-webkit-transform:rotate(0);opacity:1;}
+    100%{-webkit-transform-origin:left bottom;-webkit-transform:rotate(-90deg);opacity:0;}
+}
+@-moz-keyframes rotateoutLT{
+    0%{-moz-transform-origin:left bottom;-moz-transform:rotate(0);opacity:1;}
+    100%{-moz-transform-origin:left bottom;-moz-transform:rotate(-90deg);opacity:0;}
+}
+@-ms-keyframes rotateoutLT{
+    0%{-ms-transform-origin:left bottom;-ms-transform:rotate(0);opacity:1;}
+    100%{-ms-transform-origin:left bottom;-ms-transform:rotate(-90deg);opacity:0;}
+}
+@keyframes rotateoutLT{
+    0%{transform-origin:left bottom;transform:rotate(0);opacity:1;}
+    100%{transform-origin:left bottom;transform:rotate(-90deg);opacity:0;}
+}
+/* 转出-向左下 */
+@-webkit-keyframes rotateoutLB{
+    0%{-webkit-transform-origin:left bottom;-webkit-transform:rotate(0);opacity:1;}
+    100%{-webkit-transform-origin:left bottom;-webkit-transform:rotate(90deg);opacity:0;}
+}
+@-moz-keyframes rotateoutLB{
+    0%{-moz-transform-origin:left bottom;-moz-transform:rotate(0);opacity:1;}
+    100%{-moz-transform-origin:left bottom;-moz-transform:rotate(90deg);opacity:0;}
+}
+@-ms-keyframes rotateoutLB{
+    0%{-ms-transform-origin:left bottom;-ms-transform:rotate(0);opacity:1;}
+    100%{-ms-transform-origin:left bottom;-ms-transform:rotate(90deg);opacity:0;}
+}
+@keyframes rotateoutLB{
+    0%{transform-origin:left bottom;transform:rotate(0);opacity:1;}
+    100%{transform-origin:left bottom;transform:rotate(90deg);opacity:0;}
+}
+/* 转出-向右上 */
+@-webkit-keyframes rotateoutRT{
+    0%{-webkit-transform-origin:right bottom;-webkit-transform:rotate(0);opacity:1;}
+    100%{-webkit-transform-origin:right bottom;-webkit-transform:rotate(90deg);opacity:0;}
+}
+@-moz-keyframes rotateoutRT{
+    0%{-moz-transform-origin:right bottom;-moz-transform:rotate(0);opacity:1;}
+    100%{-moz-transform-origin:right bottom;-moz-transform:rotate(90deg);opacity:0;}
+}
+@-ms-keyframes rotateoutRT{
+    0%{-ms-transform-origin:right bottom;-ms-transform:rotate(0);opacity:1;}
+    100%{-ms-transform-origin:right bottom;-ms-transform:rotate(90deg);opacity:0;}
+}
+@keyframes rotateoutRT{
+    0%{transform-origin:right bottom;transform:rotate(0);opacity:1;}
+    100%{transform-origin:right bottom;transform:rotate(90deg);opacity:0;}
+}
+/* 转出-向右下 */
+@-webkit-keyframes rotateoutBR{
+    0%{-webkit-transform-origin:right bottom;-webkit-transform:rotate(0);opacity:1;}
+    100%{-webkit-transform-origin:right bottom;-webkit-transform:rotate(-90deg);opacity:0;}
+}
+@-moz-keyframes rotateoutBR{
+    0%{-moz-transform-origin:right bottom;-moz-transform:rotate(0);opacity:1;}
+    100%{-moz-transform-origin:right bottom;-moz-transform:rotate(-90deg);opacity:0;}
+}
+@-ms-keyframes rotateoutBR{
+    0%{-ms-transform-origin:right bottom;-ms-transform:rotate(0);opacity:1;}
+    100%{-ms-transform-origin:right bottom;-ms-transform:rotate(-90deg);opacity:0;}
+}
+@keyframes rotateoutBR{
+    0%{transform-origin:right bottom;transform:rotate(0);opacity:1;}
+    100%{transform-origin:right bottom;transform:rotate(-90deg);opacity:0;}
+}
+/* 翻转 */
+@-webkit-keyframes flip{
+    0%{-webkit-transform:perspective(400px) rotateY(0);-webkit-animation-timing-function:ease-out;}
+    40%{-webkit-transform:perspective(400px) translateZ(150px) rotateY(170deg);-webkit-animation-timing-function:ease-out;}
+    50%{-webkit-transform:perspective(400px) translateZ(150px) rotateY(190deg) scale(1);-webkit-animation-timing-function:ease-in;}
+    80%{-webkit-transform:perspective(400px) rotateY(360deg) scale(0.95);-webkit-animation-timing-function:ease-in;}
+    100%{-webkit-transform:perspective(400px) scale(1);-webkit-animation-timing-function:ease-in;}
+}
+@-moz-keyframes flip{
+    0%{-moz-transform:perspective(400px) rotateY(0);-moz-animation-timing-function:ease-out;}
+    40%{-moz-transform:perspective(400px) translateZ(150px) rotateY(170deg);-moz-animation-timing-function:ease-out;}
+    50%{-moz-transform:perspective(400px) translateZ(150px) rotateY(190deg) scale(1);-moz-animation-timing-function:ease-in;}
+    80%{-moz-transform:perspective(400px) rotateY(360deg) scale(0.95);-moz-animation-timing-function:ease-in;}
+    100%{-moz-transform:perspective(400px) scale(1);-moz-animation-timing-function:ease-in;}
+}
+@-ms-keyframes flip{
+    0%{-ms-transform:perspective(400px) rotateY(0);-ms-animation-timing-function:ease-out;}
+    40%{-ms-transform:perspective(400px) translateZ(150px) rotateY(170deg);-ms-animation-timing-function:ease-out;}
+    50%{-ms-transform:perspective(400px) translateZ(150px) rotateY(190deg) scale(1);-ms-animation-timing-function:ease-in;}
+    80%{-ms-transform:perspective(400px) rotateY(360deg) scale(0.95);-ms-animation-timing-function:ease-in;}
+    100%{-ms-transform:perspective(400px) scale(1);-ms-animation-timing-function:ease-in;}
+}
+@keyframes flip{
+    0%{transform:perspective(400px) rotateY(0);animation-timing-function:ease-out;}
+    40%{transform:perspective(400px) translateZ(150px) rotateY(170deg);animation-timing-function:ease-out;}
+    50%{transform:perspective(400px) translateZ(150px) rotateY(190deg) scale(1);animation-timing-function:ease-in;}
+    80%{transform:perspective(400px) rotateY(360deg) scale(0.95);animation-timing-function:ease-in;}
+    100%{transform:perspective(400px) scale(1);animation-timing-function:ease-in;}
+}
+/* 翻入-X轴 */
+@-webkit-keyframes flipinX{
+    0%{-webkit-transform:perspective(400px) rotateX(90deg);opacity:0;}
+    40%{-webkit-transform:perspective(400px) rotateX(-10deg);}
+    70%{-webkit-transform:perspective(400px) rotateX(10deg);}
+    100%{-webkit-transform:perspective(400px) rotateX(0);opacity:1;}
+}
+@-moz-keyframes flipinX{
+    0%{-moz-transform:perspective(400px) rotateX(90deg);opacity:0;}
+    40%{-moz-transform:perspective(400px) rotateX(-10deg);}
+    70%{-moz-transform:perspective(400px) rotateX(10deg);}
+    100%{-moz-transform:perspective(400px) rotateX(0);opacity:1;}
+}
+@-ms-keyframes flipinX{
+    0%{-ms-transform:perspective(400px) rotateX(90deg);opacity:0;}
+    40%{-ms-transform:perspective(400px) rotateX(-10deg);}
+    70%{-ms-transform:perspective(400px) rotateX(10deg);}
+    100%{-ms-transform:perspective(400px) rotateX(0);opacity:1;}
+}
+@keyframes flipinX{
+    0%{transform:perspective(400px) rotateX(90deg);opacity:0;}
+    40%{transform:perspective(400px) rotateX(-10deg);}
+    70%{transform:perspective(400px) rotateX(10deg);}
+    100%{transform:perspective(400px) rotateX(0);opacity:1;}
+}
+/* 翻入-Y轴 */
+@-webkit-keyframes flipinY{
+    0%{-webkit-transform:perspective(400px) rotateY(90deg);opacity:0;}
+    40%{-webkit-transform:perspective(400px) rotateY(-10deg);}
+    70%{-webkit-transform:perspective(400px) rotateY(10deg);}
+    100%{-webkit-transform:perspective(400px) rotateY(0);opacity:1;}
+}
+@-moz-keyframes flipinY{
+    0%{-moz-transform:perspective(400px) rotateY(90deg);opacity:0;}
+    40%{-moz-transform:perspective(400px) rotateY(-10deg);}
+    70%{-moz-transform:perspective(400px) rotateY(10deg);}
+    100%{-moz-transform:perspective(400px) rotateY(0);opacity:1;}
+}
+@-ms-keyframes flipinY{
+    0%{-ms-transform:perspective(400px) rotateY(90deg);opacity:0;}
+    40%{-ms-transform:perspective(400px) rotateY(-10deg);}
+    70%{-ms-transform:perspective(400px) rotateY(10deg);}
+    100%{-ms-transform:perspective(400px) rotateY(0);opacity:1;}
+}
+@keyframes flipinY{
+    0%{transform:perspective(400px) rotateY(90deg);opacity:0;}
+    40%{transform:perspective(400px) rotateY(-10deg);}
+    70%{transform:perspective(400px) rotateY(10deg);}
+    100%{transform:perspective(400px) rotateY(0);opacity:1;}
+}
+/* 翻出-X轴 */
+@-webkit-keyframes flipoutX{
+    0%{-webkit-transform:perspective(400px) rotateX(0);opacity:1;}
+    100%{-webkit-transform:perspective(400px) rotateX(90deg);opacity:0;}
+}
+@-moz-keyframes flipoutX{
+    0%{-moz-transform:perspective(400px) rotateX(0);opacity:1;}
+    100%{-moz-transform:perspective(400px) rotateX(90deg);opacity:0;}
+}
+@-ms-keyframes flipoutX{
+    0%{-ms-transform:perspective(400px) rotateX(0);opacity:1;}
+    100%{-ms-transform:perspective(400px) rotateX(90deg);opacity:0;}
+}
+@keyframes flipoutX{
+    0%{transform:perspective(400px) rotateX(0);opacity:1;}
+    100%{transform:perspective(400px) rotateX(90deg);opacity:0;}
+}
+/* 翻出-Y轴 */
+@-webkit-keyframes flipoutY{
+    0%{-webkit-transform:perspective(400px) rotateY(0);opacity:1;}
+    100%{-webkit-transform:perspective(400px) rotateY(90deg);opacity:0;}
+}
+@-moz-keyframes flipoutY{
+    0%{-moz-transform:perspective(400px) rotateY(0);opacity:1;}
+    100%{-moz-transform:perspective(400px) rotateY(90deg);opacity:0;}
+}
+@-ms-keyframes flipoutY{
+    0%{-ms-transform:perspective(400px) rotateY(0);opacity:1;}
+    100%{-ms-transform:perspective(400px) rotateY(90deg);opacity:0;}
+}
+@keyframes flipoutY{
+    0%{transform:perspective(400px) rotateY(0);opacity:1;}
+    100%{transform:perspective(400px) rotateY(90deg);opacity:0;}
+}
+/* 闪烁 */
+@-webkit-keyframes flash{
+    0%,50%,100%{opacity:1;}
+    25%,75%{opacity:0;}
+}
+@-moz-keyframes flash{
+    0%,50%,100%{opacity:1;}
+    25%,75%{opacity:0;}
+}
+@-ms-keyframes flash{
+    0%,50%,100%{opacity:1;}
+    25%,75%{opacity:0;}
+}
+@keyframes flash{
+    0%,50%,100%{opacity:1;}
+    25%,75%{opacity:0;}
+}
+/* 震颤 */
+@-webkit-keyframes shake{
+    0%,100%{-webkit-transform:translateX(0);}
+    10%,30%,50%,70%,90%{-webkit-transform:translateX(-10px);}
+    20%,40%,60%,80%{-webkit-transform:translateX(10px);}
+}
+@-moz-keyframes shake{
+    0%,100%{-moz-transform:translateX(0);}
+    10%,30%,50%,70%,90%{-moz-transform:translateX(-10px);}
+    20%,40%,60%,80%{-moz-transform:translateX(10px);}
+}
+@-ms-keyframes shake{
+    0%,100%{-ms-transform:translateX(0);}
+    10%,30%,50%,70%,90%{-ms-transform:translateX(-10px);}
+    20%,40%,60%,80%{-ms-transform:translateX(10px);}
+}
+@keyframes shake{
+    0%,100%{transform:translateX(0);}
+    10%,30%,50%,70%,90%{transform:translateX(-10px);}
+    20%,40%,60%,80%{transform:translateX(10px);}
+}
+/* 摇摆 */
+@-webkit-keyframes swing{
+    20%{-webkit-transform:rotate(15deg);}
+    40%{-webkit-transform:rotate(-10deg);}
+    60%{-webkit-transform:rotate(5deg);}
+    80%{-webkit-transform:rotate(-5deg);}
+    100%{-webkit-transform:rotate(0);}
+}
+@-moz-keyframes swing{
+    20%{-moz-transform:rotate(15deg);}
+    40%{-moz-transform:rotate(-10deg);}
+    60%{-moz-transform:rotate(5deg);}
+    80%{-moz-transform:rotate(-5deg);}
+    100%{-moz-transform:rotate(0);}
+}
+@-ms-keyframes swing{
+    20%{-ms-transform:rotate(15deg);}
+    40%{-ms-transform:rotate(-10deg);}
+    60%{-ms-transform:rotate(5deg);}
+    80%{-ms-transform:rotate(-5deg);}
+    100%{-ms-transform:rotate(0);}
+}
+@keyframes swing{
+    20%{transform:rotate(15deg);}
+    40%{transform:rotate(-10deg);}
+    60%{transform:rotate(5deg);}
+    80%{transform:rotate(-5deg);}
+    100%{transform:rotate(0);}
+}
+/* 摇晃 */
+@-webkit-keyframes wobble{
+    0%{-webkit-transform:translateX(0);}
+    15%{-webkit-transform:translateX(-100px) rotate(-5deg);}
+    30%{-webkit-transform:translateX(80px) rotate(3deg);}
+    45%{-webkit-transform:translateX(-65px) rotate(-3deg);}
+    60%{-webkit-transform:translateX(40px) rotate(2deg);}
+    75%{-webkit-transform:translateX(-20px) rotate(-1deg);}
+    100%{-webkit-transform:translateX(0);}
+}
+@-moz-keyframes wobble{
+    0%{-moz-transform:translateX(0);}
+    15%{-moz-transform:translateX(-100px) rotate(-5deg);}
+    30%{-moz-transform:translateX(80px) rotate(3deg);}
+    45%{-moz-transform:translateX(-65px) rotate(-3deg);}
+    60%{-moz-transform:translateX(40px) rotate(2deg);}
+    75%{-moz-transform:translateX(-20px) rotate(-1deg);}
+    100%{-moz-transform:translateX(0);}
+}
+@-ms-keyframes wobble{
+    0%{-ms-transform:translateX(0);}
+    15%{-ms-transform:translateX(-100px) rotate(-5deg);}
+    30%{-ms-transform:translateX(80px) rotate(3deg);}
+    45%{-ms-transform:translateX(-65px) rotate(-3deg);}
+    60%{-ms-transform:translateX(40px) rotate(2deg);}
+    75%{-ms-transform:translateX(-20px) rotate(-1deg);}
+    100%{-ms-transform:translateX(0);}
+}
+@keyframes wobble{
+    0%{transform:translateX(0);}
+    15%{transform:translateX(-100px) rotate(-5deg);}
+    30%{transform:translateX(80px) rotate(3deg);}
+    45%{transform:translateX(-65px) rotate(-3deg);}
+    60%{transform:translateX(40px) rotate(2deg);}
+    75%{transform:translateX(-20px) rotate(-1deg);}
+    100%{transform:translateX(0);}
+}
+/* 震铃 */
+@-webkit-keyframes ring{
+    0%{-webkit-transform:scale(1);}
+    10%,20%{-webkit-transform:scale(0.9) rotate(-3deg);}
+    30%,50%,70%,90%{-webkit-transform:scale(1.1) rotate(3deg);}
+    40%,60%,80%{-webkit-transform:scale(1.1) rotate(-3deg);}
+    100%{-webkit-transform:scale(1) rotate(0);}
+}
+@-moz-keyframes ring{
+    0%{-moz-transform:scale(1);}
+    10%,20%{-moz-transform:scale(0.9) rotate(-3deg);}
+    30%,50%,70%,90%{-moz-transform:scale(1.1) rotate(3deg);}
+    40%,60%,80%{-moz-transform:scale(1.1) rotate(-3deg);}
+    100%{-moz-transform:scale(1) rotate(0);}
+}
+@-ms-keyframes ring{
+    0%{-ms-transform:scale(1);}
+    10%,20%{-ms-transform:scale(0.9) rotate(-3deg);}
+    30%,50%,70%,90%{-ms-transform:scale(1.1) rotate(3deg);}
+    40%,60%,80%{-ms-transform:scale(1.1) rotate(-3deg);}
+    100%{-ms-transform:scale(1) rotate(0);}
+}
+@keyframes ring{
+    0%{transform:scale(1);}
+    10%,20%{transform:scale(0.9) rotate(-3deg);}
+    30%,50%,70%,90%{transform:scale(1.1) rotate(3deg);}
+    40%,60%,80%{transform:scale(1.1) rotate(-3deg);}
+    100%{transform:scale(1) rotate(0);}
+}

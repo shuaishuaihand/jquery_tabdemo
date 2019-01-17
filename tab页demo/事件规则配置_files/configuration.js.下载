@@ -1,0 +1,866 @@
+var datatable2='';
+var todayDate = moment().startOf('day');
+var YM = todayDate.format('YYYY-MM');
+// alert(YM);
+// 加载表格
+var DatatableRemoteAjaxDemo = function() {
+	// == Private functions
+	var demo = function loadTableData() {
+		// $('#datatable_ajax').mDatatable('destroy');
+		$('#m_datatable_configuration').mDatatable('destroy');
+		
+		var datatable = $('#m_datatable_configuration').mDatatable(
+						{
+							// datasource definition
+							data : {
+								type : 'remote',
+								source : {
+									read : {
+										// sample GET method
+										method : 'POST',
+										url : '/Ruler/getList'
+									/*
+									 * map: function(raw) { // sample data
+									 * mapping var dataSet = raw; if (typeof
+									 * raw.data !== 'undefined') { dataSet =
+									 * raw.data; } return dataSet; },
+									 */
+									}
+								},
+								pageSize : 10,
+								serverPaging : true,
+								serverFiltering : false,
+								serverSorting : false,
+							},
+
+							// layout definition
+							layout : {
+								scroll : false,
+								footer : false
+							},
+
+							// column sorting
+							sortable : false,
+
+							pagination : true,
+
+							// search: {
+							// input: $('#search')
+							// },
+							search : false,
+
+							toolbar : {
+								// toolbar items
+								items : {
+									// pagination
+									pagination : {
+										// page size select
+										pageSizeSelect : [ 10, 20, 30 ],
+									},
+								},
+							},
+							search : false,
+							/*
+							 * search: { input: $('#generalSearch'), },
+							 */
+							// columns definition
+							columns : [
+									{
+										field : 'name',
+										title : '规则名称',
+										sortable : false,  
+										width : 80,
+										selector : false,
+										textAlign : 'center',
+									},
+									{
+										field : 'fvalName',
+										title : '信号类型',
+										width : 50,
+									},
+//									{
+//										field: "upperLimit",
+//										title: "阀值上限",
+//										width: 50,
+// 									},
+ 									{
+										field : 'upperLimit',
+										title : '阀值上限',
+										width : 50,
+										template: function (row) {
+											return '<span class="">' + row.upperLimit + row.unit + '</span>';
+										}
+									},
+//									{
+//										field : 'lowerLimit',
+//										title : '阀值下限 ',
+//										width : 50,
+//									},
+									{
+										field : 'lowerLimit',
+										title : '阀值下限',
+										width : 50,
+										template: function (row) {
+											return '<span class="">' + row.lowerLimit + row.unit + '</span>';
+										}
+									},
+									{
+										field : 'startTime',
+										title : '启用时间',
+										width : 75,
+									},
+									{
+										field : 'endTime',
+										title : '停用时间',
+										width : 75,
+									},
+									{
+										field : 'almcls',
+										title : '级别',
+										width : 40,
+										template: function (row) {
+											var status = {
+												0: {'title': '正常', 'class': ''},
+												1: {'title': '一级', 'class': ''}, 
+												2: {'title': '二级', 'class': ''}, 
+												3: {'title': '三级', 'class': ''},	 
+											};
+											return '<span class="">' + status[row.almcls].title + '</span>';
+										}
+									},
+									{
+										field : 'action',
+										title : '动作',
+										width : 80,
+										template: function (row) {
+											var status = {
+												1: {'title': '观察', 'class': ''}, 
+												2: {'title': '观察并预处理', 'class': ''}, 
+												3: {'title': '预处理', 'class': ''},	 
+												4: {'title': '忽略', 'class': ''} 
+											};
+											return '<span class="">' + status[row.action].title + '</span>';
+										}
+									},
+									{
+										field : 'observationTime',
+										title : '观察时限(分钟)',
+										width: 100,
+   									},
+   									{
+										field : 'preprocessing',
+										title : '预处理',
+										width: 60,
+   									},
+   									{
+										field : 'operation',
+										title : '生效状态',
+										width: 50,
+										// callback function support for column
+										// rendering
+										template: function (row) {
+											var status = {
+												1: {'title': '生效', 'class': 'm-badge--valid'},
+												0: {'title': '失效', 'class': 'm-badge--invalid'}
+											};
+											return '<a href="#" onclick="UpdateC(' + JSON.stringify(row).replace(/"/g, '&quot;') + ');"><span class="m-badge m-small-border-radius ' + status[row.operation].class + ' m-badge--wide">' + status[row.operation].title + '</span></a>';
+										}
+									},
+									{
+										field : 'Actions',
+										width : 70,
+										title : '操作',
+										textAlign : 'center',
+										sortable : false,
+										overflow : 'visible',
+										template : function(row, index,
+												datatable) {
+											//var str = JSON.stringify(row);
+											//alert(str);
+  											var dropup = (datatable	
+													.getPageSize() - index) <= 4 ? 'dropup'
+													: '';
+											return '\
+        						<a href="#" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="编辑" onclick="Update(' + JSON.stringify(row).replace(/"/g, '&quot;') + ')">\
+        							<i class="la la-edit"></i>\
+        						</a>\
+        						<a href="#" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill" title="删除" onclick="Delete('+row.resId+');">\
+        							<i class="la la-trash"></i>\
+        						</a>\
+        					';
+										},
+									} ]
+						});
+
+		var query = datatable.getDataSourceQuery();
+		/*
+		 * $('#pipeName').on('change', function() {
+		 * datatable.search($(this).val().toLowerCase(), 'pipeName'); });
+		 */
+		datatable2 = datatable;
+		$('#search').click(function() {
+ 							datatable.reload();
+							datatable.search2([ $('#eventName').val(),
+									$('#fvalTypeId').val()],[ 'eventName',
+									'fvalTypeId']);
+ 						});
+
+	};
+	// basic demo
+
+	return {
+		// public functions
+		init : function() {
+			demo();
+		}
+	};
+}();
+
+//搜索条件旁边的重置按钮
+$('#rest').click(function() {
+	 $('#eventName').val("");
+	 $('#fvalTypeId').val("");
+});
+
+//改变信号类型改变单位符号
+$(function() {
+	$("#fvalTypeId_add").change(function() {
+		var str = $(this).val();
+		console.info(str);
+		$("#unit1").html("");
+		$("#unit2").html("");
+ 		if(str == 1201){
+ 			//$("input[name='unit']").val("%");//jquery通过name属性获取html对象并赋值
+ 			//document.getElementById("unit1").value="%";//通过id获取id为name元素并修改value属性
+ 			$("#unit1").append("℃");
+ 			$("#unit2").append("℃");
+ 		}else if(str == 1202 || str == 1203 || str == 1411){
+ 			$("#unit1").append("%");
+ 			$("#unit2").append("%");
+ 		}else if(str == 1205 ){
+ 			$("#unit1").append("%LEL");
+ 			$("#unit2").append("%LEL");
+ 		}else if(str == 1204){
+ 			$("#unit1").append("PPM");
+ 			$("#unit2").append("PPM");
+ 		}else if(str == 1){
+ 			$("#unit1").append("");
+ 			$("#unit2").append("");
+ 		} 
+ 	});
+});
+
+//改变处理动作
+$(function() {
+	$("#action").change(function() {
+		var str = $(this).val();
+		console.info(str);
+		document.getElementById("Ezreal").style.display="none";
+		document.getElementById("Lux").style.display="none";
+		if(str == 1){
+//			$("#Ezreal").append("<label for='message-text' class='form-control-label'>观察时限" +
+//					"<span style='color: white'>*</span></label>&nbsp;" +
+//					"<input type='text' class='form-control' id='observationTime' style='width: 200px;'>");
+			document.getElementById("Ezreal").style.display="";
+ 			$('#preprocessing_id').val("");
+ 		}else if(str == 2){
+//			$("#Ezreal").append("<label for='message-text' class='form-control-label'>观察时限" +
+//					"<span style='color: white'>*</span></label>&nbsp;" +
+//					"<input type='text' class='form-control' id='observationTime' style='width: 200px;'>");
+//			$("#Lux").append("<label for='message-text' class='form-control-label'>预处理动作" +
+//					"<span style='color: white'>*</span></label>" +
+//					"<select id='preprocessing_id' class='form-control m-input--fixed' style='height: 38px; width: 200px;'></select>");
+ 			document.getElementById("Ezreal").style.display="";
+ 			document.getElementById("Lux").style.display="";
+ 		}else if(str == 3){
+//			$("#Ezreal").append("<label for='message-text' class='form-control-label'>预处理动作" +
+//					"<span style='color: white'>*</span></label>" +
+//					"<select id='preprocessing_id' class='form-control m-input--fixed' style='height: 38px; width: 200px;'></select>");
+ 			document.getElementById("Lux").style.display="";
+ 		}else if(str == "" || str == 4){
+ 			$('#preprocessing_id').val("");
+ 			$('#observationTime').val("");
+ 		}  
+ 	});
+});
+
+//添加-提交按钮
+$("#submit_add").on("click",function(){
+	var eventName_add = $('#eventName_add').val();
+	var fvalTypeId_add = $('#fvalTypeId_add').val();
+	console.info("fvalTypeId_add:"+fvalTypeId_add);
+	var upperLimit = parseFloat($('#upperLimit').val());
+	var lowerLimit = parseFloat($('#lowerLimit').val());
+	if(fvalTypeId_add == 1201){
+		var unit = "℃";	
+ 	}else if(fvalTypeId_add == 1202 || fvalTypeId_add == 1203 || fvalTypeId_add == 1411){
+		var unit = "%";
+ 	}else if(fvalTypeId_add == 1205 ){
+ 		var unit = "%LEL"
+ 	}else if(fvalTypeId_add == 1204){
+  		var unit = "PPM";
+ 	};
+ 	console.info(unit);
+	var start_time = $('#start_time').val();
+	var end_time = $('#end_time').val();
+	var dataSource = $('#dataSource').val();
+	var action = $('#action').val();
+	var observationTime = $('#observationTime').val();
+	var preprocessing_id = $('#preprocessing_id').val();
+	var almcls = $('#almcls').val();
+  	if(eventName_add==""||eventName_add.length==0||fvalTypeId_add == ""||upperLimit.length==0||lowerLimit.length==0||action==""||almcls==""){
+		swal("添加失败", "请填写必填选项！", "warning");
+		return;
+	}
+	if(start_time==""||start_time.length==0||end_time==""||end_time.length==0){
+		swal("添加失败", "请选择相应时间！", "warning");
+		return;
+	}
+	if(lowerLimit > upperLimit){
+		swal("添加失败", "阀值上限应大于阀值下限", "warning");
+		return;
+	}	
+	if(start_time > end_time){
+		swal("添加失败", "结束时间应大于开始时间", "warning");
+		return;
+	}
+	//console.info("eventName_add:"+eventName_add);
+	//console.info("fvalTypeId_add:"+fvalTypeId_add);
+	//console.info("upperLimit:"+upperLimit);
+	//console.info("lowerLimit:"+lowerLimit);
+	//console.info("start_time:"+start_time);
+	//console.info("end_time:"+end_time);	
+	//console.info("dataSource:"+dataSource);
+	//console.info("action:"+action);
+	//console.info("observationTime:"+observationTime);
+	//console.info("preprocessing_id:"+preprocessing_id);
+	//console.info("observationTime:"+observationTime);
+	$('#mainForm_add').ajaxSubmit( // ajax方式提交表单
+			{
+				url: '/Ruler/Add',
+				type: 'post',
+				async : false,
+				dataType: 'json',
+				data : {
+ 					'eventName_add' : eventName_add,
+					'fvalTypeId_add' : fvalTypeId_add,
+					'upperLimit' : upperLimit,
+ 					'lowerLimit' : lowerLimit,
+ 					'unit' : unit,
+					'start_time' : start_time,
+					'end_time' : end_time,
+					'dataSource' : dataSource,
+					'action' : action,
+					'observationTime' : observationTime,
+					'preprocessing_id' : preprocessing_id,
+					'almcls' : almcls
+				},
+				success: function (data) {
+					swal("提示", "添加成功", "success");// 弹出成功提示框
+					//$("input[type=reset]").trigger("click"); //清空表单内容
+					$("#add_modal").modal("toggle");// modal插件，状态反转，关闭则显示，显示则关闭
+					$('#eventName_add').val("");
+					$('#fvalTypeId_add').val("");
+					$('#upperLimit').val("");
+					$('#lowerLimit').val("");
+					$('#start_time').val("00:00:00");
+					$('#end_time').val("23:59:59");
+					$('#dataSource').val("");
+					$('#action').val("");
+					$('#observationTime').val("");
+					$('#preprocessing_id').val("");
+					$("#unit1").html("");
+					$("#unit2").html("");
+					$("#almcls").val("");
+					datatable2.reload();// 重新加载表格
+					//window.location.reload(true); 
+				},
+				error : function() {
+					swal("提示", "未知原因添加失败", "error");
+//			 		console.info("--------------")
+//			  		console.info("error!");
+//			  		console.info("XMLHttpRequest.status:"+XMLHttpRequest.status); // 200
+//			  		console.info("textStatus:"+textStatus); // parsererror
+//			  		console.info("errorThrown:"+errorThrown); // SyntaxError: Unexpected end of input
+				},
+				clearForm: false,// 禁止清楚表单
+				resetForm: false // 禁止重置表单
+			});
+	//window.location.reload(true); 
+	});
+
+//添加的重置按钮
+$('#rest2').click(function() {
+	$('#eventName_add').val("");
+	$('#fvalTypeId_add').val("");
+	$('#upperLimit').val("");
+	$('#lowerLimit').val("");
+	$('#start_time').val("00:00:00");
+	$('#end_time').val("23:59:59");
+	$('#dataSource').val("");
+	$('#action').val("");
+	$('#observationTime').val("");
+	$('#preprocessing_id').val("");
+	$('#almcls').val("");
+
+});
+
+$('#close_modal1').click(function() {
+	document.getElementById("Ezreal").style.display="none";
+	document.getElementById("Lux").style.display="none";
+	$('#eventName_add').val("");
+	$('#fvalTypeId_add').val("");
+	$('#upperLimit').val("");
+	$('#lowerLimit').val("");
+	$('#start_time').val("");
+	$('#end_time').val("");
+	$('#dataSource').val("");
+	$('#action').val("");
+	$('#observationTime').val("");
+	$('#preprocessing_id').val("");
+	$('#almcls').val("");
+
+});
+
+//改变信号类型改变单位符号
+$(function() {
+	$("#fvalTypeId_update").change(function() {
+		var str = $(this).val();
+		console.info(str);
+		$("#unit_update1").html("");
+		$("#unit_update2").html("");
+ 		if(str == 1201){
+ 			//$("input[name='unit']").val("%");//jquery通过name属性获取html对象并赋值
+ 			//document.getElementById("unit1").value="%";//通过id获取id为name元素并修改value属性
+ 			$("#unit_update1").append("℃");
+ 			$("#unit_update2").append("℃");
+ 		}else if(str == 1202 || str == 1203 || str == 1411){
+ 			$("#unit_update1").append("%");
+ 			$("#unit_update2").append("%");
+ 		}else if(str == 1205 ){
+ 			$("#unit_update1").append("%LEL");
+ 			$("#unit_update2").append("%LEL");
+ 		}else if(str == 1204){
+ 			$("#unit_update1").append("PPM");
+ 			$("#unit_update2").append("PPM");
+ 		}else if(str == 1){
+ 			$("#unit_update1").append("");
+ 			$("#unit_update2").append("");
+ 		} 
+ 	});
+});
+
+//修改获取数据
+function Update(row) {
+  	console.info(row);
+ 	console.info(row.action);
+	$('#update_modal').modal('show');// modal插件，手动打开模态框。
+	if(row.action == 1){
+		document.getElementById("Kaisa").style.display="";
+		document.getElementById("Vayne").style.display="none";
+	}else if(row.action == 2){
+		document.getElementById("Kaisa").style.display="";
+		document.getElementById("Vayne").style.display="";
+	}else if(row.action == 3){
+		document.getElementById("Kaisa").style.display="none";
+		document.getElementById("Vayne").style.display="";
+	} else if(row.action == 4){
+		document.getElementById("Kaisa").style.display="none";
+		document.getElementById("Vayne").style.display="none";
+ 	}
+	document.getElementById("resId").value = row.resId;
+	document.getElementById("eventName_update").value = row.name;
+	document.getElementById("fvalTypeId_update").value = row.fvaltypeid;
+	document.getElementById("upperLimit_update").value = row.upperLimit;
+	
+	//document.getElementById("unit_update1").value = row.unit;
+	//document.getElementById("unit_update2").value = row.unit;
+	$("#unit_update1").html("");
+	$("#unit_update2").html("");
+	$("#unit_update1").append(row.unit);
+	$("#unit_update2").append(row.unit);
+
+	document.getElementById("lowerLimit_update").value = row.lowerLimit;
+	document.getElementById("start_time_update").value = row.startTime;
+	document.getElementById("end_time_update").value = row.endTime;
+	document.getElementById("dataSource_update").value = row.dataSource;
+	document.getElementById("action_update").value = row.action;
+	document.getElementById("observationTime_update").value = row.observationTime;
+	document.getElementById("preprocessing_id_update").value = row.preprocessingId;
+}
+
+$(function() {
+	$("#action_update").change(function() {
+		var str = $(this).val();
+		console.info(str);
+ 		if(str == 1){
+			document.getElementById("Kaisa").style.display="";
+			document.getElementById("Vayne").style.display="none";
+ 			$('#preprocessing_id_update').val("");
+ 		}else if(str == 2){
+ 			document.getElementById("Kaisa").style.display="";
+ 			document.getElementById("Vayne").style.display="";
+ 		}else if(str == 3){
+ 			document.getElementById("Kaisa").style.display="none";
+			document.getElementById("Vayne").style.display="";
+ 			$('#observationTime_update').val("");
+ 		}else if(str == 4 || str ==""){
+ 			document.getElementById("Kaisa").style.display="none";
+ 			document.getElementById("Vayne").style.display="none";
+ 			$('#preprocessing_id_update').val("");
+ 			$('#observationTime_update').val("");
+ 		}
+ 	});
+});
+
+//修改-提交按钮
+$("#submit_update").on("click",function(){
+	var resId = $('#resId').val();
+	var eventName_update = $('#eventName_update').val();
+	var fvalTypeId_update = $('#fvalTypeId_update').val();
+	var upperLimit_update = parseFloat($('#upperLimit_update').val());
+	var lowerLimit_update = parseFloat($('#lowerLimit_update').val());
+	var start_time_update = $('#start_time_update').val();
+	var end_time_update = $('#end_time_update').val();
+	var dataSource_update = $('#dataSource_update').val();
+	var action_update = $('#action_update').val();
+	var observationTime_update = $('#observationTime_update').val();
+	var preprocessing_id_update = $('#preprocessing_id_update').val();
+  	if(eventName_update==""||eventName_update.length==0||fvalTypeId_update==""||fvalTypeId_update.length==0||upperLimit_update==""||upperLimit_update.length==0||lowerLimit_update==""||lowerLimit_update.length==0|action_update==""){
+		swal("添加失败", "请填写必填选项！", "warning");
+		return;
+	}
+	if(start_time_update==""||start_time_update.length==0||end_time_update==""||end_time_update.length==0){
+		swal("添加失败", "请选择相应时间！", "warning");
+		return;
+	}
+	if(lowerLimit_update > upperLimit_update){
+		swal("添加失败", "阀值上限应大于阀值下限", "warning");
+		return;
+	}
+	if(start_time_update > end_time_update){
+		swal("添加失败", "结束时间应大于开始时间", "warning");
+		return;
+	}
+//	console.info("resId:"+resId);
+//	console.info("eventName_update:"+eventName_update);
+//	console.info("fvalTypeId_update:"+fvalTypeId_update);
+//	console.info("upperLimit_update:"+$('#upperLimit_update').val());
+//	console.info("upperLimit_update:"+upperLimit_update);
+//	console.info("lowerLimit_update:"+lowerLimit_update);
+//	console.info("start_time_update:"+start_time_update);
+//	console.info("end_time_update:"+end_time_update);	
+//	console.info("dataSource_update:"+dataSource_update);
+//	console.info("action_update:"+action_update);
+//	console.info("observationTime_update:"+observationTime_update);
+//	console.info("preprocessing_idaction_update:"+preprocessing_id_update);
+//	console.info("observationTime_update:"+observationTime_update);
+	$('#mainForm_update').ajaxSubmit( // ajax方式提交表单
+			{
+				url: '/Ruler/Update',
+				type: 'post',
+				async : false,
+				dataType: 'json',
+				data : {
+ 					'resId' : resId,
+					'eventName_update' : eventName_update,
+					'fvalTypeId_update' : fvalTypeId_update,
+					'upperLimit_update' : upperLimit_update,
+ 					'lowerLimit_update' : lowerLimit_update,
+					'start_time_update' : start_time_update,
+					'end_time_update' : end_time_update,
+					'dataSource_update' : dataSource_update,
+					'action_update' : action_update,
+					'observationTime_update' : observationTime_update,
+					'preprocessing_id_update' : preprocessing_id_update
+				},
+				success: function (data) {
+					swal("提示", "添加成功", "success");// 弹出成功提示框
+					//$("input[type=reset]").trigger("click"); //清空表单内容
+					$("#update_modal").modal("toggle");// modal插件，状态反转，关闭则显示，显示则关闭
+					$("#unit_update1").html("");
+					$("#unit_update2").html("");
+					datatable2.reload();// 重新加载表格
+					//window.location.reload(true); 
+				},
+				error : function() {
+					swal("提示", "未知原因添加失败", "error");
+				},
+				clearForm: false,// 禁止清楚表单
+				resetForm: false // 禁止重置表单
+			});
+	//window.location.reload(true); 
+	});
+
+$('#close_modal2').click(function() {
+	document.getElementById("Kaisa").style.display="none";
+	document.getElementById("Vayne").style.display="none";
+	$('#resId').val("");
+	$('#eventName_update').val("");
+	$('#fvalTypeId_update').val("");
+	$('#upperLimit_update').val("");
+	$('#lowerLimit_update').val("");
+	$('#start_time_update').val("00:00:00");
+	$('#end_time_update').val("23:59:59");
+	$('#dataSource_update').val("");
+	$('#action_update').val("");
+	$('#observationTime_update').val("");
+	$('#preprocessing_id_update').val("");
+	$("#unit_update1").html("");
+	$("#unit_update2").html("");
+});
+
+$('#rest3').click(function() {
+	document.getElementById("Kaisa").style.display="none";
+	document.getElementById("Vayne").style.display="none";
+	$('#resId').val("");
+	$('#eventName_update').val("");
+	$('#fvalTypeId_update').val("");
+	$('#upperLimit_update').val("");
+	$('#lowerLimit_update').val("");
+	$('#start_time_update').val("00:00:00");
+	$('#end_time_update').val("23:59:59");
+	$('#dataSource_update').val("");
+	$('#action_update').val("");
+	$('#observationTime_update').val("");
+	$('#preprocessing_id_update').val("");
+	$("#unit_update1").html("");
+	$("#unit_update2").html("");
+});
+
+
+//删除
+ function Delete(resId){
+	swal({
+        title: '提示',
+        text: "确认删除吗？",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonText: '确认',
+        cancelButtonText: '取消',
+        //reverseButtons: true
+    }).then(function(result){
+        if (result.value) {
+        	$.ajax({
+        		url:"/Ruler/Delete",
+        		async:false,
+        		data:{'resId':resId},
+        		type:"POST",
+        		success : function(data) {
+    				console.info(data);
+    				if (data.result) {
+    					swal("提示", "删除成功", "success");//弹出成功提示框
+    					datatable2.reload();//重新加载表格
+    				} else{
+    					swal("提示", "删除失败失败", "error");
+    				}
+    			},
+    			error : function() {
+    				swal("提示", "未知原因删除失败", "error");
+    			}
+        	});
+            // result.dismiss can be 'cancel', 'overlay',
+            // 'close', and 'timer'
+        } 
+//        else if (result.dismiss === 'cancel') {
+//            swal(
+//                '提示',
+//                '没有删除！',
+//                'info'
+//            )
+//        }
+    });
+}
+
+// 下拉框加载管廊
+$(function() {
+	$.ajax({
+		url : "/BuildingAutomaticSystem/getPipeName",
+		type : "get",
+		dataType : "json",
+		async: false,	
+	    data:{},
+		success : function(data) {
+			 $("#pipeId").prepend("<option value=''>请选择</option>");
+			for (var i = 0; i < data.length; i++) {
+				$("#pipeId").append(
+						"<option value=" + data[i].resId + ">" + data[i].name
+								+ "</option>");
+			}
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrown) {
+			/**
+			console.info("--------------")
+ 			console.info("error!");
+ 			console.info("XMLHttpRequest.status:"+XMLHttpRequest.status); // 200
+ 			console.info("textStatus:"+textStatus); // parsererror
+ 			console.info("errorThrown:"+errorThrown); // SyntaxError: Unexpected end of input
+ 			*/
+ 		} 
+	});
+});
+	
+//下拉框加载预处理动作
+$(function() {
+	$.ajax({
+		url : "/Ruler/getPreprocessing",
+		type : "get",
+		dataType : "json",
+		async: false,	
+	    data:{},
+		success : function(data) {
+			 $("#preprocessing_id").prepend("<option value=''>请选择</option>");
+			for (var i = 0; i < data.length; i++) {
+				$("#preprocessing_id").append(
+						"<option value=" + data[i].resId + ">" + data[i].description
+								+ "</option>");
+				$("#preprocessing_id_update").append(
+						"<option value=" + data[i].resId + ">" + data[i].description
+								+ "</option>");
+			}
+		}
+ 	});
+});
+
+//新建事件预处理-提交按钮
+$("#submit2_scrap").on("click",function(){
+	var Preprocess_name = $('#Preprocess_name').val();
+	var device_type = $('#device_type').val();
+	var perform_action = $('#perform_action').val();
+	var memo = $('#memo').val();
+	var Text1 = $("#device_type").find("option:selected").text();  //获取Select选择的Text
+	var Text2 = $("#perform_action").find("option:selected").text();  //获取Select选择的Text
+    var description = Text1+Text2;
+    console.info(description);
+  	if(Preprocess_name==""||Preprocess_name.length==0||device_type==""||perform_action==""){
+		swal("添加失败", "请填写必填选项！", "warning");
+		return;
+	}
+	//console.info("eventName_add:"+eventName_add);
+	//console.info("fvalTypeId_add:"+fvalTypeId_add);
+	//console.info("upperLimit:"+upperLimit);
+	//console.info("lowerLimit:"+lowerLimit);
+	//console.info("start_time:"+start_time);
+	//console.info("end_time:"+end_time);	
+	//console.info("dataSource:"+dataSource);
+	//console.info("action:"+action);
+	//console.info("observationTime:"+observationTime);
+	console.info("preprocessing_id:"+preprocessing_id);
+	//console.info("observationTime:"+observationTime);
+	$('#mainForm_add2').ajaxSubmit( // ajax方式提交表单
+			{
+				url: '/Ruler/AddPreprocess',
+				type: 'post',
+				async : false,
+				dataType: 'json',
+				data : {
+ 					'Preprocess_name' : Preprocess_name,
+					'device_type' : device_type,
+					'perform_action' : perform_action,
+ 					'memo' : memo,
+ 					'description' : description
+				},
+				success: function (data) {
+					swal("提示", "添加成功", "success");// 弹出成功提示框
+					$("#add_modal2").modal("toggle");// modal插件，状态反转，关闭则显示，显示则关闭
+					$('#Preprocess_name').val("");
+					$('#device_type').val("");
+					$('#perform_action').val("");
+					$('#memo').val("");
+					datatable2.reload();// 重新加载表格
+					
+				},
+				error : function() {
+					swal("提示", "未知原因添加失败", "error");
+//			 		console.info("--------------")
+//			  		console.info("error!");
+//			  		console.info("XMLHttpRequest.status:"+XMLHttpRequest.status); // 200
+//			  		console.info("textStatus:"+textStatus); // parsererror
+//			  		console.info("errorThrown:"+errorThrown); // SyntaxError: Unexpected end of input
+				},
+				clearForm: false,// 禁止清楚表单
+				resetForm: false // 禁止重置表单
+			});
+	//window.location.reload(true); 
+	});
+
+//重置按钮
+$('#rest4').click(function() {
+	$('#Preprocess_name').val("");
+	$('#device_type').val("");
+	$('#perform_action').val("");
+	$('#memo').val("");
+});
+
+$('#close_modal3').click(function() {
+	$('#Preprocess_name').val("");
+	$('#device_type').val("");
+	$('#perform_action').val("");
+	$('#memo').val("");
+});
+
+function UpdateC(row) {
+  	console.info(row);
+  	var resId = row.resId;
+  	console.info(resId);
+  	 swal({
+         title: '确认修改吗?',
+       //  text: "此操作不可恢复!",
+         type: 'warning',
+         showCancelButton: true,
+         confirmButtonText: '确认',
+         cancelButtonText: '取消'
+     }).then(function(result) {
+    if (result.value) {
+  	if(row.operation == 1){
+  		$.ajax({
+  			url : "/Ruler/ChangeToZero",
+  			type : "get",
+  			dataType : "json",
+  			async: false,	
+  		    data:{'resId':row.resId},
+  			success : function(data) {
+				 console.info(data);
+				 if (data.result == "success") {
+					 swal("提示", "规则失效成功", "success");// 弹出成功提示框
+					 datatable2.reload();// 重新加载表格
+				 } else {
+					 swal("提示", "规则失效失败", "error");
+				 }
+			 }
+  	 	});
+  	}else if(row.operation == 0){
+  		$.ajax({
+  			url : "/Ruler/ChangeToOne",
+  			type : "get",
+  			dataType : "json",
+  			async: false,	
+  		    data:{'resId':row.resId,
+  		    	  'fvalTypeId':row.fvaltypeid
+  		    },
+  			success : function(data) {
+				 console.info(data);
+				 console.info(data.result);
+				 if (data.result == "success") {
+					 swal("提示", "规则生效成功", "success");// 弹出成功提示框
+					 datatable2.reload();// 重新加载表格
+				 } else if(data.result == "error"){
+					 swal("提示", "当前类型已经有一条生效规则，请先确定！", "error");
+				 }
+			 }
+  	 	});
+  	
+  	}
+   }
+  });
+}
+ 
+
+
+// 界面加载时
+jQuery(document).ready(function() {
+	// $('#name').val("");
+	// $('#categories').val("");
+	DatatableRemoteAjaxDemo.init();
+
+});

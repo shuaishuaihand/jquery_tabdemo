@@ -1,0 +1,466 @@
+//== Class definition
+
+var BootstrapDatetimepicker = function () {
+	var date = new Date();
+    //== Private functions
+    var demos = function () {
+        // minimal setup
+        $('#m_datetimepicker_1').datetimepicker({
+            todayHighlight: true,
+            autoclose: true,
+            format: 'yyyy.mm.dd hh:ii'
+        });
+
+        $('#m_datetimepicker_1_modal').datetimepicker({
+            todayHighlight: true,
+            autoclose: true,
+            format: 'yyyy.mm.dd hh:ii'
+        });
+
+        // input group demo
+        $('#m_datetimepicker_2, #m_datetimepicker_1_validate, #m_datetimepicker_2_validate, #m_datetimepicker_3_validate').datetimepicker({
+            todayHighlight: true,
+            autoclose: true,
+            pickerPosition: 'bottom-left',
+            format: 'yyyy/mm/dd hh:ii'
+        });
+        $('#m_datetimepicker_2_modal').datetimepicker({
+            todayHighlight: true,
+            autoclose: true,
+            pickerPosition: 'bottom-left',
+            format: 'yyyy/mm/dd hh:ii'
+        });
+
+        // today button
+        $('#m_datetimepicker_3').datetimepicker({
+            todayHighlight: true,
+            autoclose: true,
+            pickerPosition: 'bottom-left',
+            todayBtn: true,
+            format: 'yyyy/mm/dd hh:ii'
+        });
+
+        $('#m_datetimepicker_3_modal').datetimepicker({
+            todayHighlight: true,
+            autoclose: true,
+            pickerPosition: 'bottom-left',
+            todayBtn: true,
+            format: 'yyyy/mm/dd hh:ii'
+        });
+
+        // orientation
+        $('#m_datetimepicker_4_1').datetimepicker({
+            todayHighlight: true,
+            autoclose: true,
+            pickerPosition: 'bottom-left',
+            format: 'yyyy.mm.dd hh:ii'
+        });
+
+        $('#m_datetimepicker_4_2').datetimepicker({
+            todayHighlight: true,
+            autoclose: true,
+            pickerPosition: 'bottom-right',
+            format: 'yyyy/mm/dd hh:ii'
+        });
+
+        $('#m_datetimepicker_4_3').datetimepicker({
+            todayHighlight: true,
+            autoclose: true,
+            pickerPosition: 'top-left',
+            format: 'yyyy-mm-dd hh:ii'
+        });
+
+        $('#m_datetimepicker_4_4').datetimepicker({
+            todayHighlight: true,
+            autoclose: true,
+            pickerPosition: 'top-right',
+            format: 'yyyy-mm-dd hh:ii'
+        });
+
+        $('#m_datetimepicker_5').datetimepicker({
+            format: "dd MM yyyy - HH:ii P",
+            showMeridian: true,
+            todayHighlight: true,
+            autoclose: true,
+            pickerPosition: 'bottom-left'
+        });
+
+        $('#m_datetimepicker_6').datetimepicker({
+            format: "yyyy/mm/dd",
+            todayHighlight: true,
+            autoclose: true,
+            startView: 2,
+            minView: 2,
+            forceParse: 0,
+            pickerPosition: 'bottom-left'
+        });
+        // 自定义日期显示修改
+        $('#m_datetimepicker_startTime').datetimepicker({
+            language: 'zh-CN',
+            format: "yyyy/mm/dd",
+            todayHighlight: true,
+            //defaultDate :new Date(),
+            initialDate: new Date(),
+            autoclose: true,//选中之后自动隐藏日期选择框
+            //clearBtn: true,//清除按钮
+            todayBtn: true,//今日按钮
+            startView: 2,
+            minView: 2,
+            forceParse: 0,
+            pickerPosition: 'bottom-left'
+
+        });
+        $('#m_datetimepicker_endTime').datetimepicker({
+            language: 'zh-CN',
+            format: "yyyy/mm/dd",
+            todayHighlight: true,
+            autoclose: true,//选中之后自动隐藏日期选择框
+            //clearBtn: true,//清除按钮
+            todayBtn: true,//今日按钮
+            startView: 2,
+            minView: 2,
+            forceParse: 0,
+            pickerPosition: 'bottom-left'
+
+        });
+        $('#u_datetimepicker_startTime').datetimepicker({
+            language: 'zh-CN',
+            format: "yyyy/mm/dd",
+            todayHighlight: true,
+            startDate: date,
+            //defaultDate :new Date(),
+            initialDate: new Date(),
+            autoclose: true,//选中之后自动隐藏日期选择框
+            //clearBtn: true,//清除按钮
+            todayBtn: true,//今日按钮
+            startView: 2,
+            minView: 2,
+            forceParse: 0,
+            pickerPosition: 'top-left'
+        }).on('changeDate',function(ev){
+            var starttime=$("#u_datetimepicker_startTime").val();
+            $("#u_datetimepicker_endTime").datetimepicker('setStartDate',starttime);
+            $("#u_datetimepicker_startTime").datetimepicker('hide');
+                    });
+
+        $('#u_datetimepicker_endTime').datetimepicker({
+            language: 'zh-CN',
+            format: "yyyy/mm/dd",
+            todayHighlight: true,
+            //defaultDate :new Date(),
+            initialDate: new Date(),
+            autoclose: true,//选中之后自动隐藏日期选择框
+            //clearBtn: true,//清除按钮
+            todayBtn: true,//今日按钮
+            startView: 2,
+            minView: 2,
+            forceParse: 0,
+            pickerPosition: 'top-left'
+
+        }).on('changeDate',function(ev){
+            var starttime=$("#u_datetimepicker_startTime").val();
+            var endtime=$("#u_datetimepicker_endTime").val();
+            $("#u_datetimepicker_startTime").datetimepicker('setEndDate',endtime);
+            $("#u_datetimepicker_endTime").datetimepicker('hide'); 
+       });
+        
+        $('#u_datetimepicker_startTime_bottom').datetimepicker({
+            language: 'zh-CN',
+            format: "yyyy/mm/dd",
+            todayHighlight: true,
+            startDate: date,
+            //defaultDate :new Date(),
+            initialDate: new Date(),
+            autoclose: true,//选中之后自动隐藏日期选择框
+            //clearBtn: true,//清除按钮
+            todayBtn: true,//今日按钮
+            startView: 2,
+            minView: 2,
+            forceParse: 0,
+            pickerPosition: 'bottom-left'
+        }).on('changeDate',function(ev){
+            var starttime=$("#u_datetimepicker_startTime_bottom").val();
+            $("#u_datetimepicker_endTime_bottom").datetimepicker('setStartDate',starttime);
+            $("#u_datetimepicker_startTime_bottom").datetimepicker('hide');
+                    });
+
+        $('#u_datetimepicker_endTime_bottom').datetimepicker({
+            language: 'zh-CN',
+            format: "yyyy/mm/dd",
+            todayHighlight: true,
+            //defaultDate :new Date(),
+            initialDate: new Date(),
+            autoclose: true,//选中之后自动隐藏日期选择框
+            //clearBtn: true,//清除按钮
+            todayBtn: true,//今日按钮
+            startView: 2,
+            minView: 2,
+            forceParse: 0,
+            pickerPosition: 'bottom-left'
+
+        }).on('changeDate',function(ev){
+            var starttime=$("#u_datetimepicker_startTime_bottom").val();
+            var endtime=$("#u_datetimepicker_endTime_bottom").val();
+            $("#u_datetimepicker_startTime_bottom").datetimepicker('setEndDate',endtime);
+            $("#u_datetimepicker_endTime_bottom").datetimepicker('hide'); 
+       });
+        
+        $('#u_datetimepicker_endTime').datetimepicker({
+            language: 'zh-CN',
+            format: "yyyy/mm/dd",
+            todayHighlight: true,
+            //defaultDate :new Date(),
+            initialDate: new Date(),
+            autoclose: true,//选中之后自动隐藏日期选择框
+            //clearBtn: true,//清除按钮
+            todayBtn: true,//今日按钮
+            startView: 2,
+            minView: 2,
+            forceParse: 0,
+            pickerPosition: 'top-left'
+
+        }).on('changeDate',function(ev){
+            var starttime=$("#u_datetimepicker_startTime").val();
+            var endtime=$("#u_datetimepicker_endTime").val();
+            $("#u_datetimepicker_startTime").datetimepicker('setEndDate',endtime);
+            $("#u_datetimepicker_endTime").datetimepicker('hide'); 
+       });
+        
+        $('#m_datetimepicker_startTime_bottom').datetimepicker({
+            language: 'zh-CN',
+            format: "yyyy/mm/dd",
+            todayHighlight: true,
+            startDate: date,
+            //defaultDate :new Date(),
+            initialDate: new Date(),
+            autoclose: true,//选中之后自动隐藏日期选择框
+            //clearBtn: true,//清除按钮
+            todayBtn: true,//今日按钮
+            startView: 2,
+            minView: 2,
+            forceParse: 0,
+            pickerPosition: 'bottom-left'
+        }).on('changeDate',function(ev){
+            var starttime=$("#m_datetimepicker_startTime_bottom").val();
+            $("#m_datetimepicker_endTime_bottom").datetimepicker('setStartDate',starttime);
+            $("#m_datetimepicker_startTime_bottom").datetimepicker('hide');
+                    });
+
+        $('#m_datetimepicker_endTime_bottom').datetimepicker({
+            language: 'zh-CN',
+            format: "yyyy/mm/dd",
+            todayHighlight: true,
+            //defaultDate :new Date(),
+            initialDate: new Date(),
+            autoclose: true,//选中之后自动隐藏日期选择框
+            //clearBtn: true,//清除按钮
+            todayBtn: true,//今日按钮
+            startView: 2,
+            minView: 2,
+            forceParse: 0,
+            pickerPosition: 'bottom-left'
+
+        }).on('changeDate',function(ev){
+            var starttime=$("#m_datetimepicker_startTime_bottom").val();
+            var endtime=$("#m_datetimepicker_endTime_bottom").val();
+            $("#m_datetimepicker_startTime_bottom").datetimepicker('setEndDate',endtime);
+            $("#m_datetimepicker_endTime_bottom").datetimepicker('hide'); 
+       });
+
+        $('#m_datetimepicker_7').datetimepicker({
+            format: "hh:ii",
+            showMeridian: true,
+            todayHighlight: true,
+            autoclose: true,
+            startView: 1,
+            minView: 0,
+            maxView: 1,
+            forceParse: 0,
+            pickerPosition: 'bottom-left'
+        });
+     // 日期时分
+        $('#m_datetimepicker_dateCN1').datetimepicker({
+        	language: 'zh-CN',
+        	todayHighlight: true,
+        	startDate: date,
+            autoclose: true,
+            pickerPosition: 'bottom-right',
+            todayBtn: true,
+            format: 'yyyy/mm/dd hh:ii'
+        }).on('changeDate',function(ev){
+            var starttime=$("#m_datetimepicker_dateCN1").val();
+            $("#m_datetimepicker_dateCN2").datetimepicker('setStartDate',starttime);
+            $("#m_datetimepicker_dateCN1").datetimepicker('hide');
+                    });
+        
+        $('#m_datetimepicker_dateCN2').datetimepicker({
+        	language: 'zh-CN',
+        	todayHighlight: true,
+            autoclose: true,
+            pickerPosition: 'bottom-right',
+            todayBtn: true,
+            format: 'yyyy/mm/dd hh:ii'
+        }).on('changeDate',function(ev){
+            var starttime=$("#m_datetimepicker_dateCN1").val();
+            var endtime=$("#m_datetimepicker_dateCN2").val();
+            $("#m_datetimepicker_dateCN1").datetimepicker('setEndDate',endtime);
+            $("#m_datetimepicker_dateCN2").datetimepicker('hide'); 
+       });
+        
+        // 日期时分
+        $('#m_datetimepicker_dateCN11').datetimepicker({
+        	language: 'zh-CN',
+        	todayHighlight: true,
+        	startDate: date,
+            autoclose: true,
+            pickerPosition: 'bottom-right',
+            todayBtn: true,
+            format: 'yyyy/mm/dd hh:ii'
+        }).on('changeDate',function(ev){
+            var starttime=$("#m_datetimepicker_dateCN11").val();
+            $("#m_datetimepicker_dateCN22").datetimepicker('setStartDate',starttime);
+            $("#m_datetimepicker_dateCN11").datetimepicker('hide');
+                    });
+        
+        $('#m_datetimepicker_dateCN22').datetimepicker({
+        	language: 'zh-CN',
+        	todayHighlight: true,
+            autoclose: true,
+            pickerPosition: 'bottom-right',
+            todayBtn: true,
+            format: 'yyyy/mm/dd hh:ii'
+        }).on('changeDate',function(ev){
+            var starttime=$("#m_datetimepicker_dateCN11").val();
+            var endtime=$("#m_datetimepicker_dateCN22").val();
+            $("#m_datetimepicker_dateCN11").datetimepicker('setEndDate',endtime);
+            $("#m_datetimepicker_dateCN21").datetimepicker('hide'); 
+       });
+        
+       //出入廊安全时间选择框 不带时分秒
+        $('#m_datetimepicker_start').datetimepicker({
+        	language: 'zh-CN',
+        	todayHighlight: true,
+            autoclose: true,
+            pickerPosition: 'bottom-right',
+            todayBtn: true,
+            format: 'yyyy/mm/dd',
+            minView: 2,
+        }).on('changeDate',function(ev){
+            var starttime=$("#m_datetimepicker_start").val();
+            $("#m_datetimepicker_end").datetimepicker('setStartDate',starttime);
+            $("#m_datetimepicker_start").datetimepicker('hide');
+                    });
+        
+        $('#m_datetimepicker_end').datetimepicker({
+        	language: 'zh-CN',
+        	todayHighlight: true,
+            autoclose: true,
+            pickerPosition: 'bottom-right',
+            todayBtn: true,
+            format: 'yyyy/mm/dd',
+            minView: 2,
+        }).on('changeDate',function(ev){
+            var starttime=$("#m_datetimepicker_start").val();
+            var endtime=$("#m_datetimepicker_end").val();
+            $("#m_datetimepicker_start").datetimepicker('setEndDate',endtime);
+            $("#m_datetimepicker_end").datetimepicker('hide'); 
+       });
+        
+        $('#m_datetimepicker_startTime_from').datetimepicker({
+            language: 'zh-CN',
+            format: "yyyy/mm/dd",
+            todayHighlight: true,
+            //startDate: date,
+            //defaultDate :new Date(),
+            initialDate: new Date(),
+            autoclose: true,//选中之后自动隐藏日期选择框
+            //clearBtn: true,//清除按钮
+            todayBtn: true,//今日按钮
+            startView: 2,
+            minView: 2,
+            forceParse: 0,
+            pickerPosition: 'bottom-left'
+        }).on('changeDate',function(ev){
+            var starttime=$("#m_datetimepicker_startTime_from").val();
+            $("#m_datetimepicker_endTime_from").datetimepicker('setStartDate',starttime);
+            $("#m_datetimepicker_startTime_from").datetimepicker('hide');
+                    });
+
+        $('#m_datetimepicker_endTime_from').datetimepicker({
+            language: 'zh-CN',
+            format: "yyyy/mm/dd",
+            todayHighlight: true,
+            //defaultDate :new Date(),
+            initialDate: new Date(),
+            autoclose: true,//选中之后自动隐藏日期选择框
+            //clearBtn: true,//清除按钮
+            todayBtn: true,//今日按钮
+            startView: 2,
+            minView: 2,
+            forceParse: 0,
+            pickerPosition: 'bottom-left'
+
+        }).on('changeDate',function(ev){
+            var starttime=$("#m_datetimepicker_startTime_from").val();
+            var endtime=$("#m_datetimepicker_endTime_from").val();
+            $("#m_datetimepicker_startTime_from").datetimepicker('setEndDate',endtime);
+            $("#m_datetimepicker_endTime_from").datetimepicker('hide'); 
+       });
+        
+        $('#m_datetimepicker_startTime_upfrom').datetimepicker({
+            language: 'zh-CN',
+            format: "yyyy/mm/dd",
+            todayHighlight: true,
+            //startDate: date,
+            //defaultDate :new Date(),
+            initialDate: new Date(),
+            autoclose: true,//选中之后自动隐藏日期选择框
+            //clearBtn: true,//清除按钮
+            todayBtn: true,//今日按钮
+            startView: 2,
+            minView: 2,
+            forceParse: 0,
+            pickerPosition: 'bottom-left'
+        }).on('changeDate',function(ev){
+            var starttime=$("#m_datetimepicker_startTime_upfrom").val();
+            $("#m_datetimepicker_endTime_upfrom").datetimepicker('setStartDate',starttime);
+            $("#m_datetimepicker_startTime_upfrom").datetimepicker('hide');
+        });
+
+        $('#m_datetimepicker_endTime_upfrom').datetimepicker({
+            language: 'zh-CN',
+            format: "yyyy/mm/dd",
+            todayHighlight: true,
+            //defaultDate :new Date(),
+            initialDate: new Date(),
+            autoclose: true,//选中之后自动隐藏日期选择框
+            //clearBtn: true,//清除按钮
+            todayBtn: true,//今日按钮
+            startView: 2,
+            minView: 2,
+            forceParse: 0,
+            pickerPosition: 'bottom-left'
+
+        }).on('changeDate',function(ev){
+            var starttime=$("#m_datetimepicker_startTime_upfrom").val();
+            var endtime=$("#m_datetimepicker_endTime_upfrom").val();
+            $("#m_datetimepicker_startTime_upfrom").datetimepicker('setEndDate',endtime);
+            $("#m_datetimepicker_endTime_upfrom").datetimepicker('hide'); 
+       }); 
+        
+        
+    }
+    
+   
+    
+    return {
+        // public functions
+        init: function() {
+            demos(); 
+        }
+    };
+}();
+
+jQuery(document).ready(function() {    
+    BootstrapDatetimepicker.init();
+});

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://220.248.243.122:11813/Ruler/configuration -->
+<html lang="en"><!-- begin::Head --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>事件规则配置</title>
+	<meta content="Latest updates and statistic charts" name="description">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<!--begin::Web font -->
+
+	<!--end::Web font -->
+	<!--begin::Base Styles -->
+	<link href="./事件规则配置_files/vendors.bundle.css" rel="stylesheet" type="text/css">
+	<link href="./事件规则配置_files/style.bundle.css" rel="stylesheet" type="text/css">
+	<!--end::Base Styles -->
+	<link href="./事件规则配置_files/custom.css" rel="stylesheet" type="text/css">
+
+	<!-- <style>
+    @media ( min-width : 992px) {
+        .modal-lg {
+            max-width: 1500px;
+        }
+    }
+    </style> -->
+	<style type="text/css">
+		@media ( min-width : 992px) {
+			.modal-lg {
+				max-width: 750px;
+				max-height: 500px
+			}
+			.modal-lg2 {
+				max-width: 530px;
+				max-height: 600px
+			}
+		}
+
+		.m-btn--icon.m-btn--icon-only {
+			display: inline-block;
+			position: relative;
+			padding: 0 !important;
+			width: 33px;
+			height: 23px;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function test() {
+			var mobi = $("#m_select2_3").val();
+			alert(mobi);
+		}
+	</script>
+<script src="./事件规则配置_files/jquery.mousewheel.min.js.下载"></script><style type="text/css">span.im-caret {
+    -webkit-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        border-right-color: black;
+    }
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+@-webkit-keyframes blink {
+    from, to {
+        border-right-color: black;
+    }
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+span.im-static {
+    color: grey;
+}
+
+div.im-colormask {
+    display: inline-block;
+    border-style: inset;
+    border-width: 2px;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+div.im-colormask > input {
+    position: absolute;
+    display: inline-block;
+    background-color: transparent;
+    color: transparent;
+    -webkit-appearance: caret;
+    -moz-appearance: caret;
+    appearance: caret;
+    border-style: none;
+    left: 0; /*calculated*/
+}
+
+div.im-colormask > input:focus {
+    outline: none;
+}
+
+div.im-colormask > input::-moz-selection{
+    background: none;
+}
+
+div.im-colormask > input::selection{
+    background: none;
+}
+div.im-colormask > input::-moz-selection{
+    background: none;
+}
+
+div.im-colormask > div {
+    color: black;
+    display: inline-block;
+    width: 100px; /*calculated*/
+}</style><style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head>
+<!-- end::Head -->
+<!-- end::Body -->
+<body class="m-page--fluid m--skin- m-content--skin-light2 m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default" style="height: 1000px;">
+<div class="m-grid m-grid--hor m-grid--root m-page" style="width: 100%; height: 100%;">
+	<div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body ">
+		<div class="m-content-new w100">
+			<div class="m-portlet m--margin-bottom-10">
+				<div class="m-portlet__body">
+					<!-- begin from -->
+					<form class="m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed">
+						<div class="form-group m-form__group row">
+							<label class="col-form-label col-lg-1 col-md-1 col-sm-1">事件名称</label>
+							<div class="col-lg-2 col-md-2 col-sm-2">
+								<input class="form-control m-input" id="eventName" placeholder="请输入事件名称" type="text">
+							</div>
+							<label class="col-form-label col-lg-1 col-md-1 col-sm-1">信号类型</label>
+							<div class="col-lg-2 col-md-2 col-sm-2">
+								<select class="form-control m-input" id="fvalTypeId" name="">
+									<option value="">请选择</option>
+									<option value="1201">温度信号</option>
+									<option value="1202	">湿度信号</option>
+									<option value="1203">氧气信号</option>
+									<option value="1205">甲烷信号</option>
+									<option value="1411">一氧化碳信号</option>
+									<option value="1204">硫化氢信号</option>
+									<option value="1412">液位信号</option>
+								</select>
+							</div>
+							<div class="btn-toolbar m--margin-left-50">
+								<div>
+									<button class="btn btn-accent" id="search" type="button">&nbsp;查&nbsp;&nbsp;询&nbsp;</button>
+									<button class="btn btn-metal" id="rest" type="button">&nbsp;重&nbsp;&nbsp;置&nbsp;</button>
+								</div>
+							</div>
+						</div>
+					</form>
+					<!-- end from -->
+				</div>
+			</div>
+			<div class="m-portlet">
+				<div class="m-portlet__body">
+					<div class="m-stack m-stack--ver m-stack--general rask-data" style="width: 300px">
+						<div class="m-stack__item m-stack__item--middle m-stack__item--left">
+							<button class="btn btn-info" data-target="#add_modal" data-toggle="modal" type="button">
+								<i class="la la-plus"></i>新建事件规则
+							</button>
+						</div>
+						<div class="m-stack__item m-stack__item--middle m-stack__item--left">
+							<button class="btn btn-primary" data-target="#add_modal2" data-toggle="modal" type="button">
+								<i class="la la-plus"></i>新建事件预处理
+							</button>
+						</div>
+					</div>
+
+
+					<!--begin::Portlet-->
+					<ul class="nav nav-tabs  m-tabs-line" role="tablist">
+						<li class="nav-item m-tabs__item"><a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_tabs_6_1" role="tab"> 事件规则 </a></li>
+						<li class="nav-item m-tabs__item"><a class="nav-link m-tabs__link" data-toggle="tab" href="#m_tabs_6_3" role="tab"> 事件预处理 </a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active" id="m_tabs_6_1" role="tabpanel">
+							<!-- begin::datetable -->
+							<div class="m_datatable m-datatable m-datatable--default m-datatable--brand m-datatable--loaded" id="m_datatable_configuration" style=""><table class="m-datatable__table" style="display: block; min-height: 300px; overflow-x: auto;"><thead class="m-datatable__head"><tr class="m-datatable__row"><th data-field="name" class="m-datatable__cell--center m-datatable__cell"><span style="width: 80px;">规则名称</span></th><th data-field="fvalName" class="m-datatable__cell"><span style="width: 50px;">信号类型</span></th><th data-field="upperLimit" class="m-datatable__cell"><span style="width: 50px;">阀值上限</span></th><th data-field="lowerLimit" class="m-datatable__cell"><span style="width: 50px;">阀值下限</span></th><th data-field="startTime" class="m-datatable__cell"><span style="width: 75px;">启用时间</span></th><th data-field="endTime" class="m-datatable__cell"><span style="width: 75px;">停用时间</span></th><th data-field="almcls" class="m-datatable__cell"><span style="width: 40px;">级别</span></th><th data-field="action" class="m-datatable__cell"><span style="width: 80px;">动作</span></th><th data-field="observationTime" class="m-datatable__cell"><span style="width: 100px;">观察时限(分钟)</span></th><th data-field="preprocessing" class="m-datatable__cell"><span style="width: 60px;">预处理</span></th><th data-field="operation" class="m-datatable__cell"><span style="width: 50px;">生效状态</span></th><th data-field="Actions" class="m-datatable__cell--center m-datatable__cell"><span style="width: 70px;">操作</span></th></tr></thead><tbody class="m-datatable__body" style=""><tr data-row="0" class="m-datatable__row"><td data-field="name" class="m-datatable__cell--center m-datatable__cell"><span style="width: 80px;">温度规则配置</span></td><td data-field="fvalName" class="m-datatable__cell"><span style="width: 50px;">湿度信号</span></td><td data-field="upperLimit" class="m-datatable__cell"><span style="width: 50px;"><span class="">18%</span></span></td><td data-field="lowerLimit" class="m-datatable__cell"><span style="width: 50px;"><span class="">2%</span></span></td><td data-field="startTime" class="m-datatable__cell"><span style="width: 75px;">02:00:00</span></td><td data-field="endTime" class="m-datatable__cell"><span style="width: 75px;">04:00:00</span></td><td data-field="almcls" class="m-datatable__cell"><span style="width: 40px;"><span class="">三级</span></span></td><td data-field="action" class="m-datatable__cell"><span style="width: 80px;"><span class="">观察并预处理</span></span></td><td data-field="observationTime" class="m-datatable__cell"><span style="width: 100px;">180</span></td><td data-field="preprocessing" class="m-datatable__cell"><span style="width: 60px;"></span></td><td data-field="operation" class="m-datatable__cell"><span style="width: 50px;"><a href="http://220.248.243.122:11813/Ruler/configuration#" onclick="UpdateC({&quot;resId&quot;:2,&quot;resCreatedate&quot;:null,&quot;resCreator&quot;:null,&quot;resEditdate&quot;:null,&quot;resEditor&quot;:null,&quot;resVersion&quot;:null,&quot;name&quot;:&quot;温度规则配置&quot;,&quot;code&quot;:null,&quot;fvaltypeid&quot;:1202,&quot;entityTypeid&quot;:null,&quot;upperLimit&quot;:&quot;18&quot;,&quot;lowerLimit&quot;:&quot;2&quot;,&quot;startTime&quot;:&quot;02:00:00&quot;,&quot;endTime&quot;:&quot;04:00:00&quot;,&quot;dataSource&quot;:&quot;Platform Ⅰ&quot;,&quot;action&quot;:2,&quot;observationTime&quot;:&quot;180&quot;,&quot;preprocessingId&quot;:&quot;494557187702784&quot;,&quot;description&quot;:null,&quot;memo&quot;:null,&quot;tenantId&quot;:null,&quot;unit&quot;:&quot;%&quot;,&quot;fvalName&quot;:&quot;湿度信号&quot;,&quot;preprocessing&quot;:null,&quot;operation&quot;:1,&quot;almcls&quot;:3});"><span class="m-badge m-small-border-radius m-badge--valid m-badge--wide">生效</span></a></span></td><td data-field="Actions" class="m-datatable__cell--center m-datatable__cell"><span style="overflow: visible; width: 70px;">        						<a href="http://220.248.243.122:11813/Ruler/configuration#" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="编辑" onclick="Update({&quot;resId&quot;:2,&quot;resCreatedate&quot;:null,&quot;resCreator&quot;:null,&quot;resEditdate&quot;:null,&quot;resEditor&quot;:null,&quot;resVersion&quot;:null,&quot;name&quot;:&quot;温度规则配置&quot;,&quot;code&quot;:null,&quot;fvaltypeid&quot;:1202,&quot;entityTypeid&quot;:null,&quot;upperLimit&quot;:&quot;18&quot;,&quot;lowerLimit&quot;:&quot;2&quot;,&quot;startTime&quot;:&quot;02:00:00&quot;,&quot;endTime&quot;:&quot;04:00:00&quot;,&quot;dataSource&quot;:&quot;Platform Ⅰ&quot;,&quot;action&quot;:2,&quot;observationTime&quot;:&quot;180&quot;,&quot;preprocessingId&quot;:&quot;494557187702784&quot;,&quot;description&quot;:null,&quot;memo&quot;:null,&quot;tenantId&quot;:null,&quot;unit&quot;:&quot;%&quot;,&quot;fvalName&quot;:&quot;湿度信号&quot;,&quot;preprocessing&quot;:null,&quot;operation&quot;:1,&quot;almcls&quot;:3})">        							<i class="la la-edit"></i>        						</a>        						<a href="http://220.248.243.122:11813/Ruler/configuration#" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill" title="删除" onclick="Delete(2);">        							<i class="la la-trash"></i>        						</a>        					</span></td></tr><tr data-row="1" class="m-datatable__row m-datatable__row--even"><td data-field="name" class="m-datatable__cell--center m-datatable__cell"><span style="width: 80px;">氧气浓度信号</span></td><td data-field="fvalName" class="m-datatable__cell"><span style="width: 50px;">氧气浓度信号</span></td><td data-field="upperLimit" class="m-datatable__cell"><span style="width: 50px;"><span class="">24%</span></span></td><td data-field="lowerLimit" class="m-datatable__cell"><span style="width: 50px;"><span class="">21%</span></span></td><td data-field="startTime" class="m-datatable__cell"><span style="width: 75px;">00:00:00</span></td><td data-field="endTime" class="m-datatable__cell"><span style="width: 75px;">23:59:00</span></td><td data-field="almcls" class="m-datatable__cell"><span style="width: 40px;"><span class="">正常</span></span></td><td data-field="action" class="m-datatable__cell"><span style="width: 80px;"><span class="">观察并预处理</span></span></td><td data-field="observationTime" class="m-datatable__cell"><span style="width: 100px;"></span></td><td data-field="preprocessing" class="m-datatable__cell"><span style="width: 60px;"></span></td><td data-field="operation" class="m-datatable__cell"><span style="width: 50px;"><a href="http://220.248.243.122:11813/Ruler/configuration#" onclick="UpdateC({&quot;resId&quot;:488258591010816,&quot;resCreatedate&quot;:null,&quot;resCreator&quot;:null,&quot;resEditdate&quot;:null,&quot;resEditor&quot;:null,&quot;resVersion&quot;:null,&quot;name&quot;:&quot;氧气浓度信号&quot;,&quot;code&quot;:null,&quot;fvaltypeid&quot;:1203,&quot;entityTypeid&quot;:null,&quot;upperLimit&quot;:&quot;24&quot;,&quot;lowerLimit&quot;:&quot;21&quot;,&quot;startTime&quot;:&quot;00:00:00&quot;,&quot;endTime&quot;:&quot;23:59:00&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;action&quot;:2,&quot;observationTime&quot;:&quot;&quot;,&quot;preprocessingId&quot;:&quot;&quot;,&quot;description&quot;:null,&quot;memo&quot;:null,&quot;tenantId&quot;:null,&quot;unit&quot;:&quot;%&quot;,&quot;fvalName&quot;:&quot;氧气浓度信号&quot;,&quot;preprocessing&quot;:null,&quot;operation&quot;:1,&quot;almcls&quot;:0});"><span class="m-badge m-small-border-radius m-badge--valid m-badge--wide">生效</span></a></span></td><td data-field="Actions" class="m-datatable__cell--center m-datatable__cell"><span style="overflow: visible; width: 70px;">        						<a href="http://220.248.243.122:11813/Ruler/configuration#" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="编辑" onclick="Update({&quot;resId&quot;:488258591010816,&quot;resCreatedate&quot;:null,&quot;resCreator&quot;:null,&quot;resEditdate&quot;:null,&quot;resEditor&quot;:null,&quot;resVersion&quot;:null,&quot;name&quot;:&quot;氧气浓度信号&quot;,&quot;code&quot;:null,&quot;fvaltypeid&quot;:1203,&quot;entityTypeid&quot;:null,&quot;upperLimit&quot;:&quot;24&quot;,&quot;lowerLimit&quot;:&quot;21&quot;,&quot;startTime&quot;:&quot;00:00:00&quot;,&quot;endTime&quot;:&quot;23:59:00&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;action&quot;:2,&quot;observationTime&quot;:&quot;&quot;,&quot;preprocessingId&quot;:&quot;&quot;,&quot;description&quot;:null,&quot;memo&quot;:null,&quot;tenantId&quot;:null,&quot;unit&quot;:&quot;%&quot;,&quot;fvalName&quot;:&quot;氧气浓度信号&quot;,&quot;preprocessing&quot;:null,&quot;operation&quot;:1,&quot;almcls&quot;:0})">        							<i class="la la-edit"></i>        						</a>        						<a href="http://220.248.243.122:11813/Ruler/configuration#" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill" title="删除" onclick="Delete(488258591010816);">        							<i class="la la-trash"></i>        						</a>        					</span></td></tr><tr data-row="2" class="m-datatable__row"><td data-field="name" class="m-datatable__cell--center m-datatable__cell"><span style="width: 80px;">氧气一级告警</span></td><td data-field="fvalName" class="m-datatable__cell"><span style="width: 50px;">氧气浓度信号</span></td><td data-field="upperLimit" class="m-datatable__cell"><span style="width: 50px;"><span class="">100%</span></span></td><td data-field="lowerLimit" class="m-datatable__cell"><span style="width: 50px;"><span class="">50%</span></span></td><td data-field="startTime" class="m-datatable__cell"><span style="width: 75px;">00:00:00</span></td><td data-field="endTime" class="m-datatable__cell"><span style="width: 75px;">23:59:59</span></td><td data-field="almcls" class="m-datatable__cell"><span style="width: 40px;"><span class="">一级</span></span></td><td data-field="action" class="m-datatable__cell"><span style="width: 80px;"><span class="">观察并预处理</span></span></td><td data-field="observationTime" class="m-datatable__cell"><span style="width: 100px;"></span></td><td data-field="preprocessing" class="m-datatable__cell"><span style="width: 60px;"></span></td><td data-field="operation" class="m-datatable__cell"><span style="width: 50px;"><a href="http://220.248.243.122:11813/Ruler/configuration#" onclick="UpdateC({&quot;resId&quot;:488617696907264,&quot;resCreatedate&quot;:null,&quot;resCreator&quot;:null,&quot;resEditdate&quot;:null,&quot;resEditor&quot;:null,&quot;resVersion&quot;:null,&quot;name&quot;:&quot;氧气一级告警&quot;,&quot;code&quot;:null,&quot;fvaltypeid&quot;:1203,&quot;entityTypeid&quot;:null,&quot;upperLimit&quot;:&quot;100&quot;,&quot;lowerLimit&quot;:&quot;50&quot;,&quot;startTime&quot;:&quot;00:00:00&quot;,&quot;endTime&quot;:&quot;23:59:59&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;action&quot;:2,&quot;observationTime&quot;:&quot;&quot;,&quot;preprocessingId&quot;:&quot;&quot;,&quot;description&quot;:null,&quot;memo&quot;:null,&quot;tenantId&quot;:null,&quot;unit&quot;:&quot;%&quot;,&quot;fvalName&quot;:&quot;氧气浓度信号&quot;,&quot;preprocessing&quot;:null,&quot;operation&quot;:0,&quot;almcls&quot;:1});"><span class="m-badge m-small-border-radius m-badge--invalid m-badge--wide">失效</span></a></span></td><td data-field="Actions" class="m-datatable__cell--center m-datatable__cell"><span style="overflow: visible; width: 70px;">        						<a href="http://220.248.243.122:11813/Ruler/configuration#" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="编辑" onclick="Update({&quot;resId&quot;:488617696907264,&quot;resCreatedate&quot;:null,&quot;resCreator&quot;:null,&quot;resEditdate&quot;:null,&quot;resEditor&quot;:null,&quot;resVersion&quot;:null,&quot;name&quot;:&quot;氧气一级告警&quot;,&quot;code&quot;:null,&quot;fvaltypeid&quot;:1203,&quot;entityTypeid&quot;:null,&quot;upperLimit&quot;:&quot;100&quot;,&quot;lowerLimit&quot;:&quot;50&quot;,&quot;startTime&quot;:&quot;00:00:00&quot;,&quot;endTime&quot;:&quot;23:59:59&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;action&quot;:2,&quot;observationTime&quot;:&quot;&quot;,&quot;preprocessingId&quot;:&quot;&quot;,&quot;description&quot;:null,&quot;memo&quot;:null,&quot;tenantId&quot;:null,&quot;unit&quot;:&quot;%&quot;,&quot;fvalName&quot;:&quot;氧气浓度信号&quot;,&quot;preprocessing&quot;:null,&quot;operation&quot;:0,&quot;almcls&quot;:1})">        							<i class="la la-edit"></i>        						</a>        						<a href="http://220.248.243.122:11813/Ruler/configuration#" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill" title="删除" onclick="Delete(488617696907264);">        							<i class="la la-trash"></i>        						</a>        					</span></td></tr><tr data-row="3" class="m-datatable__row m-datatable__row--even"><td data-field="name" class="m-datatable__cell--center m-datatable__cell"><span style="width: 80px;">氧气二级告警</span></td><td data-field="fvalName" class="m-datatable__cell"><span style="width: 50px;">氧气浓度信号</span></td><td data-field="upperLimit" class="m-datatable__cell"><span style="width: 50px;"><span class="">50%</span></span></td><td data-field="lowerLimit" class="m-datatable__cell"><span style="width: 50px;"><span class="">30%</span></span></td><td data-field="startTime" class="m-datatable__cell"><span style="width: 75px;">00:00:00</span></td><td data-field="endTime" class="m-datatable__cell"><span style="width: 75px;">23:59:00</span></td><td data-field="almcls" class="m-datatable__cell"><span style="width: 40px;"><span class="">二级</span></span></td><td data-field="action" class="m-datatable__cell"><span style="width: 80px;"><span class="">观察并预处理</span></span></td><td data-field="observationTime" class="m-datatable__cell"><span style="width: 100px;"></span></td><td data-field="preprocessing" class="m-datatable__cell"><span style="width: 60px;"></span></td><td data-field="operation" class="m-datatable__cell"><span style="width: 50px;"><a href="http://220.248.243.122:11813/Ruler/configuration#" onclick="UpdateC({&quot;resId&quot;:488626752794624,&quot;resCreatedate&quot;:null,&quot;resCreator&quot;:null,&quot;resEditdate&quot;:null,&quot;resEditor&quot;:null,&quot;resVersion&quot;:null,&quot;name&quot;:&quot;氧气二级告警&quot;,&quot;code&quot;:null,&quot;fvaltypeid&quot;:1203,&quot;entityTypeid&quot;:null,&quot;upperLimit&quot;:&quot;50&quot;,&quot;lowerLimit&quot;:&quot;30&quot;,&quot;startTime&quot;:&quot;00:00:00&quot;,&quot;endTime&quot;:&quot;23:59:00&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;action&quot;:2,&quot;observationTime&quot;:&quot;&quot;,&quot;preprocessingId&quot;:&quot;&quot;,&quot;description&quot;:null,&quot;memo&quot;:null,&quot;tenantId&quot;:null,&quot;unit&quot;:&quot;%&quot;,&quot;fvalName&quot;:&quot;氧气浓度信号&quot;,&quot;preprocessing&quot;:null,&quot;operation&quot;:0,&quot;almcls&quot;:2});"><span class="m-badge m-small-border-radius m-badge--invalid m-badge--wide">失效</span></a></span></td><td data-field="Actions" class="m-datatable__cell--center m-datatable__cell"><span style="overflow: visible; width: 70px;">        						<a href="http://220.248.243.122:11813/Ruler/configuration#" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="编辑" onclick="Update({&quot;resId&quot;:488626752794624,&quot;resCreatedate&quot;:null,&quot;resCreator&quot;:null,&quot;resEditdate&quot;:null,&quot;resEditor&quot;:null,&quot;resVersion&quot;:null,&quot;name&quot;:&quot;氧气二级告警&quot;,&quot;code&quot;:null,&quot;fvaltypeid&quot;:1203,&quot;entityTypeid&quot;:null,&quot;upperLimit&quot;:&quot;50&quot;,&quot;lowerLimit&quot;:&quot;30&quot;,&quot;startTime&quot;:&quot;00:00:00&quot;,&quot;endTime&quot;:&quot;23:59:00&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;action&quot;:2,&quot;observationTime&quot;:&quot;&quot;,&quot;preprocessingId&quot;:&quot;&quot;,&quot;description&quot;:null,&quot;memo&quot;:null,&quot;tenantId&quot;:null,&quot;unit&quot;:&quot;%&quot;,&quot;fvalName&quot;:&quot;氧气浓度信号&quot;,&quot;preprocessing&quot;:null,&quot;operation&quot;:0,&quot;almcls&quot;:2})">        							<i class="la la-edit"></i>        						</a>        						<a href="http://220.248.243.122:11813/Ruler/configuration#" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill" title="删除" onclick="Delete(488626752794624);">        							<i class="la la-trash"></i>        						</a>        					</span></td></tr><tr data-row="4" class="m-datatable__row"><td data-field="name" class="m-datatable__cell--center m-datatable__cell"><span style="width: 80px;">氧气三级告警</span></td><td data-field="fvalName" class="m-datatable__cell"><span style="width: 50px;">氧气浓度信号</span></td><td data-field="upperLimit" class="m-datatable__cell"><span style="width: 50px;"><span class="">30%</span></span></td><td data-field="lowerLimit" class="m-datatable__cell"><span style="width: 50px;"><span class="">24%</span></span></td><td data-field="startTime" class="m-datatable__cell"><span style="width: 75px;">00:00:00</span></td><td data-field="endTime" class="m-datatable__cell"><span style="width: 75px;">23:59:00</span></td><td data-field="almcls" class="m-datatable__cell"><span style="width: 40px;"><span class="">三级</span></span></td><td data-field="action" class="m-datatable__cell"><span style="width: 80px;"><span class="">观察并预处理</span></span></td><td data-field="observationTime" class="m-datatable__cell"><span style="width: 100px;"></span></td><td data-field="preprocessing" class="m-datatable__cell"><span style="width: 60px;"></span></td><td data-field="operation" class="m-datatable__cell"><span style="width: 50px;"><a href="http://220.248.243.122:11813/Ruler/configuration#" onclick="UpdateC({&quot;resId&quot;:488627065151488,&quot;resCreatedate&quot;:null,&quot;resCreator&quot;:null,&quot;resEditdate&quot;:null,&quot;resEditor&quot;:null,&quot;resVersion&quot;:null,&quot;name&quot;:&quot;氧气三级告警&quot;,&quot;code&quot;:null,&quot;fvaltypeid&quot;:1203,&quot;entityTypeid&quot;:null,&quot;upperLimit&quot;:&quot;30&quot;,&quot;lowerLimit&quot;:&quot;24&quot;,&quot;startTime&quot;:&quot;00:00:00&quot;,&quot;endTime&quot;:&quot;23:59:00&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;action&quot;:2,&quot;observationTime&quot;:&quot;&quot;,&quot;preprocessingId&quot;:&quot;&quot;,&quot;description&quot;:null,&quot;memo&quot;:null,&quot;tenantId&quot;:null,&quot;unit&quot;:&quot;%&quot;,&quot;fvalName&quot;:&quot;氧气浓度信号&quot;,&quot;preprocessing&quot;:null,&quot;operation&quot;:0,&quot;almcls&quot;:3});"><span class="m-badge m-small-border-radius m-badge--invalid m-badge--wide">失效</span></a></span></td><td data-field="Actions" class="m-datatable__cell--center m-datatable__cell"><span style="overflow: visible; width: 70px;">        						<a href="http://220.248.243.122:11813/Ruler/configuration#" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="编辑" onclick="Update({&quot;resId&quot;:488627065151488,&quot;resCreatedate&quot;:null,&quot;resCreator&quot;:null,&quot;resEditdate&quot;:null,&quot;resEditor&quot;:null,&quot;resVersion&quot;:null,&quot;name&quot;:&quot;氧气三级告警&quot;,&quot;code&quot;:null,&quot;fvaltypeid&quot;:1203,&quot;entityTypeid&quot;:null,&quot;upperLimit&quot;:&quot;30&quot;,&quot;lowerLimit&quot;:&quot;24&quot;,&quot;startTime&quot;:&quot;00:00:00&quot;,&quot;endTime&quot;:&quot;23:59:00&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;action&quot;:2,&quot;observationTime&quot;:&quot;&quot;,&quot;preprocessingId&quot;:&quot;&quot;,&quot;description&quot;:null,&quot;memo&quot;:null,&quot;tenantId&quot;:null,&quot;unit&quot;:&quot;%&quot;,&quot;fvalName&quot;:&quot;氧气浓度信号&quot;,&quot;preprocessing&quot;:null,&quot;operation&quot;:0,&quot;almcls&quot;:3})">        							<i class="la la-edit"></i>        						</a>        						<a href="http://220.248.243.122:11813/Ruler/configuration#" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill" title="删除" onclick="Delete(488627065151488);">        							<i class="la la-trash"></i>        						</a>        					</span></td></tr><tr data-row="5" class="m-datatable__row m-datatable__row--even"><td data-field="name" class="m-datatable__cell--center m-datatable__cell"><span style="width: 80px;">氧气三级告警</span></td><td data-field="fvalName" class="m-datatable__cell"><span style="width: 50px;">氧气浓度信号</span></td><td data-field="upperLimit" class="m-datatable__cell"><span style="width: 50px;"><span class="">21%</span></span></td><td data-field="lowerLimit" class="m-datatable__cell"><span style="width: 50px;"><span class="">15%</span></span></td><td data-field="startTime" class="m-datatable__cell"><span style="width: 75px;">00:00:00</span></td><td data-field="endTime" class="m-datatable__cell"><span style="width: 75px;">23:59:00</span></td><td data-field="almcls" class="m-datatable__cell"><span style="width: 40px;"><span class="">三级</span></span></td><td data-field="action" class="m-datatable__cell"><span style="width: 80px;"><span class="">观察并预处理</span></span></td><td data-field="observationTime" class="m-datatable__cell"><span style="width: 100px;"></span></td><td data-field="preprocessing" class="m-datatable__cell"><span style="width: 60px;"></span></td><td data-field="operation" class="m-datatable__cell"><span style="width: 50px;"><a href="http://220.248.243.122:11813/Ruler/configuration#" onclick="UpdateC({&quot;resId&quot;:488627707437056,&quot;resCreatedate&quot;:null,&quot;resCreator&quot;:null,&quot;resEditdate&quot;:null,&quot;resEditor&quot;:null,&quot;resVersion&quot;:null,&quot;name&quot;:&quot;氧气三级告警&quot;,&quot;code&quot;:null,&quot;fvaltypeid&quot;:1203,&quot;entityTypeid&quot;:null,&quot;upperLimit&quot;:&quot;21&quot;,&quot;lowerLimit&quot;:&quot;15&quot;,&quot;startTime&quot;:&quot;00:00:00&quot;,&quot;endTime&quot;:&quot;23:59:00&quot;,&quot;dataSource&quot;:null,&quot;action&quot;:2,&quot;observationTime&quot;:&quot;&quot;,&quot;preprocessingId&quot;:&quot;&quot;,&quot;description&quot;:null,&quot;memo&quot;:null,&quot;tenantId&quot;:null,&quot;unit&quot;:&quot;%&quot;,&quot;fvalName&quot;:&quot;氧气浓度信号&quot;,&quot;preprocessing&quot;:null,&quot;operation&quot;:0,&quot;almcls&quot;:3});"><span class="m-badge m-small-border-radius m-badge--invalid m-badge--wide">失效</span></a></span></td><td data-field="Actions" class="m-datatable__cell--center m-datatable__cell"><span style="overflow: visible; width: 70px;">        						<a href="http://220.248.243.122:11813/Ruler/configuration#" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="编辑" onclick="Update({&quot;resId&quot;:488627707437056,&quot;resCreatedate&quot;:null,&quot;resCreator&quot;:null,&quot;resEditdate&quot;:null,&quot;resEditor&quot;:null,&quot;resVersion&quot;:null,&quot;name&quot;:&quot;氧气三级告警&quot;,&quot;code&quot;:null,&quot;fvaltypeid&quot;:1203,&quot;entityTypeid&quot;:null,&quot;upperLimit&quot;:&quot;21&quot;,&quot;lowerLimit&quot;:&quot;15&quot;,&quot;startTime&quot;:&quot;00:00:00&quot;,&quot;endTime&quot;:&quot;23:59:00&quot;,&quot;dataSource&quot;:null,&quot;action&quot;:2,&quot;observationTime&quot;:&quot;&quot;,&quot;preprocessingId&quot;:&quot;&quot;,&quot;description&quot;:null,&quot;memo&quot;:null,&quot;tenantId&quot;:null,&quot;unit&quot;:&quot;%&quot;,&quot;fvalName&quot;:&quot;氧气浓度信号&quot;,&quot;preprocessing&quot;:null,&quot;operation&quot;:0,&quot;almcls&quot;:3})">        							<i class="la la-edit"></i>        						</a>        						<a href="http://220.248.243.122:11813/Ruler/configuration#" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill" title="删除" onclick="Delete(488627707437056);">        							<i class="la la-trash"></i>        						</a>        					</span></td></tr><tr data-row="6" class="m-datatable__row"><td data-field="name" class="m-datatable__cell--center m-datatable__cell"><span style="width: 80px;">甲烷正常</span></td><td data-field="fvalName" class="m-datatable__cell"><span style="width: 50px;">甲烷浓度信号</span></td><td data-field="upperLimit" class="m-datatable__cell"><span style="width: 50px;"><span class="">10%LEL</span></span></td><td data-field="lowerLimit" class="m-datatable__cell"><span style="width: 50px;"><span class="">4%LEL</span></span></td><td data-field="startTime" class="m-datatable__cell"><span style="width: 75px;">00:00:00</span></td><td data-field="endTime" class="m-datatable__cell"><span style="width: 75px;">23:59:59</span></td><td data-field="almcls" class="m-datatable__cell"><span style="width: 40px;"><span class="">正常</span></span></td><td data-field="action" class="m-datatable__cell"><span style="width: 80px;"><span class="">观察</span></span></td><td data-field="observationTime" class="m-datatable__cell"><span style="width: 100px;"></span></td><td data-field="preprocessing" class="m-datatable__cell"><span style="width: 60px;"></span></td><td data-field="operation" class="m-datatable__cell"><span style="width: 50px;"><a href="http://220.248.243.122:11813/Ruler/configuration#" onclick="UpdateC({&quot;resId&quot;:489731139067904,&quot;resCreatedate&quot;:null,&quot;resCreator&quot;:null,&quot;resEditdate&quot;:null,&quot;resEditor&quot;:null,&quot;resVersion&quot;:null,&quot;name&quot;:&quot;甲烷正常&quot;,&quot;code&quot;:null,&quot;fvaltypeid&quot;:1205,&quot;entityTypeid&quot;:null,&quot;upperLimit&quot;:&quot;10&quot;,&quot;lowerLimit&quot;:&quot;4&quot;,&quot;startTime&quot;:&quot;00:00:00&quot;,&quot;endTime&quot;:&quot;23:59:59&quot;,&quot;dataSource&quot;:null,&quot;action&quot;:1,&quot;observationTime&quot;:&quot;&quot;,&quot;preprocessingId&quot;:&quot;&quot;,&quot;description&quot;:null,&quot;memo&quot;:null,&quot;tenantId&quot;:null,&quot;unit&quot;:&quot;%LEL&quot;,&quot;fvalName&quot;:&quot;甲烷浓度信号&quot;,&quot;preprocessing&quot;:null,&quot;operation&quot;:0,&quot;almcls&quot;:0});"><span class="m-badge m-small-border-radius m-badge--invalid m-badge--wide">失效</span></a></span></td><td data-field="Actions" class="m-datatable__cell--center m-datatable__cell"><span style="overflow: visible; width: 70px;">        						<a href="http://220.248.243.122:11813/Ruler/configuration#" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="编辑" onclick="Update({&quot;resId&quot;:489731139067904,&quot;resCreatedate&quot;:null,&quot;resCreator&quot;:null,&quot;resEditdate&quot;:null,&quot;resEditor&quot;:null,&quot;resVersion&quot;:null,&quot;name&quot;:&quot;甲烷正常&quot;,&quot;code&quot;:null,&quot;fvaltypeid&quot;:1205,&quot;entityTypeid&quot;:null,&quot;upperLimit&quot;:&quot;10&quot;,&quot;lowerLimit&quot;:&quot;4&quot;,&quot;startTime&quot;:&quot;00:00:00&quot;,&quot;endTime&quot;:&quot;23:59:59&quot;,&quot;dataSource&quot;:null,&quot;action&quot;:1,&quot;observationTime&quot;:&quot;&quot;,&quot;preprocessingId&quot;:&quot;&quot;,&quot;description&quot;:null,&quot;memo&quot;:null,&quot;tenantId&quot;:null,&quot;unit&quot;:&quot;%LEL&quot;,&quot;fvalName&quot;:&quot;甲烷浓度信号&quot;,&quot;preprocessing&quot;:null,&quot;operation&quot;:0,&quot;almcls&quot;:0})">        							<i class="la la-edit"></i>        						</a>        						<a href="http://220.248.243.122:11813/Ruler/configuration#" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill" title="删除" onclick="Delete(489731139067904);">        							<i class="la la-trash"></i>        						</a>        					</span></td></tr><tr data-row="7" class="m-datatable__row m-datatable__row--even"><td data-field="name" class="m-datatable__cell--center m-datatable__cell"><span style="width: 80px;">CO正常</span></td><td data-field="fvalName" class="m-datatable__cell"><span style="width: 50px;">一氧化碳浓度信号</span></td><td data-field="upperLimit" class="m-datatable__cell"><span style="width: 50px;"><span class="">12%</span></span></td><td data-field="lowerLimit" class="m-datatable__cell"><span style="width: 50px;"><span class="">10%</span></span></td><td data-field="startTime" class="m-datatable__cell"><span style="width: 75px;">00:00:00</span></td><td data-field="endTime" class="m-datatable__cell"><span style="width: 75px;">23:59:59</span></td><td data-field="almcls" class="m-datatable__cell"><span style="width: 40px;"><span class="">正常</span></span></td><td data-field="action" class="m-datatable__cell"><span style="width: 80px;"><span class="">观察</span></span></td><td data-field="observationTime" class="m-datatable__cell"><span style="width: 100px;"></span></td><td data-field="preprocessing" class="m-datatable__cell"><span style="width: 60px;"></span></td><td data-field="operation" class="m-datatable__cell"><span style="width: 50px;"><a href="http://220.248.243.122:11813/Ruler/configuration#" onclick="UpdateC({&quot;resId&quot;:489731523043328,&quot;resCreatedate&quot;:null,&quot;resCreator&quot;:null,&quot;resEditdate&quot;:null,&quot;resEditor&quot;:null,&quot;resVersion&quot;:null,&quot;name&quot;:&quot;CO正常&quot;,&quot;code&quot;:null,&quot;fvaltypeid&quot;:1411,&quot;entityTypeid&quot;:null,&quot;upperLimit&quot;:&quot;12&quot;,&quot;lowerLimit&quot;:&quot;10&quot;,&quot;startTime&quot;:&quot;00:00:00&quot;,&quot;endTime&quot;:&quot;23:59:59&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;action&quot;:1,&quot;observationTime&quot;:&quot;&quot;,&quot;preprocessingId&quot;:&quot;&quot;,&quot;description&quot;:null,&quot;memo&quot;:null,&quot;tenantId&quot;:null,&quot;unit&quot;:&quot;%&quot;,&quot;fvalName&quot;:&quot;一氧化碳浓度信号&quot;,&quot;preprocessing&quot;:null,&quot;operation&quot;:0,&quot;almcls&quot;:0});"><span class="m-badge m-small-border-radius m-badge--invalid m-badge--wide">失效</span></a></span></td><td data-field="Actions" class="m-datatable__cell--center m-datatable__cell"><span style="overflow: visible; width: 70px;">        						<a href="http://220.248.243.122:11813/Ruler/configuration#" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="编辑" onclick="Update({&quot;resId&quot;:489731523043328,&quot;resCreatedate&quot;:null,&quot;resCreator&quot;:null,&quot;resEditdate&quot;:null,&quot;resEditor&quot;:null,&quot;resVersion&quot;:null,&quot;name&quot;:&quot;CO正常&quot;,&quot;code&quot;:null,&quot;fvaltypeid&quot;:1411,&quot;entityTypeid&quot;:null,&quot;upperLimit&quot;:&quot;12&quot;,&quot;lowerLimit&quot;:&quot;10&quot;,&quot;startTime&quot;:&quot;00:00:00&quot;,&quot;endTime&quot;:&quot;23:59:59&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;action&quot;:1,&quot;observationTime&quot;:&quot;&quot;,&quot;preprocessingId&quot;:&quot;&quot;,&quot;description&quot;:null,&quot;memo&quot;:null,&quot;tenantId&quot;:null,&quot;unit&quot;:&quot;%&quot;,&quot;fvalName&quot;:&quot;一氧化碳浓度信号&quot;,&quot;preprocessing&quot;:null,&quot;operation&quot;:0,&quot;almcls&quot;:0})">        							<i class="la la-edit"></i>        						</a>        						<a href="http://220.248.243.122:11813/Ruler/configuration#" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill" title="删除" onclick="Delete(489731523043328);">        							<i class="la la-trash"></i>        						</a>        					</span></td></tr></tbody></table><div class="m-datatable__pager m-datatable--paging-loaded clearfix"><ul class="m-datatable__pager-nav" style="display: none;"><li><a title="First" class="m-datatable__pager-link m-datatable__pager-link--first m-datatable__pager-link--disabled" data-page="1" disabled="disabled"><i class="la la-angle-double-left"></i></a></li><li><a title="Previous" class="m-datatable__pager-link m-datatable__pager-link--prev m-datatable__pager-link--disabled" data-page="1" disabled="disabled"><i class="la la-angle-left"></i></a></li><li style="display: none;"><a title="More pages" class="m-datatable__pager-link m-datatable__pager-link--more-prev" data-page="1"><i class="la la-ellipsis-h"></i></a></li><li style="display: none;"><input type="text" class="m-pager-input form-control" title="Page number"></li><li><a class="m-datatable__pager-link m-datatable__pager-link-number m-datatable__pager-link--active" data-page="1" title="1">1</a></li><li style="display: none;"><a title="More pages" class="m-datatable__pager-link m-datatable__pager-link--more-next" data-page="1"><i class="la la-ellipsis-h"></i></a></li><li><a title="Next" class="m-datatable__pager-link m-datatable__pager-link--next m-datatable__pager-link--disabled" data-page="1" disabled="disabled"><i class="la la-angle-right"></i></a></li><li><a title="Last" class="m-datatable__pager-link m-datatable__pager-link--last m-datatable__pager-link--disabled" data-page="1" disabled="disabled"><i class="la la-angle-double-right"></i></a></li></ul><div class="m-datatable__pager-info"><div class="btn-group bootstrap-select m-datatable__pager-size" style="width: 70px;"><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="button" title="Select page size"><span class="filter-option pull-left">10</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open" role="combobox"><ul class="dropdown-menu inner" role="listbox" aria-expanded="false"><li data-original-index="1" class="selected"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true"><span class="text">10</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">20</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">30</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select class="selectpicker m-datatable__pager-size" title="Select page size" data-width="70px" data-selected="10" tabindex="-98"><option class="bs-title-option" value="">Select page size</option><option value="10">10</option><option value="20">20</option><option value="30">30</option></select></div><span class="m-datatable__pager-detail">显示  8记录中 1 - 8</span></div></div></div>
+							<!-- end::datetable -->
+						</div>
+						<div class="tab-pane" id="m_tabs_6_3" role="tabpanel">
+							<!-- begin::datetable -->
+							<div class="m_datatable m-datatable m-datatable--default m-datatable--brand m-datatable--loaded" id="m_datatable_preprocess" style=""><table class="m-datatable__table" style="display: block; min-height: 300px; overflow-x: auto;"><thead class="m-datatable__head"><tr class="m-datatable__row"><th data-field="name" class="m-datatable__cell"><span style="width: 110px;">名称</span></th><th data-field="deviceName" class="m-datatable__cell"><span style="width: 110px;">设备类型</span></th><th data-field="performAction" class="m-datatable__cell"><span style="width: 110px;">预处理动作</span></th><th data-field="description" class="m-datatable__cell"><span style="width: 110px;">描述</span></th><th data-field="memo" class="m-datatable__cell"><span style="width: 110px;">备注</span></th><th data-field="Actions" class="m-datatable__cell--center m-datatable__cell"><span style="width: 70px;">操作</span></th></tr></thead><tbody class="m-datatable__body" style=""><tr data-row="0" class="m-datatable__row"><td data-field="name" class="m-datatable__cell"><span style="width: 110px;">氧气含量过低预处理</span></td><td data-field="deviceName" class="m-datatable__cell"><span style="width: 110px;">通风机</span></td><td data-field="performAction" class="m-datatable__cell"><span style="width: 110px;"><span class="">打开</span></span></td><td data-field="description" class="m-datatable__cell"><span style="width: 110px;">通风机打开</span></td><td data-field="memo" class="m-datatable__cell"><span style="width: 110px;">打开通风机三分钟</span></td><td data-field="Actions" class="m-datatable__cell--center m-datatable__cell"><span style="overflow: visible; width: 70px;">        						<a href="http://220.248.243.122:11813/Ruler/configuration#" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="编辑" onclick="UpdatePc({&quot;resId&quot;:493539697070080,&quot;resCreatedate&quot;:null,&quot;resCreator&quot;:null,&quot;resEditdate&quot;:null,&quot;resEditor&quot;:null,&quot;resVersion&quot;:null,&quot;name&quot;:&quot;氧气含量过低预处理&quot;,&quot;code&quot;:null,&quot;deviceType&quot;:351022,&quot;performAction&quot;:1,&quot;entityTypeid&quot;:null,&quot;description&quot;:&quot;通风机打开&quot;,&quot;memo&quot;:&quot;打开通风机三分钟&quot;,&quot;tenantId&quot;:null,&quot;deviceName&quot;:&quot;通风机&quot;})">        							<i class="la la-edit"></i>        						</a>        						<a href="http://220.248.243.122:11813/Ruler/configuration#" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill" title="删除" onclick="DeletePc(493539697070080);">        							<i class="la la-trash"></i>        						</a>        					</span></td></tr><tr data-row="1" class="m-datatable__row m-datatable__row--even"><td data-field="name" class="m-datatable__cell"><span style="width: 110px;">集水坑水位超过标准值</span></td><td data-field="deviceName" class="m-datatable__cell"><span style="width: 110px;">排水泵</span></td><td data-field="performAction" class="m-datatable__cell"><span style="width: 110px;"><span class="">打开</span></span></td><td data-field="description" class="m-datatable__cell"><span style="width: 110px;">排水泵打开</span></td><td data-field="memo" class="m-datatable__cell"><span style="width: 110px;">排水泵打开三分钟</span></td><td data-field="Actions" class="m-datatable__cell--center m-datatable__cell"><span style="overflow: visible; width: 70px;">        						<a href="http://220.248.243.122:11813/Ruler/configuration#" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="编辑" onclick="UpdatePc({&quot;resId&quot;:493540076367872,&quot;resCreatedate&quot;:null,&quot;resCreator&quot;:null,&quot;resEditdate&quot;:null,&quot;resEditor&quot;:null,&quot;resVersion&quot;:null,&quot;name&quot;:&quot;集水坑水位超过标准值&quot;,&quot;code&quot;:null,&quot;deviceType&quot;:351023,&quot;performAction&quot;:1,&quot;entityTypeid&quot;:null,&quot;description&quot;:&quot;排水泵打开&quot;,&quot;memo&quot;:&quot;排水泵打开三分钟&quot;,&quot;tenantId&quot;:null,&quot;deviceName&quot;:&quot;排水泵&quot;})">        							<i class="la la-edit"></i>        						</a>        						<a href="http://220.248.243.122:11813/Ruler/configuration#" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill" title="删除" onclick="DeletePc(493540076367872);">        							<i class="la la-trash"></i>        						</a>        					</span></td></tr></tbody></table><div class="m-datatable__pager m-datatable--paging-loaded clearfix"><ul class="m-datatable__pager-nav" style="display: none;"><li><a title="First" class="m-datatable__pager-link m-datatable__pager-link--first m-datatable__pager-link--disabled" data-page="1" disabled="disabled"><i class="la la-angle-double-left"></i></a></li><li><a title="Previous" class="m-datatable__pager-link m-datatable__pager-link--prev m-datatable__pager-link--disabled" data-page="1" disabled="disabled"><i class="la la-angle-left"></i></a></li><li style="display: none;"><a title="More pages" class="m-datatable__pager-link m-datatable__pager-link--more-prev" data-page="1"><i class="la la-ellipsis-h"></i></a></li><li style="display: none;"><input type="text" class="m-pager-input form-control" title="Page number"></li><li><a class="m-datatable__pager-link m-datatable__pager-link-number m-datatable__pager-link--active" data-page="1" title="1">1</a></li><li style="display: none;"><a title="More pages" class="m-datatable__pager-link m-datatable__pager-link--more-next" data-page="1"><i class="la la-ellipsis-h"></i></a></li><li><a title="Next" class="m-datatable__pager-link m-datatable__pager-link--next m-datatable__pager-link--disabled" data-page="1" disabled="disabled"><i class="la la-angle-right"></i></a></li><li><a title="Last" class="m-datatable__pager-link m-datatable__pager-link--last m-datatable__pager-link--disabled" data-page="1" disabled="disabled"><i class="la la-angle-double-right"></i></a></li></ul><div class="m-datatable__pager-info"><div class="btn-group bootstrap-select m-datatable__pager-size" style="width: 70px;"><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="button" title="Select page size"><span class="filter-option pull-left">10</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open" role="combobox"><ul class="dropdown-menu inner" role="listbox" aria-expanded="false"><li data-original-index="1" class="selected"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true"><span class="text">10</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">20</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">30</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select class="selectpicker m-datatable__pager-size" title="Select page size" data-width="70px" data-selected="10" tabindex="-98"><option class="bs-title-option" value="">Select page size</option><option value="10">10</option><option value="20">20</option><option value="30">30</option></select></div><span class="m-datatable__pager-detail">显示  2记录中 1 - 2</span></div></div></div>
+							<!-- end::datetable -->
+						</div>
+					</div>
+					<!--end::Portlet-->
+
+					<!--begin::Modal-->
+					<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="add_modal" role="dialog" tabindex="-1">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h6 class="modal-title" id="exampleModalLabel">新建事件规则</h6>
+									<button aria-label="Close" class="close" data-dismiss="modal" id="close_modal1" type="button">
+										<span aria-hidden="true">×</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form class="m-form m-form--fit m-form--label-align-right" enctype="multipart/form-data" id="mainForm_add" method="post" onsubmit="return check()">
+										<div class="form-group m-form__group row m--padding-bottom-0">
+											<label class="col-form-label col-lg-2 col-md-2 col-sm-12" for="recipient-name">
+												事件名称&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="col-lg-4 col-md-4 col-sm-12">
+												<input class="form-control m-input" id="eventName_add" name="" placeholder="请输入事件名称" type="text">
+											</div>
+											<label class="col-form-label col-lg-2 col-md-2 col-sm-12" for="recipient-name">
+												信号类型&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="col-lg-4 col-md-4 col-sm-12">
+												<select class="form-control m-input" id="fvalTypeId_add">
+													<option value="">请选择</option>
+													<option value="1201">温度信号</option>
+													<option value="1202">湿度信号</option>
+													<option value="1203">氧气信号</option>
+													<option value="1205">甲烷信号</option>
+													<option value="1411">一氧化碳信号</option>
+													<option value="1204">硫化氢信号</option>
+													<!--<option value="1412">液位信号</option> -->
+												</select>
+											</div>
+										</div>
+										<div class="form-group m-form__group row m--padding-bottom-0">
+											<label class="col-form-label col-lg-2 col-md-2 col-sm-12" for="recipient-name">
+												阀值上限&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="input-group col-lg-4 col-md-4 col-sm-12">
+												<input aria-describedby="basic-addon2" class="form-control m-input" id="upperLimit" onkeyup="this.value=this.value.toString().match(/^\d+(?:\.\d{0,2})?/)" placeholder="请输入数字" type="text">
+												<div class="input-group-append">
+														<span class="input-group-text" id="unit1" style="height: 37px"> </span>
+												</div>
+											</div>
+											<label class="col-form-label col-lg-2 col-md-2 col-sm-12" for="recipient-name">
+												阀值下限&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="input-group col-lg-4 col-md-4 col-sm-12">
+												<input aria-describedby="basic-addon2" class="form-control m-input" id="lowerLimit" onkeyup="this.value=this.value.toString().match(/^\d+(?:\.\d{0,2})?/)" placeholder="请输入数字" type="text">
+												<div class="input-group-append">
+														<span class="input-group-text" id="unit2" name="unit" style="height: 37px"> </span>
+												</div>
+											</div>
+										</div>
+										<div class="form-group m-form__group row m--padding-bottom-0">
+											<label class="col-form-label col-lg-2 col-md-2 col-sm-12" for="recipient-name">
+												生效时间&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="col-lg-4 col-md-4 col-sm-12">
+												<input class="form-control m-input" id="start_time" name="" placeholder="请选择时间" type="text">
+											</div>
+											<label class="col-form-label col-lg-2 col-md-2 col-sm-12" for="message-text">
+												失效时间&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="col-lg-4 col-md-4 col-sm-12">
+												<input class="form-control m-input" id="end_time" name="" placeholder="请选择时间" type="text">
+											</div>
+											<!-- 												<div class="col-form-label col-lg-6 col-sm-12"> -->
+											<!-- 													<label for="message-text" class="form-control-label">级&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别<span -->
+											<!-- 														style="color: red">*</span></label>&nbsp;<input type="text" -->
+											<!-- 														class="form-control" id="dataSource" style="width: 200px;" -->
+											<!-- 														placeholder="请输入数据来源"> -->
+											<!-- 												</div> -->
+										</div>
+										<div class="form-group m-form__group row m--padding-bottom-0">
+											<label class="col-form-label col-lg-2 col-md-2 col-sm-12" for="message-text">
+												级&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="col-lg-4 col-md-4 col-sm-12">
+												<select class="form-control m-input" id="almcls">
+													<option value="">请选择</option>
+													<option value="0">正常</option>
+													<option value="1">一级</option>
+													<option value="2">二级</option>
+													<option value="3">三级</option>
+												</select>
+											</div>
+											<label class="col-form-label col-lg-2 col-md-2 col-sm-12" for="message-text">
+												处理动作&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="col-lg-4 col-md-4 col-sm-12">
+												<select class="form-control m-input" id="action">
+													<option value="">请选择</option>
+													<option value="1">观察</option>
+													<option value="2">观察并预处理</option>
+													<option value="3">预处理</option>
+													<option value="4">忽略</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group m-form__group row m--padding-bottom-0">
+											<div class="col-form-label col-lg-6 col-md-6 col-sm-12" id="Ezreal" style="display: none">
+												<div class="row" style="padding: 0 0 0 10px;">
+													<label class="col-form-label col-lg-4 col-md-4 col-sm-12" for="message-text">
+												  观察时限(分)<span class="col-form-label-red-tips">*</span>
+													</label>
+													<div class="col-lg-8 col-md-8 col-sm-12">
+														<input class="form-control m-input" id="observationTime" onkeyup="this.value=this.value.toString().match(/^\d+(?:\.\d{0,2})?/)" placeholder="请输入数字" type="text">
+													</div>
+												</div>
+											</div>
+											<div class="col-form-label col-lg-6 col-md-6 col-sm-12" id="Lux" style="display: none">
+												<div class="row" style="padding: 0 0 0 10px;">
+													<label class="col-form-label col-lg-4 col-md-4 col-sm-12" for="message-text">
+														预处理动作&nbsp;<span class="col-form-label-red-tips">*</span>
+													</label>
+													<div class="col-lg-8 col-md-8 col-sm-12">
+														<select class="form-control m-input" id="preprocessing_id"><option value="">请选择</option>
+														<option value="493539697070080">通风机打开</option><option value="493540076367872">排水泵打开</option></select>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-group m-form__group m-form__group-modal-btn-toolbar">
+											<button class="btn btn-accent" id="submit_add" type="button">提&nbsp;交</button>
+											<button class="btn btn-metal" id="rest2" type="button">重&nbsp;置</button>
+											<input name="reset" style="display: none;" type="reset">
+											<!-- data-dismiss="modal" -->
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--end::Modal-->
+					<!--begin::Modal-->
+					<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="update_modal" role="dialog" tabindex="-1">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h6 class="modal-title" id="exampleModalLabel">修改事件规则</h6>
+									<button aria-label="Close" class="close" data-dismiss="modal" id="close_modal2" type="button">
+										<span aria-hidden="true">×</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form class="m-form m-form--fit m-form--label-align-right" enctype="multipart/form-data" id="mainForm_update" method="post" onsubmit="return check()">
+										<div class="form-group m-form__group row m--padding-bottom-0">
+											<input id="resId" style="display: none" type="text">
+											<label class="col-form-label col-lg-2 col-md-2 col-sm-12" for="recipient-name">
+												事件名称&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="col-lg-4 col-md-4 col-sm-12">
+												<input class="form-control m-input" id="eventName_update" placeholder="请输入事件名称" type="text">
+											</div>
+											<label class="col-form-label col-lg-2 col-md-2 col-sm-12" for="recipient-name">
+												信号类型&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="col-lg-4 col-md-4 col-sm-12">
+												<select class="form-control m-input" id="fvalTypeId_update">
+													<option value="">请选择</option>
+													<option value="1201">温度信号</option>
+													<option value="1202">湿度信号</option>
+													<option value="1203">氧气信号</option>
+													<option value="1205">甲烷信号</option>
+													<option value="1411">一氧化碳信号</option>
+													<option value="1204">硫化氢信号</option>
+													<!-- <option value="1412">液位信号</option> -->
+												</select>
+											</div>
+										</div>
+										<div class="form-group m-form__group row m--padding-bottom-0">
+											<label class="col-form-label col-lg-2 col-md-2 col-sm-12" for="recipient-name">
+												阀值上限&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="input-group col-lg-4 col-md-4 col-sm-12">
+												<input aria-describedby="basic-addon2" class="form-control m-input" id="upperLimit_update" onkeyup="this.value=this.value.toString().match(/^\d+(?:\.\d{0,2})?/)" placeholder="请输入数字" type="text">
+												<div class="input-group-append">
+														<span class="input-group-text" id="unit_update1" style="height: 37px"> </span>
+												</div>
+											</div>
+											<label class="col-form-label col-lg-2 col-md-2 col-sm-12" for="recipient-name">
+												阀值下限&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="input-group col-lg-4 col-md-4 col-sm-12">
+												<input aria-describedby="basic-addon2" class="form-control m-input" id="lowerLimit_update" onkeyup="this.value=this.value.toString().match(/^\d+(?:\.\d{0,2})?/)" placeholder="请输入数字" type="text">
+												<div class="input-group-append">
+														<span class="input-group-text" id="unit_update2" name="unit" style="height: 37px"> </span>
+												</div>
+											</div>
+										</div>
+										<div class="form-group m-form__group row m--padding-bottom-0">
+											<label class="col-form-label col-lg-2 col-md-2 col-sm-12" for="recipient-name">
+												生效时间&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="col-lg-4 col-md-4 col-sm-12">
+												<input class="form-control m-input" id="start_time_update" name="" placeholder="请选择时间" type="text">
+											</div>
+											<label class="col-form-label col-lg-2 col-md-2 col-sm-12" for="message-text">
+												失效时间&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="col-lg-4 col-md-4 col-sm-12">
+												<input class="form-control m-input" id="end_time_update" name="" placeholder="请选择时间" type="text">
+											</div>
+										</div>
+										<div class="form-group m-form__group row m--padding-bottom-0">
+											<label class="col-form-label col-lg-2 col-md-2 col-sm-12" for="message-text">
+												数值来源&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="col-lg-4 col-md-4 col-sm-12">
+												<input class="form-control m-input" id="dataSource_update" placeholder="请输入数据来源" type="text">
+											</div>
+											<label class="col-form-label col-lg-2 col-md-2 col-sm-12" for="message-text">
+												处理动作&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="col-lg-4 col-md-4 col-sm-12">
+												<select class="form-control m-input" id="action_update">
+													<option value="">请选择</option>
+													<option value="1">观察</option>
+													<option value="2">观察并预处理</option>
+													<option value="3">预处理</option>
+													<option value="4">忽略</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group m-form__group row m--padding-bottom-0">
+											<div class="col-form-label col-lg-6 col-md-6 col-sm-12" id="Kaisa" style="display: none">
+												<div class="row" style="padding: 0 0 0 10px;">
+													<label class="col-form-label col-lg-4 col-md-4 col-sm-12" for="message-text">
+														观察时限(分)<span class="col-form-label-red-tips">*</span>
+													</label>
+													<div class="col-lg-8 col-md-8 col-sm-12">
+														<input class="form-control" id="observationTime_update" onkeyup="this.value=this.value.toString().match(/^\d+(?:\.\d{0,2})?/)" placeholder="请输入数字" type="text">
+													</div>
+												</div>
+											</div>
+											<div class="col-form-label col-lg-6 col-md-6 col-sm-12" id="Vayne" style="display: none">
+												<div class="row" style="padding: 0 0 0 10px;">
+													<label class="col-form-label col-lg-4 col-md-4 col-sm-12" for="message-text">
+														预处理动作&nbsp;<span class="col-form-label-red-tips">*</span>
+													</label>
+													<div class="col-lg-8 col-md-8 col-sm-12">
+														<select class="form-control m-input" id="preprocessing_id_update">
+														<option value="493539697070080">通风机打开</option><option value="493540076367872">排水泵打开</option></select>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-group m-form__group m-form__group-modal-btn-toolbar">
+											<button class="btn btn-accent" id="submit_update" type="button">提&nbsp;交</button>
+											<!-- 	<button type="button" class="btn btn-secondary" id="re3">重置</button> -->
+											<!-- data-dismiss="modal" -->
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--end::Modal-->
+					<!--begin::Modal-->
+					<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="add_modal2" role="dialog" tabindex="-1">
+						<div class="modal-dialog modal-lg2" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h6 class="modal-title" id="exampleModalLabel">新建事件预处理</h6>
+									<button aria-label="Close" class="close" data-dismiss="modal" id="close_modal3" type="button">
+										<span aria-hidden="true">×</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form class="m-form m-form--fit m-form--label-align-right" enctype="multipart/form-data" id="mainForm_add2" method="post" onsubmit="return check()">
+										<div class="form-group m-form__group row">
+											<label class="col-form-label col-lg-3 col-md-3 col-sm-12" for="recipient-name">
+												事件名称&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="col-lg-9 col-md-9 col-sm-12">
+												<input class="form-control m-input" id="Preprocess_name" placeholder="请输入事件名称" type="text">
+											</div>
+										</div>
+										<div class="form-group m-form__group row">
+											<label class="col-form-label col-lg-3 col-md-3 col-sm-12" for="recipient-name">
+												设备类型&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="col-lg-9 col-md-9 col-sm-12">
+												<select class="form-control m-input" id="device_type">
+													<option value="">请选择</option>
+													<option value="351022">通风机</option>
+													<option value="351023">排水泵</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group m-form__group row">
+											<label class="col-form-label col-lg-3 col-md-3 col-sm-12" for="recipient-name">
+												动&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="col-lg-9 col-md-9 col-sm-12">
+												<select class="form-control m-input" id="perform_action">
+													<option value="">请选择</option>
+													<option value="1">打开</option>
+													<option value="0">关闭</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group m-form__group row">
+											<label class="col-form-label col-lg-3 col-md-3 col-sm-12" for="message-text">
+												备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="col-lg-9 col-md-9 col-sm-12">
+												<textarea class="form-control m-input" id="memo" rows="5"></textarea>
+											</div>
+										</div>
+										<div class="form-group m-form__group m-form__group-modal-btn-toolbar">
+											<button class="btn btn-accent" id="submit2" type="button">提&nbsp;交</button>
+											<button class="btn btn-metal" id="rest4" type="button">重&nbsp;置</button>
+											<!-- data-dismiss="modal" -->
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--end::Modal-->
+					<!--begin::Modal-->
+					<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="update_modal2" role="dialog" tabindex="-1">
+						<div class="modal-dialog modal-lg2" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h6 class="modal-title" id="exampleModalLabel">修改事件预处理</h6>
+									<button aria-label="Close" class="close" data-dismiss="modal" id="close_modal3" type="button">
+										<span aria-hidden="true">×</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form class="m-form m-form--fit m-form--label-align-right" enctype="multipart/form-data" id="mainForm_update_pc" method="post" onsubmit="return check()">
+										<div class="form-group m-form__group row">
+											<input id="pc_resId" style="display: none" type="text">
+											<label class="col-form-label col-lg-3 col-md-3 col-sm-12" for="recipient-name">
+												事件名称&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="col-lg-9 col-md-9 col-sm-12">
+												<input class="form-control" id="pc_name" placeholder="请输入事件名称" type="text">
+											</div>
+										</div>
+										<div class="form-group m-form__group row">
+											<label class="col-form-label col-lg-3 col-md-3 col-sm-12" for="recipient-name">
+												设备类型&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="col-lg-9 col-md-9 col-sm-12">
+												<select class="form-control m-input" id="pc_deviceType">
+													<option value="">请选择</option>
+													<option value="351022">通风机</option>
+													<option value="351023">排水泵</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group m-form__group row">
+											<label class="col-form-label col-lg-3 col-md-3 col-sm-12" for="recipient-name">
+												动&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="col-lg-9 col-md-9 col-sm-12">
+												<select class="form-control m-input" id="pc_performAction">
+													<option value="">请选择</option>
+													<option value="1">打开</option>
+													<option value="0">关闭</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group m-form__group row">
+											<label class="col-form-label col-lg-3 col-md-3 col-sm-12" for="message-text">
+												备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注&nbsp;<span class="col-form-label-red-tips">*</span>
+											</label>
+											<div class="col-lg-9 col-md-9 col-sm-12">
+												<textarea class="form-control m-input" id="pc_memo" rows="5"></textarea>
+											</div>
+										</div>
+										<div class="form-group m-form__group m-form__group-modal-btn-toolbar">
+											<button class="btn btn-accent" id="submit_pc" type="button">提&nbsp;交</button>
+											<!-- 										<button type="button" class="btn btn-secondary" id="rest_pc">重置</button> -->
+											<!-- data-dismiss="modal" -->
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--end::Modal-->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="./事件规则配置_files/jquery.min.js.下载"></script>
+<!-- 	<script -->
+<!-- 		src="/metronic/assets/global/plugins/bootstrap/js/bootstrap.min.js" -->
+<!-- 		type="text/javascript"></script> -->
+<script src="./事件规则配置_files/bootstrap-table.min.js.下载"></script>
+<script src="./事件规则配置_files/bootstrap-table-zh-CN.js.下载"></script>
+<script src="./事件规则配置_files/vendors.bundle.js.下载" type="text/javascript"></script>
+<script src="./事件规则配置_files/scripts.bundle.js.下载" type="text/javascript"></script>
+<script src="./事件规则配置_files/configuration.js.下载" type="text/javascript"></script>
+<script src="./事件规则配置_files/preprocess.js.下载" type="text/javascript"></script>
+
+<script src="./事件规则配置_files/bootstrap-datetimepicker.js.下载" type="text/javascript"></script>
+<script src="./事件规则配置_files/bootstrap-datetimepicker.zh-CN.js.下载" type="text/javascript"></script>
+<script src="./事件规则配置_files/bootstrap-timepicker.js.下载" type="text/javascript"></script>
+
+
+
+
+<!-- end::Body -->
+
+<!-- /queryAlarmList --></body></html>
